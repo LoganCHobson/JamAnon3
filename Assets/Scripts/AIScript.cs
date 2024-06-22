@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AIScript : MonoBehaviour
 {
-    WaveSpawner waveSpawner;
+    
 
     public LayerMask whatIsGround, whatIsPlayer;
     public NavMeshSurface surface;
@@ -153,6 +153,6 @@ public class AIScript : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
-        waveSpawner.enemySpawnCount -= 1;
+        
     }
 }
