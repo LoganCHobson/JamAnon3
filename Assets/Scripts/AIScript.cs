@@ -8,6 +8,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AIScript : MonoBehaviour
 {
+    
+
     public LayerMask whatIsGround, whatIsPlayer;
     public NavMeshSurface surface;
 
@@ -38,7 +40,7 @@ public class AIScript : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("FPS Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -141,7 +143,7 @@ public class AIScript : MonoBehaviour
 
     public void TakeDamage()
     {
-        // health -= damage
+       
         if (health <= 0)
         {
             Invoke(nameof(DestroyEnemy), 0.5f);
@@ -151,5 +153,6 @@ public class AIScript : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+        
     }
 }
