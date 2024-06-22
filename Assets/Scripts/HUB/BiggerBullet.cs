@@ -20,6 +20,12 @@ public class BiggerBullet : MonoBehaviour
         if(insideCollider == true)
         {
             purchaseTag.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
+            {
+                Debug.Log("Player Buys the Bigger Bullet Gun");
+                SwitchGuns(GameObject.FindGameObjectWithTag("Player").transform, "BiggerBulletGun");
+                WalletManager.instance.coin -= price;
+            }
         }else
         {
             purchaseTag.SetActive(false);
@@ -31,14 +37,6 @@ public class BiggerBullet : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             insideCollider = true;
-            if(Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
-            {
-                Debug.Log("Player Buys the Bigger Bullet Gun");
-                SwitchGuns(other.transform, "BiggerBulletGun");
-
-                WalletManager.instance.coin -= price;
-            }
-            
         }
     }
 

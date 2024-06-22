@@ -20,6 +20,12 @@ public class Lanucher : MonoBehaviour
         if(insideCollider == true)
         {
             purchaseTag.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
+            {
+                Debug.Log("Player Buys the Lanucher");
+                SwitchGuns(GameObject.FindGameObjectWithTag("Player").transform, "LauncherGun");
+                WalletManager.instance.coin -= price;
+            }
         }else
         {
             purchaseTag.SetActive(false);
@@ -31,13 +37,6 @@ public class Lanucher : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             insideCollider = true;
-            if(Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
-            {
-                Debug.Log("Player Buys the Lanucher");
-                SwitchGuns(other.transform, "LanucherGun");
-                WalletManager.instance.coin -= price;
-            }
-            
         }
     }
 

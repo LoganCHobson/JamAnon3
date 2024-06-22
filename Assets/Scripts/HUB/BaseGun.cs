@@ -20,6 +20,12 @@ public class BaseGun : MonoBehaviour
         if(insideCollider == true)
         {
             purchaseTag.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
+            {
+                Debug.Log("Player Buys the Base Gun");
+                SwitchGuns(GameObject.FindGameObjectWithTag("Player").transform, "BaseGun");
+                WalletManager.instance.coin -= price;
+            }
         }else
         {
             purchaseTag.SetActive(false);
@@ -31,13 +37,6 @@ public class BaseGun : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             insideCollider = true;
-            if(Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
-            {
-                Debug.Log("Player Buys the Base Gun");
-                SwitchGuns(other.transform, "BaseGun");
-                WalletManager.instance.coin -= price;
-            }
-            
         }
     }
 
