@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 574346740}
   - component: {fileID: 574346741}
   m_Layer: 0
-  m_Name: Teleporter (1)
+  m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5349,7 +5349,7 @@ GameObject:
   - component: {fileID: 2069593232}
   - component: {fileID: 2069593233}
   m_Layer: 0
-  m_Name: Teleporter
+  m_Name: Teleporter (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
