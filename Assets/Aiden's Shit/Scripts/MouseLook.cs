@@ -29,4 +29,9 @@ public class MouseLook : MonoBehaviour
 
         playerBody.Rotate(Vector3.up * mouseX);
     }
+
+    public void DestroyLookingAround()
+    {
+        Destroy(this);
+    }
 }
