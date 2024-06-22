@@ -23,9 +23,7 @@ public class WaveSpawner : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(EnemySpawn(enemyPrefab1));
-        StartCoroutine(EnemySpawn(enemyPrefab2));
-        StartCoroutine(EnemySpawn(enemyPrefab3));
+        EnemySpawner();
 
     }
 
@@ -34,8 +32,8 @@ public class WaveSpawner : MonoBehaviour
         spawner = GetComponent<Transform>();
         while (enemySpawnCount <= amountOfEnemies)
         {
-            float randomX = Random.Range(spawner.position.x, spawner.position.x - 70);
-            float randomZ = Random.Range(spawner.position.z, spawner.position.x + 70);
+            float randomX = Random.Range(spawner.position.x, spawner.position.x - 65);
+            float randomZ = Random.Range(spawner.position.z, spawner.position.z + 65);
             spawnPos = new Vector3(randomX, 5f, randomZ);
 
 
@@ -47,6 +45,14 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StartCoroutine(EnemySpawn(enemyPrefab1));
+        StartCoroutine(EnemySpawn(enemyPrefab2));
+        StartCoroutine(EnemySpawn(enemyPrefab3));
     }
+
+    public void EnemySpawner()
+    {
+
+    }
+
 }
