@@ -9,6 +9,8 @@ public class DungeonSpawner : MonoBehaviour
     private GameObject objectPoolMaster;
     public Transform spawnPoint;
     public float sphereRadius = 2f;
+
+    private bool countDown = false;
     private void Start()
     {
         spawnPoint = gameObject.transform.GetChild(0);
@@ -16,9 +18,24 @@ public class DungeonSpawner : MonoBehaviour
 
         CheckSpawnerOverlap();
     }
+
+    private void Update()
+    {
+        if(countDown)
+        {
+            float count = 1;
+            count -= Time.deltaTime;
+            if (count <= 0)
+            {
+                countDown = false;
+                gameObject.SetActive(false);
+
+            }
+        }
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
-       
         if(other.CompareTag("Player"))
         {
             Debug.Log("Spawning");
@@ -27,7 +44,7 @@ public class DungeonSpawner : MonoBehaviour
             Debug.Log(rand);
 
             objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
-            Destroy(gameObject, 1);
+            countDown = true;
         }
         
     }
@@ -41,6 +58,7 @@ public class DungeonSpawner : MonoBehaviour
             DungeonSpawner otherSpawner = collider.GetComponent<DungeonSpawner>();
             if (otherSpawner != null && otherSpawner != this)
             {
+                otherSpawner.gameObject.SetActive(false);
                 gameObject.SetActive(false);
                 Debug.LogWarning("Spawner disabled due to proximity to another spawner.");
                 return;
