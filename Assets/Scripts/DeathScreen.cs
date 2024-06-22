@@ -7,7 +7,7 @@ using SuperPupSystems.Helper;
 
 public class DeathScreen : MonoBehaviour
 {
-     public bool didDie = false;
+    public bool didDie = false;
 
     public Health playerHealth;
 
@@ -42,8 +42,8 @@ public class DeathScreen : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Loading Main Menu");
-        //Time.timeScale = 1.0f;
-        //SceneManager.LoadSceneAsync("MainMenu");
+        Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
     public void QuitGame()
