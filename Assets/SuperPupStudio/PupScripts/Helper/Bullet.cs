@@ -11,6 +11,7 @@ namespace SuperPupSystems.Helper
         public int damage = 1;
         public float speed = 20f;
         public float lifeTime = 10f;
+        public float destroyDelay = 0.5f;
         public bool destroyOnImpact = true;
         public UnityEvent hitTarget;
         public LayerMask mask;
@@ -66,9 +67,15 @@ namespace SuperPupSystems.Helper
 
                 if (destroyOnImpact)
                 {
-                    DestroyBullet();
+                    StartCoroutine(DestroyBulletAfterDelay());
                 }
             }
+        }
+
+        private IEnumerator DestroyBulletAfterDelay()
+        {
+            yield return new WaitForSeconds(destroyDelay);
+            DestroyBullet();
         }
 
         private void DestroyBullet()
