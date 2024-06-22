@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5783751040006128803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -357,7 +357,7 @@ Transform:
   m_GameObject: {fileID: 303614107656130320}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 1, y: 72, z: 37}
+  m_LocalPosition: {x: 1, y: -70.9, z: -33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504027515489063072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -471,7 +471,7 @@ Transform:
   m_GameObject: {fileID: 566953796421263069}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 0.997, y: -0.886, z: 37}
+  m_LocalPosition: {x: 0.9799907, y: 2.0000029, z: -33.000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2232,7 +2232,7 @@ GameObject:
   - component: {fileID: 3722173888020172684}
   - component: {fileID: 1145125049901506249}
   - component: {fileID: 7162516567823924241}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (5)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -2288,7 +2288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &7162516567823924241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26036,7 +26039,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 13841
+  m_VersionIndex: 13850
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -26817,7 +26820,7 @@ GameObject:
   - component: {fileID: 2204106243733468371}
   - component: {fileID: 1436952805865014843}
   - component: {fileID: 1936028650487274216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (4)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -26873,7 +26876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &1936028650487274216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28453,7 +28459,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10121
+  m_VersionIndex: 10139
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -29148,7 +29154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4447635223191364462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -29265,7 +29271,7 @@ GameObject:
   - component: {fileID: 5733915112088047417}
   - component: {fileID: 9099072597934984527}
   - component: {fileID: 8720734336859448562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (6)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -29321,7 +29327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &8720734336859448562
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29859,7 +29868,7 @@ GameObject:
   - component: {fileID: 5582897894046972042}
   - component: {fileID: 2636421713248898979}
   - component: {fileID: 7941882057956751491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (3)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -29915,7 +29924,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &7941882057956751491
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31818,7 +31830,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2450
+  m_VersionIndex: 2468
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -33094,7 +33106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5687941729026544355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -33764,12 +33776,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2092
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2110
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33779,7 +33791,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1853
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33872,12 +33884,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2092
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2110
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33887,7 +33899,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1853
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33980,12 +33992,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2092
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2110
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33995,7 +34007,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1853
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -34088,12 +34100,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2092
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2110
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -34103,7 +34115,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1853
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}

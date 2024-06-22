@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6830081828846736772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 9219043373134283522}
   - component: {fileID: 6150840492944003384}
   - component: {fileID: 574008763053069442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (5)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -763,7 +763,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &574008763053069442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1537,7 +1540,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5030
+  m_VersionIndex: 5042
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4615,7 +4618,7 @@ GameObject:
   - component: {fileID: 413346546880046910}
   - component: {fileID: 5765105234819864796}
   - component: {fileID: 8029924834600701520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (3)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -4671,7 +4674,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &8029924834600701520
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48327,7 +48333,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 17387
+  m_VersionIndex: 17399
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -49606,7 +49612,7 @@ GameObject:
   - component: {fileID: 6459196161233483608}
   - component: {fileID: 3591378354631218966}
   - component: {fileID: 3265136491829322514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (6)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -49662,7 +49668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &3265136491829322514
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -49699,7 +49708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5070922285854536467}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -50194,7 +50203,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10118
+  m_VersionIndex: 10130
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -50972,7 +50981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8229158780017712279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -52414,7 +52423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650345034997267210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -53112,7 +53121,7 @@ GameObject:
   - component: {fileID: 6507237473208946252}
   - component: {fileID: 6692145633600718581}
   - component: {fileID: 7189156608538081602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (4)
   m_TagString: Doorway
   m_Icon: {fileID: 0}
@@ -53168,7 +53177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  boxSize: {x: 1, y: 1, z: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!54 &7189156608538081602
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53696,12 +53708,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2086
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2104
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -53711,7 +53723,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1847
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -53878,12 +53890,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2086
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2104
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -53893,7 +53905,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1847
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -54134,12 +54146,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2077
+      value: 2089
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2095
+      value: 2107
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -54149,7 +54161,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1838
+      value: 1850
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -54242,12 +54254,12 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2077
+      value: 2089
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2095
+      value: 2107
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -54257,7 +54269,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1838
+      value: 1850
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
