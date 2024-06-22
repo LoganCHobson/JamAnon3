@@ -3568,16 +3568,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd681bc47923964ab92298a5f89c33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 3566617669944663168}
-  spawnPos: {x: 0, y: 0, z: 0}
-  enemySpawnCount: 0
-  enemyPrefab1: {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb,
-    type: 3}
-  enemyPrefab2: {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f,
-    type: 3}
-  enemyPrefab3: {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7,
-    type: 3}
-  amountOfEnemies: 10
+  objectsToSpawn:
+  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
+  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
+  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
+  - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
+  - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
+  - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
+  - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
+  - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
+  - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
+  timeBetweenSpawns: 1
+  timeBetweenWaves: 5
+  totalWaves: 3
+  wantedEnemyCount: 5
+  currentEnemyCount: 0
 --- !u!1 &3718101220433171786
 GameObject:
   m_ObjectHideFlags: 0

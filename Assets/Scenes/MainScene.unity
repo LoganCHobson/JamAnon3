@@ -1450,6 +1450,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  death: 0
 --- !u!54 &574346741
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2040,7 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880616874}
   m_Layer: 0
-  m_Name: Spawn in
+  m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2613,7 +2614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068328904}
   m_Layer: 0
-  m_Name: Spawn in
+  m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4597,10 +4598,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 181303750114633287, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 211795144095709329, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 585247908707040373, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1407600501818514582, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962723888875781863, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153330683697395908, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2657382010459216697, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
@@ -4652,10 +4678,110 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3037584161490349531, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185174925316545968, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213282334223230263, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3410045159539016713, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410045159539016713, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627906446214118933, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390588300803125010, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694024791931808353, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882792000253665379, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222853205893768154, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655406346316711347, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317786959353204152, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706248331953523663, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478343396068277241, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538476629405441566, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756644083634826936, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7812677638654922989, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010721646380255591, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697970273724929306, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976453977031439228, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052024219637176989, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5334,6 +5460,7 @@ MonoBehaviour:
   onTeleport:
     m_PersistentCalls:
       m_Calls: []
+  death: 0
 --- !u!54 &2069593233
 Rigidbody:
   m_ObjectHideFlags: 0
