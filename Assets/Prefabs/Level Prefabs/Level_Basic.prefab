@@ -763,6 +763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sphereRadius: 3
+  overlapCheckDelay: 0.1
+  maxSpawnAttempts: 5
   boxSize: {x: 1, y: 1, z: 1}
   obstacleLayer:
     serializedVersion: 2
@@ -3527,6 +3530,60 @@ Transform:
   - {fileID: 3004209418984824613}
   m_Father: {fileID: 4744755293536703047}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3666570108949721670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3566617669944663168}
+  - component: {fileID: 7123815228850978666}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3566617669944663168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666570108949721670}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4744755293536703047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7123815228850978666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666570108949721670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd681bc47923964ab92298a5f89c33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 3566617669944663168}
+  spawnPos: {x: 0, y: 0, z: 0}
+  enemySpawnCount: 0
+  enemyPrefab1: {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb,
+    type: 3}
+  enemyPrefab2: {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f,
+    type: 3}
+  enemyPrefab3: {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7,
+    type: 3}
+  amountOfEnemies: 10
 --- !u!1 &3718101220433171786
 GameObject:
   m_ObjectHideFlags: 0
@@ -5171,6 +5228,7 @@ Transform:
   - {fileID: 7672794119458066197}
   - {fileID: 1032801895244970370}
   - {fileID: 6614680325912975623}
+  - {fileID: 3566617669944663168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9148664733953277958

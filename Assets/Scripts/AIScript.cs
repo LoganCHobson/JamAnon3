@@ -11,6 +11,7 @@ public class AIScript : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
     public NavMeshSurface surface;
 
+    public float health;
     public NavMeshAgent agent;
 
     private NavMeshPath path;
@@ -26,11 +27,20 @@ public class AIScript : MonoBehaviour
     // Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public GameObject projectile;
+    public Transform firePoint;
 
     // States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     private void Start()
     {
@@ -76,7 +86,7 @@ public class AIScript : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        if (distanceToWalkPoint.magnitude < 1f)
+        if (distanceToWalkPoint.magnitude < 2f)
         {
             walkPointSet = false;
         }
@@ -90,11 +100,14 @@ public class AIScript : MonoBehaviour
 
         if(Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
         {
+            path = new NavMeshPath();
             NavMesh.CalculatePath(transform.position, walkPoint, NavMesh.AllAreas, path);
-      
-            
+
+            if (path.status == NavMeshPathStatus.PathComplete)
+            {
                 walkPointSet = true;
-            
+            }
+          
                 
         }
     }
@@ -102,15 +115,16 @@ public class AIScript : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        
     }
 
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-
+        transform.LookAt(player);
         if (!alreadyAttacked)
         {
-
+            GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
             
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -125,5 +139,17 @@ public class AIScript : MonoBehaviour
         alreadyAttacked = false;
     }
 
+    public void TakeDamage()
+    {
+        // health -= damage
+        if (health <= 0)
+        {
+            Invoke(nameof(DestroyEnemy), 0.5f);
+        }
+    }
 
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
 }
