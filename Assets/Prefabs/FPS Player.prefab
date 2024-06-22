@@ -1230,7 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6917426436593805678}
-  bulletPrefab: {fileID: 7804715228311895986, guid: f7e33d97308681d48b96659050fb63dd,
+  bulletPrefab: {fileID: 158785590979715239, guid: d6aa5aa583f14d64b98108fe93193654,
     type: 3}
   bulletSpeed: 15
   fireRate: 0.4
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6917426436593805678}
-  bulletPrefab: {fileID: 7804715228311895986, guid: f7e33d97308681d48b96659050fb63dd,
+  bulletPrefab: {fileID: 4611980707816074615, guid: 3a3a4aeaf90d5d145be4add4953eebc4,
     type: 3}
   bulletSpeed: 5
   fireRate: 0.6
