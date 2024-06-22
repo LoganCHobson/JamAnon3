@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5783751040006128803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -357,7 +357,7 @@ Transform:
   m_GameObject: {fileID: 303614107656130320}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 1, y: 72, z: 37}
+  m_LocalPosition: {x: 1, y: -70.9, z: -33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504027515489063072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -471,7 +471,7 @@ Transform:
   m_GameObject: {fileID: 566953796421263069}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 0.997, y: -0.886, z: 37}
+  m_LocalPosition: {x: 0.9799907, y: 2.0000029, z: -33.000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2232,9 +2232,9 @@ GameObject:
   - component: {fileID: 3722173888020172684}
   - component: {fileID: 1145125049901506249}
   - component: {fileID: 7162516567823924241}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (5)
-  m_TagString: Doorway
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2288,7 +2288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  minDistanceBetweenSpawners: 5
 --- !u!54 &7162516567823924241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2579,6 +2579,7 @@ GameObject:
   - component: {fileID: 1905270937642972566}
   - component: {fileID: 1065273929740197606}
   - component: {fileID: 2865703411019329146}
+  - component: {fileID: 1606926835005073322}
   m_Layer: 7
   m_Name: Level_Void
   m_TagString: Untagged
@@ -26036,7 +26037,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 13841
+  m_VersionIndex: 13853
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -26141,6 +26142,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1606926835005073322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484681212737897393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 423
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c9a6e0e1fbc7635438cba3ff351633fe, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &2652999935148307087
 GameObject:
   m_ObjectHideFlags: 0
@@ -26817,9 +26849,9 @@ GameObject:
   - component: {fileID: 2204106243733468371}
   - component: {fileID: 1436952805865014843}
   - component: {fileID: 1936028650487274216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (4)
-  m_TagString: Doorway
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26873,7 +26905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  minDistanceBetweenSpawners: 5
 --- !u!54 &1936028650487274216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28360,39 +28392,39 @@ MonoBehaviour:
   - m_Vertices: 0f000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -9, y: -0.0007327907, z: -68.00002}
-  - {x: -9, y: 0, z: 0}
+  - {x: -22, y: -0.0007328024, z: -68.00004}
+  - {x: -22, y: 0, z: -0.0000015497208}
   - {x: 0, y: -0.0007327907, z: -68.00002}
   - {x: 0, y: 0, z: 0}
-  - {x: -9, y: 0, z: 0}
+  - {x: -22, y: 0, z: -0.0000015497208}
   - {x: 0, y: 0, z: 0}
-  - {x: -9, y: 67.999985, z: -0.049464345}
+  - {x: -22, y: 68.000015, z: -0.049464367}
   - {x: 0, y: 67.999985, z: -0.049464345}
-  - {x: -9, y: 67.999985, z: -0.049464345}
+  - {x: -22, y: 68.000015, z: -0.049464367}
   - {x: 0, y: 67.999985, z: -0.049464345}
-  - {x: -9, y: 67.950165, z: -68.04981}
+  - {x: -22, y: 67.95019, z: -68.04983}
   - {x: 0, y: 67.950165, z: -68.04981}
-  - {x: -9, y: 67.950165, z: -68.04981}
+  - {x: -22, y: 67.95019, z: -68.04983}
   - {x: 0, y: 67.950165, z: -68.04981}
-  - {x: -9, y: -0.049834266, z: -68}
+  - {x: -22, y: -0.04983427, z: -68.000015}
   - {x: 0, y: -0.049834266, z: -68}
   m_Textures0:
-  - {x: -38.500008, y: -29.499994}
-  - {x: 29.500015, y: -29.500029}
-  - {x: -38.500015, y: -38.499992}
-  - {x: 29.500008, y: -38.50003}
-  - {x: -38.5, y: 38.500023}
-  - {x: -38.500008, y: 29.500021}
-  - {x: 29.500008, y: 38.499985}
-  - {x: 29.5, y: 29.499987}
-  - {x: -29.50018, y: -29.499825}
-  - {x: -29.50018, y: -38.499825}
-  - {x: 38.500183, y: -29.499825}
-  - {x: 38.500183, y: -38.499825}
-  - {x: -29.500008, y: 38.499985}
-  - {x: -29.500008, y: 29.499985}
-  - {x: 38.500008, y: 38.499985}
-  - {x: 38.500008, y: 29.499985}
+  - {x: -45.00001, y: -23}
+  - {x: 23.000027, y: -23.000038}
+  - {x: -45.00001, y: -45}
+  - {x: 23.000011, y: -45.00004}
+  - {x: -45.00001, y: 45.00004}
+  - {x: -45.000027, y: 23.000038}
+  - {x: 23.000027, y: 45}
+  - {x: 22.99998, y: 23}
+  - {x: -23.000093, y: -22.999825}
+  - {x: -23.000093, y: -44.999825}
+  - {x: 45.000282, y: -22.999825}
+  - {x: 45.000267, y: -44.999825}
+  - {x: -22.999971, y: 44.999996}
+  - {x: -22.999949, y: 22.999996}
+  - {x: 45.00007, y: 44.999996}
+  - {x: 45.00007, y: 22.999996}
   m_Textures2:
   - {x: 0, y: 0, z: 0, w: 0}
   - {x: 0, y: 0, z: 0, w: 0}
@@ -28428,22 +28460,22 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0, w: 0}
   - {x: 0, y: 0, z: 0, w: 0}
   m_Tangents:
-  - {x: -0.0000005048863, y: 0.00001077633, z: 1, w: -1}
-  - {x: -0.0000005329355, y: 0.00001077633, z: 1, w: -1}
-  - {x: -0.0000005329355, y: 0.00001077633, z: 1, w: -1}
-  - {x: -0.0000005609846, y: 0.00001077633, z: 1, w: -1}
-  - {x: -0.00000056098474, y: 0.99999976, z: -0.00072741683, w: -1}
-  - {x: -0.00000053293564, y: 0.99999976, z: -0.00072741683, w: -1}
-  - {x: -0.00000053293564, y: 0.99999976, z: -0.00072741683, w: -1}
-  - {x: -0.0000005048865, y: 0.99999976, z: -0.00072741683, w: -1}
-  - {x: 0, y: -0.0007326423, z: -0.99999976, w: -1}
-  - {x: 0, y: -0.0007326423, z: -0.99999976, w: -1}
-  - {x: 0, y: -0.0007326423, z: -0.99999976, w: -1}
-  - {x: 0, y: -0.0007326423, z: -0.99999976, w: -1}
-  - {x: 0, y: -0.99999976, z: 0.0007325339, w: -1}
-  - {x: 0, y: -0.99999976, z: 0.0007325339, w: -1}
-  - {x: 0, y: -0.99999976, z: 0.0007325339, w: -1}
-  - {x: 0, y: -0.99999976, z: 0.0007325339, w: -1}
+  - {x: -0.0000005609846, y: 0.000010776499, z: 1, w: -1}
+  - {x: -0.00000056098463, y: 0.0000107764145, z: 1, w: -1}
+  - {x: -0.00000056098463, y: 0.0000107764145, z: 1, w: -1}
+  - {x: -0.0000005609847, y: 0.00001077633, z: 1, w: -1}
+  - {x: -0.00000056098463, y: 0.99999976, z: -0.000727394, w: -1}
+  - {x: -0.00000056098474, y: 0.99999976, z: -0.0007274054, w: -1}
+  - {x: -0.00000056098474, y: 0.99999976, z: -0.0007274054, w: -1}
+  - {x: -0.00000056098486, y: 0.99999976, z: -0.00072741683, w: -1}
+  - {x: 0, y: -0.00073275436, z: -0.99999976, w: -1}
+  - {x: -7.0665325e-17, y: -0.00073269836, z: -0.99999976, w: -1}
+  - {x: -7.0665325e-17, y: -0.00073269836, z: -0.99999976, w: -1}
+  - {x: -6.058718e-17, y: -0.0007326423, z: -0.99999976, w: -1}
+  - {x: 0, y: -0.99999976, z: 0.00073253363, w: -1}
+  - {x: 0, y: -0.99999976, z: 0.00073253375, w: -1}
+  - {x: 0, y: -0.99999976, z: 0.00073253375, w: -1}
+  - {x: 0, y: -0.99999976, z: 0.00073253387, w: -1}
   m_Colors: []
   m_UnwrapParameters:
     m_HardAngle: 88
@@ -28453,7 +28485,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10121
+  m_VersionIndex: 10368
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -29148,7 +29180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4447635223191364462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -29265,9 +29297,9 @@ GameObject:
   - component: {fileID: 5733915112088047417}
   - component: {fileID: 9099072597934984527}
   - component: {fileID: 8720734336859448562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (6)
-  m_TagString: Doorway
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29321,7 +29353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  minDistanceBetweenSpawners: 5
 --- !u!54 &8720734336859448562
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29859,9 +29891,9 @@ GameObject:
   - component: {fileID: 5582897894046972042}
   - component: {fileID: 2636421713248898979}
   - component: {fileID: 7941882057956751491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner (3)
-  m_TagString: Doorway
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29915,7 +29947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 3
+  minDistanceBetweenSpawners: 5
 --- !u!54 &7941882057956751491
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31700,7 +31732,7 @@ GameObject:
   - component: {fileID: 8940694440861002047}
   - component: {fileID: 1922062210278234233}
   - component: {fileID: 7959472185849653416}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Death Planes
   m_TagString: AcidWater
   m_Icon: {fileID: 0}
@@ -31818,7 +31850,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2450
+  m_VersionIndex: 2477
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -33094,7 +33126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5687941729026544355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -33764,12 +33796,17 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2101
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2119
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Doorway
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33779,7 +33816,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1862
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33838,6 +33875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
+      propertyPath: m_TagString
+      value: Doorway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -33872,12 +33914,17 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2101
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2119
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Doorway
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33887,7 +33934,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1862
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33946,6 +33993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
+      propertyPath: m_TagString
+      value: Doorway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -33980,12 +34032,17 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2101
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2119
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Doorway
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -33995,7 +34052,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1862
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -34054,6 +34111,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
+      propertyPath: m_TagString
+      value: Doorway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -34088,12 +34150,17 @@ PrefabInstance:
     - target: {fileID: 104732469885449694, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2074
+      value: 2101
       objectReference: {fileID: 0}
     - target: {fileID: 202468711401648476, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2092
+      value: 2119
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Doorway
       objectReference: {fileID: 0}
     - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -34103,7 +34170,7 @@ PrefabInstance:
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1835
+      value: 1862
       objectReference: {fileID: 0}
     - target: {fileID: 5715665620975362693, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
@@ -34159,6 +34226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hallway Door (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Doorway
       objectReference: {fileID: 0}
     - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}

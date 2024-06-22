@@ -58,6 +58,14 @@ namespace SolarStudios //Logans Library
             yield return new WaitForSeconds(delay);
             obj.SetActive(false);
         }
+
+        public void RecycleAll(float delay = 0f)
+        {
+            foreach(GameObject obj in objectPool)
+            {
+                StartCoroutine(DeactivateObjectDelayed(obj, delay));
+            }
+        }
     }
 
 }
