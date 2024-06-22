@@ -469,7 +469,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd95b91e6ed4e6f408919d9ad912dc5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSens: 100
+  mouseSens: 500
   playerBody: {fileID: 2657382010459216697}
 --- !u!1 &2153330683697395908
 GameObject:
@@ -715,10 +715,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6185032626171186584}
-  speed: 8
-  sprintSpeed: 16
+  speed: 6
+  sprintSpeed: 10
   gravity: -9.81
-  jumpHeight: 2.5
+  jumpHeight: 1.5
   groundCheck: {fileID: 2158885717722867542}
   groundDistance: 0.4
   groundMask:
