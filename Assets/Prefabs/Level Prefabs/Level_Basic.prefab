@@ -3583,19 +3583,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToSpawn:
-  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
-  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
-  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
-  - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
-  - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
   - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
   - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
-  - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
-  - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
-  timeBetweenSpawns: 1
+  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
+  timeBetweenSpawns: 0.1
   timeBetweenWaves: 5
-  totalWaves: 3
-  wantedEnemyCount: 5
+  totalWaves: 1
+  wantedEnemyCount: 27
   currentEnemyCount: 0
 --- !u!1 &3718101220433171786
 GameObject:
@@ -48536,7 +48530,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b39cf90fe749afd45a0eee10179dbf29, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 90ff5c6608727ec449734c3f85e7e13d, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &4877105756995677257
 GameObject:
