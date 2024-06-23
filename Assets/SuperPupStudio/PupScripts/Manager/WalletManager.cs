@@ -78,5 +78,10 @@ namespace SuperPupSystems.Manager
             earnEvent.Invoke(_amount);
             coinUpdatedEvent.Invoke(_amount, coin);
         }
+
+        public void AddCoin(int _amount)
+        {
+            coin += _amount;
+        }
     }
 }
