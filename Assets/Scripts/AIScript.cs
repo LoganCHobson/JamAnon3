@@ -21,6 +21,8 @@ public class AIScript : MonoBehaviour
 
     public Transform enemy;
 
+    public AudioSource audio;
+
     // Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -42,6 +44,7 @@ public class AIScript : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        //audio = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -132,6 +135,7 @@ public class AIScript : MonoBehaviour
 
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
+                audio.Play();
             }
             if (attackRange <= 5)
             {
