@@ -1395,6 +1395,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2686912666370099451, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: coin
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3037584161490349531, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_Layer
@@ -1480,6 +1485,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6037051775153051085, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037051775153051085, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317786959353204152, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_Layer
@@ -1541,6 +1556,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 698265755}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &698265757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6531356965471515608, guid: 11164402afa24e94fa5f5c070892cd25,
+    type: 3}
+  m_PrefabInstance: {fileID: 698265755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c134854f2abea984fb8ed25359e8198d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &793122490
 Mesh:
   m_ObjectHideFlags: 0
@@ -2269,9 +2296,49 @@ PrefabInstance:
       objectReference: {fileID: 968503840}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1168214014}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 698265757}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: AddToRun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: RunCounter, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3291273111239163600, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh

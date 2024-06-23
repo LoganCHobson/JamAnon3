@@ -63,6 +63,11 @@ public class BiggerBullet : MonoBehaviour
             {
                 purchasedGun.gameObject.SetActive(true);
             }
+            Debug.Log("Has Found the Gun " + gunName);
+        }else
+        {
+            Debug.Log("gunHolder returned Null");
         }
+        
     }
 }
