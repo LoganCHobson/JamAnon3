@@ -120,14 +120,14 @@ MonoBehaviour:
   damage: 1
   speed: 50
   lifeTime: 10
-  destroyDelay: 0.5
+  destroyDelay: 0.1
   destroyOnImpact: 1
   hitTarget:
     m_PersistentCalls:
       m_Calls: []
   mask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 193
   tags:
   - Player
   - Enemy
