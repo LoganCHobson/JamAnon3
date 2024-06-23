@@ -3733,7 +3733,7 @@ MonoBehaviour:
   timeBetweenSpawns: 0.1
   timeBetweenWaves: 5
   totalWaves: 1
-  wantedEnemyCount: 27
+  wantedEnemyCount: 3
   currentEnemyCount: 0
   lootToSpawn:
   - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
