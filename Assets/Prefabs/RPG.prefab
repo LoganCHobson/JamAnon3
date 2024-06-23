@@ -14793,6 +14793,8 @@ MonoBehaviour:
     m_Bits: 129
   tags:
   - Explosive
+  - Player
+  - Enemy
 --- !u!114 &2367087310436618480
 MonoBehaviour:
   m_ObjectHideFlags: 0
