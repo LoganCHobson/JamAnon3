@@ -22,9 +22,17 @@ public class BiggerBullet : MonoBehaviour
             purchaseTag.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
             {
-                Debug.Log("Player Buys the Bigger Bullet Gun");
-                SwitchGuns(GameObject.FindGameObjectWithTag("Player").transform, "BiggerBulletGun");
-                WalletManager.instance.coin -= price;
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    Debug.Log("Player found: " + player.name);
+                    SwitchGuns(player.transform, "BiggerBulletGun");
+                    WalletManager.instance.coin -= price;
+                }
+                else
+                {
+                    Debug.Log("Player not found");
+                }
             }
         }else
         {
@@ -67,7 +75,17 @@ public class BiggerBullet : MonoBehaviour
         }else
         {
             Debug.Log("gunHolder returned Null");
+            PrintHierarchy(playerTransform);
         }
         
+    }
+
+    private void PrintHierarchy(Transform parent, string indent = "")
+    {
+        Debug.Log(indent + parent.name);
+        foreach (Transform child in parent)
+        {
+            PrintHierarchy(child, indent + "  ");
+        }
     }
 }
