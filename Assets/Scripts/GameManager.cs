@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
-        bulletDamage = player.GetComponentInChildren<Bullet>().damage;
+        //bulletDamage = player.GetComponentInChildren<Bullet>().damage;
         preMaxHealth = player.GetComponent<Health>().maxHealth;
         preMoney = player.GetComponent<WalletManager>().coin;
         foreach (Transform child in player.transform)
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         player.GetComponentInChildren<Gun>().fireRate = preFireRate;
         player.GetComponent<Health>().maxHealth = preMaxHealth;
         player.GetComponent<WalletManager>().coin = preMoney;
-        player.GetComponentInChildren<Bullet>().damage = bulletDamage;
+        //player.GetComponentInChildren<Bullet>().damage = bulletDamage;
         foreach (Transform child in player.transform)
         {
             if (child.CompareTag("Gun"))
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Saving player data!");
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
-        bulletDamage = player.GetComponentInChildren<Bullet>().damage;
+        //bulletDamage = player.GetComponentInChildren<Bullet>().damage;
         preMaxHealth = player.GetComponent<Health>().maxHealth;
         preMoney = player.GetComponent<WalletManager>().coin;
         foreach (Transform child in player.transform)
