@@ -182,7 +182,8 @@ MonoBehaviour:
   surface: {fileID: 0}
   agent: {fileID: 7863548376847701774}
   player: {fileID: 0}
-  enemy: {fileID: 0}
+  enemy: {fileID: 8820747798342098250}
+  audio: {fileID: -1463820217447624448}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 15
   timeBetweenAttacks: 1
@@ -288,18 +289,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 77e6c1679a2b3d34cb15cadc97acb5a6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_audioClip: {fileID: 8300000, guid: 9fecd5901753a40faa047a269480a3f7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.35
   m_Pitch: 0.88
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 146
+  Priority: 175
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 50
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
