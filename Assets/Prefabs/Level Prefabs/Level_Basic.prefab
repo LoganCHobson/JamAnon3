@@ -3866,6 +3866,7 @@ MonoBehaviour:
   totalWaves: 1
   wantedEnemyCount: 3
   currentEnemyCount: 0
+  enemiesSpawned: []
   lootToSpawn:
   - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
   - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
