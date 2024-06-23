@@ -14,6 +14,7 @@ public class WaveSpawner : MonoBehaviour
     private int currentWave = 0; //Current wave index
     private Vector3 spawnPos;
 
+    public List<GameObject> lootToSpawn = new List<GameObject>();
     void Start()
     {
         //Start spawning waves
@@ -31,8 +32,20 @@ public class WaveSpawner : MonoBehaviour
                 nextSpawnTime = Time.time + timeBetweenSpawns;
             }
         }
- 
 
+        SpawnLoot();
+    }
+
+    private void SpawnLoot()
+    {
+        foreach(GameObject obj in lootToSpawn)
+        {
+            float randomX = Random.Range(transform.position.x, transform.position.x - 65);
+            float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
+            spawnPos = new Vector3(randomX, 20f, randomZ);
+            Instantiate(obj, spawnPos, Quaternion.identity);
+        }
+         
     }
 
     void SpawnObject()
@@ -48,13 +61,6 @@ public class WaveSpawner : MonoBehaviour
             Instantiate(objToSpawn, spawnPos, Quaternion.identity);
             currentEnemyCount += 1;
         }
-       // GameObject objToSpawn = objectsToSpawn[currentWave % objectsToSpawn.Count];
-       // float randomX = Random.Range(transform.position.x, transform.position.x - 65);
-       // float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
-       // spawnPos = new Vector3(randomX, 5f, randomZ);
-
-        //Instantiate(objToSpawn, spawnPos, Quaternion.identity);
-        //currentEnemyCount += 1;
     }
 
     void SpawnWave()
