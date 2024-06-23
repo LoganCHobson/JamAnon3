@@ -19,6 +19,8 @@ public class WaveSpawner : MonoBehaviour
     {
         //Start spawning waves
         SpawnWave();
+
+        SpawnLoot();
     }
 
     void Update()
@@ -33,7 +35,7 @@ public class WaveSpawner : MonoBehaviour
             }
         }
 
-        SpawnLoot();
+        
     }
 
     private void SpawnLoot()
