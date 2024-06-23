@@ -7,6 +7,8 @@ public class DungeonSpawner : MonoBehaviour
     private Transform spawnPoint;
     public float minDistanceBetweenSpawners = 5f;
 
+    public Transform endcapSpawnPoint;
+
     private void Start()
     {
         objectPoolMaster = GameObject.Find("ObjectPoolMaster");
@@ -20,9 +22,15 @@ public class DungeonSpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            int rand = Random.Range(0, objectPoolMaster.transform.childCount);
+            int rand = Random.Range(0, 5);
 
-            DisableSpawner(objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position));
+            GameObject spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
+            
+            if (spawnedRoom == null)
+            {
+                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position);
+            }
+            DisableSpawner(spawnedRoom);
 
             gameObject.SetActive(false);
         }
