@@ -124,6 +124,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4784139628650047596}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 537404293873fa049bb6f16d78d5520e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1382475964873785916}
   m_SourcePrefab: {fileID: 100100000, guid: 537404293873fa049bb6f16d78d5520e, type: 3}
 --- !u!1 &8152157234169448432 stripped
 GameObject:
@@ -234,8 +238,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4771278559077617343, guid: 3ec9348e86ba0894592dca6acf334adb,
+          type: 3}
+        m_TargetAssemblyTypeName: LootEnemies, Assembly-CSharp
+        m_MethodName: SpawnLoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHealth: 100
   currentHealth: 100
+--- !u!114 &-1382475964873785916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152157234169448432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262e084d510666f4ea81a9cd0e9b7533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot:
+  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
+  - {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020, type: 3}
+  - {fileID: 6294575206199383447, guid: 3e4b2d74ab1b9bc40abee06dcb2450f9, type: 3}
+  - {fileID: 1775392326538538140, guid: eda4c51ed54c29744af064a4fa3ea23e, type: 3}
 --- !u!4 &8820747798342098250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 537404293873fa049bb6f16d78d5520e,

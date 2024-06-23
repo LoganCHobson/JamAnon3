@@ -20,7 +20,7 @@ public class WaveSpawner : MonoBehaviour
         //Start spawning waves
         SpawnWave();
 
-        SpawnLoot();
+        //SpawnLoot();
     }
 
     void Update()
