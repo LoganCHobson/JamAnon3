@@ -13,7 +13,7 @@ public class AIScript : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
     public NavMeshSurface surface;
 
-    public float health;
+ 
     public NavMeshAgent agent;
 
     private NavMeshPath path;
@@ -40,7 +40,7 @@ public class AIScript : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("FPS Player").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -148,18 +148,5 @@ public class AIScript : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage()
-    {
-       
-        if (health <= 0)
-        {
-            Invoke(nameof(DestroyEnemy), 0.5f);
-        }
-    }
 
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-        
-    }
 }

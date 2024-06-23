@@ -172,7 +172,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   surface: {fileID: 0}
-  health: 0
   agent: {fileID: 7863548376847701774}
   player: {fileID: 0}
   enemy: {fileID: 0}
