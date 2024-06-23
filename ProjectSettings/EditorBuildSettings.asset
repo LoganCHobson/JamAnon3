@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 6eaf9a0f91b3c2c4294849d9119d182f
   - enabled: 1
-    path: Assets/Aiden's Shit/Scenes/WhiteBoxTestScene.unity
-    guid: 76d21db8f0cc10f469ffd3f20003b803
+    path: Assets/Scenes/MainScene.unity
+    guid: e10a1aaab86d27c4ab3007a1a730734a
   m_configObjects: {}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1584270822804971902}
   - component: {fileID: 6068925338886854768}
   - component: {fileID: 473643910590200989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bigger Bullet PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4503779833327982162}
   - component: {fileID: 387033695324884540}
   - component: {fileID: 6797716261559172338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 3231729062889912497}
   - component: {fileID: 671872593636290645}
   - component: {fileID: 684449426502965454}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Launcher Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 5168806405436651720}
   - component: {fileID: 4213981990879182548}
   - component: {fileID: 6181690506982335050}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: FA Gun Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 3435543942379869144}
   - component: {fileID: 2735229642089351115}
   - component: {fileID: 6358229634813358630}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: 'Launcher Price Text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 2957523663455852206}
   - component: {fileID: 7259557077753529098}
   - component: {fileID: 9094743715296890935}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: FA Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1564,7 +1564,7 @@ GameObject:
   - component: {fileID: 5841704886132212740}
   - component: {fileID: 5821519739085948034}
   - component: {fileID: 4311760433700791071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,7 +2454,7 @@ GameObject:
   - component: {fileID: 7653673990421755146}
   - component: {fileID: 2833713697907090179}
   - component: {fileID: 7381869179894613833}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUB Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2588,7 +2588,7 @@ GameObject:
   - component: {fileID: 5216509555110998779}
   - component: {fileID: 121980168314657799}
   - component: {fileID: 8402958379896324066}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Health Pack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2724,7 +2724,7 @@ GameObject:
   - component: {fileID: 300272670860081584}
   - component: {fileID: 425472817411735382}
   - component: {fileID: 4418799984137324495}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lanucher PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 6390680090608442950}
   - component: {fileID: 5954834762936920152}
   - component: {fileID: 8063469075962041203}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: BB Price Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2980,7 +2980,7 @@ GameObject:
   - component: {fileID: 6516897620692653308}
   - component: {fileID: 5253254306086965202}
   - component: {fileID: 174402169722205148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3870,7 +3870,7 @@ GameObject:
   - component: {fileID: 1634261577516323213}
   - component: {fileID: 5732275031954417267}
   - component: {fileID: 3184644044254690960}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: FA Price Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4007,7 +4007,7 @@ GameObject:
   - component: {fileID: 1390417365084417276}
   - component: {fileID: 9062047630506365017}
   - component: {fileID: 8002851675849229795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4897,7 +4897,7 @@ GameObject:
   - component: {fileID: 9162297871691071370}
   - component: {fileID: 443383949547865362}
   - component: {fileID: 2027735583111807013}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: BB Gun Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5029,7 +5029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593020499422146740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5073,7 +5073,7 @@ GameObject:
   - component: {fileID: 1508548025739991316}
   - component: {fileID: 8788028953142496798}
   - component: {fileID: 8388931790846336868}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUB UI Upgrade Wall Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5179,7 +5179,7 @@ GameObject:
   - component: {fileID: 3594364666366156782}
   - component: {fileID: 1997286735513025264}
   - component: {fileID: 899363379472570228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hub Room 2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9756,7 +9756,7 @@ GameObject:
   - component: {fileID: 6118377954877489477}
   - component: {fileID: 2903386854792454644}
   - component: {fileID: 4560244813063706426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10646,7 +10646,7 @@ GameObject:
   - component: {fileID: 6470894451096120759}
   - component: {fileID: 3909981204615064294}
   - component: {fileID: 4257075183803905363}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Base Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10778,7 +10778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6473952046709457987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HUB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10824,7 +10824,7 @@ GameObject:
   - component: {fileID: 5513671079528935477}
   - component: {fileID: 2197805765978294159}
   - component: {fileID: 8173782143039055501}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUB UI Upgrade Wall One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10931,7 +10931,7 @@ GameObject:
   - component: {fileID: 282873042498925227}
   - component: {fileID: 468589855249909959}
   - component: {fileID: 9201202068582429247}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUB UI Gun Wall One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11037,7 +11037,7 @@ GameObject:
   - component: {fileID: 8289397926153656658}
   - component: {fileID: 4364591597967008222}
   - component: {fileID: 4005276512541107053}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HU Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11173,7 +11173,7 @@ GameObject:
   - component: {fileID: 7657032670405622617}
   - component: {fileID: 7967738400964949153}
   - component: {fileID: 8425569879370475407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Rate Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11293,7 +11293,7 @@ GameObject:
   - component: {fileID: 202551476882551105}
   - component: {fileID: 7538305583387068854}
   - component: {fileID: 8379852998232791702}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HP Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11429,7 +11429,7 @@ GameObject:
   - component: {fileID: 7424097273177290992}
   - component: {fileID: 7669344027907061322}
   - component: {fileID: 3566240387990519899}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Base Gun PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11548,7 +11548,7 @@ GameObject:
   - component: {fileID: 6245068054522928918}
   - component: {fileID: 8793322413074621822}
   - component: {fileID: 5468079035269488812}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: 'Base Gun Text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11682,7 +11682,7 @@ GameObject:
   - component: {fileID: 2358307693376041013}
   - component: {fileID: 4175612100732509547}
   - component: {fileID: 8939909670026320277}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: 'Base Price Text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11818,7 +11818,7 @@ GameObject:
   - component: {fileID: 3106730455729319415}
   - component: {fileID: 8571908619166306299}
   - component: {fileID: 4951400950283008337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Health Upgrade PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11938,7 +11938,7 @@ GameObject:
   - component: {fileID: 7135038731814643184}
   - component: {fileID: 3210207648374579490}
   - component: {fileID: 5631403899554050195}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HU Price Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12075,7 +12075,7 @@ GameObject:
   - component: {fileID: 3923222644272858148}
   - component: {fileID: 3821799993726437906}
   - component: {fileID: 5927573894281711941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12967,7 +12967,7 @@ GameObject:
   - component: {fileID: 3523282921243114181}
   - component: {fileID: 1308772319349933050}
   - component: {fileID: 3639424903152477203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Health Pack PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13087,7 +13087,7 @@ GameObject:
   - component: {fileID: 9169796031723614267}
   - component: {fileID: 4417607513400910450}
   - component: {fileID: 3724288159964370943}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: 'HP Price Text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13222,7 +13222,7 @@ GameObject:
   - component: {fileID: 4703173789798068960}
   - component: {fileID: 7825696708812796872}
   - component: {fileID: 2966663087377187819}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUB UI Gun Wall Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13328,7 +13328,7 @@ GameObject:
   - component: {fileID: 919554713915482096}
   - component: {fileID: 7227034235882863608}
   - component: {fileID: 4785638675402120935}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: 'FRU Price Text '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13462,7 +13462,7 @@ GameObject:
   - component: {fileID: 3921658660835073434}
   - component: {fileID: 6105677635529306427}
   - component: {fileID: 55606782486403037}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: FRU Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13599,7 +13599,7 @@ GameObject:
   - component: {fileID: 3265809362229516631}
   - component: {fileID: 54722834661815789}
   - component: {fileID: 8002926796326201425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14492,7 +14492,7 @@ GameObject:
   - component: {fileID: 49786252294521826}
   - component: {fileID: 3819414234702120570}
   - component: {fileID: 2506368401857791712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15384,7 +15384,7 @@ GameObject:
   - component: {fileID: 360150883663719574}
   - component: {fileID: 7784830807734979076}
   - component: {fileID: 5409502875214961372}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fully Auto PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15504,7 +15504,7 @@ GameObject:
   - component: {fileID: 3859725179216163175}
   - component: {fileID: 7006835553961609073}
   - component: {fileID: 4012527433434351530}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUB UI Welcome Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15605,7 +15605,7 @@ GameObject:
   - component: {fileID: 8312968949527325599}
   - component: {fileID: 4508445422049729920}
   - component: {fileID: 7028191878275422651}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Health Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15739,7 +15739,7 @@ GameObject:
   - component: {fileID: 2586436068257031158}
   - component: {fileID: 730204247740398166}
   - component: {fileID: 361093208653899609}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: BB Purchase Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15876,7 +15876,7 @@ GameObject:
   - component: {fileID: 2717105109372589478}
   - component: {fileID: 5931387335902308228}
   - component: {fileID: 2326340112352248779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16766,7 +16766,7 @@ GameObject:
   - component: {fileID: 6232329355367448755}
   - component: {fileID: 3593216110137148627}
   - component: {fileID: 1071027128165985039}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fire Rate Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16903,7 +16903,7 @@ GameObject:
   - component: {fileID: 5647848216248978646}
   - component: {fileID: 8050832291984891982}
   - component: {fileID: 4117986060584752079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17793,7 +17793,7 @@ GameObject:
   - component: {fileID: 6089415017393331737}
   - component: {fileID: 7760212604259606723}
   - component: {fileID: 5884057662786460478}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Launcher Gun Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

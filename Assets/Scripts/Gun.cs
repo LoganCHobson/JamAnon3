@@ -25,11 +25,11 @@ public class Gun : MonoBehaviour
 
     GameObject gunHolder;
 
-    //AudioSource audio;
+    AudioSource audio;
 
     private void Start()
     {
-        //audio = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
         gunHolder = GetComponentInParent<WeaponSway>().gameObject;
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
         if (pausedGame == null)
@@ -73,7 +73,7 @@ public class Gun : MonoBehaviour
         nextFireTime = Time.time + fireRate;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
-        //audio.Play();
+        audio.Play();
         Destroy(bullet, 3f);
 
         //Invoke("Delay", .08f);

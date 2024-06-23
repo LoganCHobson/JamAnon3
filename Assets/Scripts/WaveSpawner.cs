@@ -13,6 +13,8 @@ public class WaveSpawner : MonoBehaviour
     private float nextSpawnTime; //Time to spawn next object
     private int currentWave = 0; //Current wave index
     private Vector3 spawnPos;
+    public List<GameObject> enemiesSpawned;
+
 
     public List<GameObject> lootToSpawn = new List<GameObject>();
     void Start()
@@ -60,8 +62,10 @@ public class WaveSpawner : MonoBehaviour
             float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
             spawnPos = new Vector3(randomX, 5f, randomZ);
 
-            Instantiate(objToSpawn, spawnPos, Quaternion.identity);
+            GameObject newEnemy = Instantiate(objToSpawn, spawnPos, Quaternion.identity);
             currentEnemyCount += 1;
+            enemiesSpawned.Add(newEnemy);
+
         }
     }
 
@@ -85,5 +89,11 @@ public class WaveSpawner : MonoBehaviour
     {
         currentWave = 0;
     }
+
+    public void ClearEnemies()
+    {
+        enemiesSpawned.Clear();
+    }
+
     
 }
