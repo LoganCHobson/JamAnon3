@@ -1,3 +1,4 @@
+using SolarStudios;
 using SuperPupSystems.Helper;
 using SuperPupSystems.Manager;
 using System.Collections;
@@ -7,7 +8,12 @@ public class pickup : MonoBehaviour
 {
     public int value;
     public float rotationSpeed = 25f;
+    private AudioSource audio;
 
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     void Update()
     {
         gameObject.transform.Rotate(0f, rotationSpeed * Time.deltaTime, 0f);
@@ -17,8 +23,9 @@ public class pickup : MonoBehaviour
     {
         if(other.transform.CompareTag("Player"))
         {
-                WalletManager.instance.AddCoin(value);
-            Destroy(gameObject);
+            audio.Play(); ;
+            WalletManager.instance.AddCoin(value);
+            gameObject.SetActive(false);
         }
     }
 }

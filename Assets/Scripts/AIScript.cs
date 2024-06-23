@@ -1,3 +1,4 @@
+using SuperPupSystems.Helper;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -22,6 +23,7 @@ public class AIScript : MonoBehaviour
     public Transform enemy;
 
     public AudioSource audio;
+    public AudioSource audio2;
 
     // Patroling
     public Vector3 walkPoint;
@@ -139,7 +141,14 @@ public class AIScript : MonoBehaviour
             }
             if (attackRange <= 5)
             {
+                if(Vector3.Distance(player.transform.position, gameObject.transform.position) <= attackRange)
+                {
+                    player.GetComponent<Health>().Damage(4);
+                    alreadyAttacked = true;
+                    Invoke(nameof(ResetAttack), timeBetweenAttacks);
+                    audio2.Play();
 
+                }
             }
         }
        

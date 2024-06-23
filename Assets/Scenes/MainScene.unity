@@ -3708,12 +3708,12 @@ PrefabInstance:
     - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: maxHealth
-      value: 99999999
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: currentHealth
-      value: 99999999
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
@@ -3789,6 +3789,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: sprintSpeed
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9052024219637176989, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}

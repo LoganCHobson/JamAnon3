@@ -7,7 +7,14 @@ public class FireRateUpgrade : MonoBehaviour
     public float increaseFireRate = -0.02f;
     public float rotationSpeed = 25f;
 
+    private AudioSource audio;
+
     // Update is called once per frame
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     void Update()
     {
         gameObject.transform.Rotate(0f,rotationSpeed * Time.deltaTime,0f);
@@ -20,10 +27,11 @@ public class FireRateUpgrade : MonoBehaviour
             Gun playersGun = other.GetComponentInChildren<Gun>();
             if(playersGun != null)
             {
+                audio.Play();
                 playersGun.fireRate -= increaseFireRate;
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

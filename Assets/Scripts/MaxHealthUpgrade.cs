@@ -23,7 +23,7 @@ public class MaxHealthUpgrade : MonoBehaviour
                 playerHealth.currentHealth = playerHealth.maxHealth;
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
