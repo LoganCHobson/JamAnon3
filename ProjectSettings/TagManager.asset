@@ -9,6 +9,7 @@ TagManager:
   - Doorway
   - Explosive
   - Enemy
+  - Gun
   layers:
   - Default
   - TransparentFX

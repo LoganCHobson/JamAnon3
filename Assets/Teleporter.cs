@@ -20,11 +20,14 @@ public class Teleporter : MonoBehaviour
 
         if(death && other.CompareTag("Player"))
         {
+            Debug.Log("Died");
             if(destination == null)
             {
                 destination = GameObject.Find("Destination").transform;
                 GameObject.Find("Teleporter").GetComponent<Teleporter>().onTeleport.Invoke();
                 other.gameObject.transform.position = destination.position;
+                GameObject.Find("GameManager").GetComponent<GameManager>().PlayerReset();
+
             }
         }
     }

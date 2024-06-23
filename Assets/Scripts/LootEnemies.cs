@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class LootEnemies : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public List<GameObject> loot = new List<GameObject>();
+    // Start is called before the first frame update
+   public void SpawnLoot()
     {
-        
+        int rand = Random.Range(0, loot.Count);
+
+        Instantiate(loot[rand]);
     }
 }
