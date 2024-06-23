@@ -28,9 +28,14 @@ public class DungeonSpawner : MonoBehaviour
             
             if (spawnedRoom == null)
             {
-                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position);
+                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
+                gameObject.SetActive(false);
             }
-            DisableSpawner(spawnedRoom);
+            else
+            {
+                DisableSpawner(spawnedRoom);
+            }
+            
 
             gameObject.SetActive(false);
         }
