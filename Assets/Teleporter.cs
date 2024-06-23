@@ -18,7 +18,7 @@ public class Teleporter : MonoBehaviour
             onTeleport.Invoke();
         }
 
-        if(death)
+        if(death && other.CompareTag("Player"))
         {
             if(destination == null)
             {

@@ -86812,6 +86812,14 @@ MonoBehaviour:
   totalWaves: 1
   wantedEnemyCount: 27
   currentEnemyCount: 0
+  lootToSpawn:
+  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
+  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
+  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
+  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
+  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
+  - {fileID: 1775392326538538140, guid: eda4c51ed54c29744af064a4fa3ea23e, type: 3}
+  - {fileID: 6294575206199383447, guid: 3e4b2d74ab1b9bc40abee06dcb2450f9, type: 3}
 --- !u!1 &4730536711593485257
 GameObject:
   m_ObjectHideFlags: 0
