@@ -128,7 +128,9 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 129
-  tags: []
+  tags:
+  - Player
+  - Enemy
 --- !u!1001 &973043343818338404
 PrefabInstance:
   m_ObjectHideFlags: 0
