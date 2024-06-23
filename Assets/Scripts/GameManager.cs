@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SolarStudios;
 using SuperPupSystems.Manager;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,6 +41,20 @@ public class GameManager : MonoBehaviour
             pool.GetComponent<ObjectPool>().RecycleAll();
         }
         Debug.Log("Cleared all rooms");
+    }
+
+    public void ClearAI()
+    {
+        WaveSpawner[] WS = FindObjectsOfType<WaveSpawner>();
+
+        foreach(WaveSpawner spawner in WS) 
+        {
+            foreach(GameObject obj in spawner.enemiesSpawned)
+            {
+                Destroy(obj);
+            }
+            spawner.enemiesSpawned.Clear();
+        }
     }
 
     public void PlayerReset()
