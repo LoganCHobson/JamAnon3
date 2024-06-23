@@ -14780,14 +14780,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ab43fbf1d545f4d83de9439c7a66da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 50
   speed: 20
   lifeTime: 10
   destroyDelay: 0.1
   destroyOnImpact: 1
   hitTarget:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2367087310436618480}
+        m_TargetAssemblyTypeName: Rocket, Assembly-CSharp
+        m_MethodName: OnBulletHitTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   mask:
     serializedVersion: 2
     m_Bits: 129

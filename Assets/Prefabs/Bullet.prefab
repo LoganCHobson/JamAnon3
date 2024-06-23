@@ -117,17 +117,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ab43fbf1d545f4d83de9439c7a66da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 10
   speed: 50
   lifeTime: 10
-  destroyDelay: 0.5
+  destroyDelay: 0.1
   destroyOnImpact: 1
   hitTarget:
     m_PersistentCalls:
       m_Calls: []
   mask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 193
   tags:
   - Player
   - Enemy

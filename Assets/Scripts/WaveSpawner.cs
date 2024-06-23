@@ -8,7 +8,7 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f; //Delay between waves
     public int totalWaves = 3; //Total number of waves
 
-    public int wantedEnemyCount;
+    public int wantedEnemyCount = 25;
     public int currentEnemyCount;
     private float nextSpawnTime; //Time to spawn next object
     private int currentWave = 0; //Current wave index

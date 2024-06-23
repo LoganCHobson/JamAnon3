@@ -2493,7 +2493,7 @@ MonoBehaviour:
   timeBetweenSpawns: 0.1
   timeBetweenWaves: 5
   totalWaves: 1
-  wantedEnemyCount: 27
+  wantedEnemyCount: 3
   currentEnemyCount: 0
   lootToSpawn: []
 --- !u!1 &2297413672071221652
