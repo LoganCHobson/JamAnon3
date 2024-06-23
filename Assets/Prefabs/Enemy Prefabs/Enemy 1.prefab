@@ -172,7 +172,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   surface: {fileID: 0}
-  health: 0
   agent: {fileID: -1592779909012002132}
   player: {fileID: 0}
   enemy: {fileID: 2287352085875495933}
@@ -223,7 +222,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
 --- !u!4 &2287352085875495933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 592df62ea8142fa4b831d32ae6ef4c4a,
