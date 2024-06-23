@@ -126,10 +126,17 @@ public class AIScript : MonoBehaviour
         transform.LookAt(player);
         if (!alreadyAttacked)
         {
-            GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
-            
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            if (attackRange > 5)
+            {
+                GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
+
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
+            if (attackRange <= 5)
+            {
+
+            }
         }
        
 

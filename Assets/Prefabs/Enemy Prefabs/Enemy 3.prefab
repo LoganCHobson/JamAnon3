@@ -99,6 +99,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c3f3a9742f9ad0478fda5b9d4767f88,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -156,7 +161,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 1613049692977391248}
   sightRange: 12
-  attackRange: 10
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &2810048151186914916
