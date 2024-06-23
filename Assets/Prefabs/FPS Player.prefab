@@ -778,7 +778,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 116, y: 0}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &1778180491266066372
@@ -2226,10 +2226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c07e958118a5cf45a2c27157ee0882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  didDie: 0
-  playerHealth: {fileID: 6527471693658540150}
-  deathSection: {fileID: 4390588300803125010}
-  reticle: {fileID: 181303750114633287}
 --- !u!1 &8010721646380255591
 GameObject:
   m_ObjectHideFlags: 0

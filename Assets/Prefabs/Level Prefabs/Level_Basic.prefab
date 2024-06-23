@@ -1303,6 +1303,7 @@ GameObject:
   - component: {fileID: 5604289796662077925}
   - component: {fileID: 1943506264042324907}
   - component: {fileID: 1745877111318460312}
+  - component: {fileID: 2580430273290263157}
   m_Layer: 0
   m_Name: Death Water
   m_TagString: AcidWater
@@ -1537,7 +1538,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5048
+  m_VersionIndex: 5051
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1642,6 +1643,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2580430273290263157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918308583152506378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14203e7c6a825946946e576d36240d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &2099663448683928043
 GameObject:
   m_ObjectHideFlags: 0
