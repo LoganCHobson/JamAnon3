@@ -38,13 +38,23 @@ public class WaveSpawner : MonoBehaviour
     void SpawnObject()
     {
         //Spawn the next object in the list
-        GameObject objToSpawn = objectsToSpawn[currentWave % objectsToSpawn.Count];
-        float randomX = Random.Range(transform.position.x, transform.position.x - 65);
-        float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
-        spawnPos = new Vector3(randomX, 5f, randomZ);
+        foreach (GameObject obj in objectsToSpawn)
+        {
+            GameObject objToSpawn = obj;
+            float randomX = Random.Range(transform.position.x, transform.position.x - 65);
+            float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
+            spawnPos = new Vector3(randomX, 5f, randomZ);
 
-        Instantiate(objToSpawn, spawnPos, Quaternion.identity);
-        currentEnemyCount += 1;
+            Instantiate(objToSpawn, spawnPos, Quaternion.identity);
+            currentEnemyCount += 1;
+        }
+       // GameObject objToSpawn = objectsToSpawn[currentWave % objectsToSpawn.Count];
+       // float randomX = Random.Range(transform.position.x, transform.position.x - 65);
+       // float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
+       // spawnPos = new Vector3(randomX, 5f, randomZ);
+
+        //Instantiate(objToSpawn, spawnPos, Quaternion.identity);
+        //currentEnemyCount += 1;
     }
 
     void SpawnWave()

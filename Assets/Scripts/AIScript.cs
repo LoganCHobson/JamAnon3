@@ -13,7 +13,7 @@ public class AIScript : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
     public NavMeshSurface surface;
 
-    public float health;
+ 
     public NavMeshAgent agent;
 
     private NavMeshPath path;
@@ -40,7 +40,7 @@ public class AIScript : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("FPS Player").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -126,10 +126,17 @@ public class AIScript : MonoBehaviour
         transform.LookAt(player);
         if (!alreadyAttacked)
         {
-            GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
-            
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            if (attackRange > 5)
+            {
+                GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
+
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
+            if (attackRange <= 5)
+            {
+
+            }
         }
        
 
@@ -141,18 +148,5 @@ public class AIScript : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage()
-    {
-       
-        if (health <= 0)
-        {
-            Invoke(nameof(DestroyEnemy), 0.5f);
-        }
-    }
 
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-        
-    }
 }
