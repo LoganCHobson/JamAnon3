@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Resetting player to prerun");
         player.GetComponentInChildren<Gun>().fireRate = preFireRate;
         player.GetComponent<Health>().maxHealth = preMaxHealth;
+        player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
         player.GetComponent<WalletManager>().coin = preMoney;
         //player.GetComponentInChildren<Bullet>().damage = bulletDamage;
         foreach (Transform child in player.transform)
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
         //bulletDamage = player.GetComponentInChildren<Bullet>().damage;
         preMaxHealth = player.GetComponent<Health>().maxHealth;
+        player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
         preMoney = player.GetComponent<WalletManager>().coin;
         foreach (Transform child in player.transform)
         {
@@ -87,19 +89,6 @@ public class GameManager : MonoBehaviour
             {
                 gunType = child.gameObject;
                 break;
-            }
-        }
-    }
-    public void SpawnerFix() //This script fixes weird bug.
-    {
-        DungeonSpawner[] allSpawners = FindObjectsOfType<DungeonSpawner>();
-
-        foreach (DungeonSpawner obj in allSpawners)
-        {
-            if (obj.transform.parent.gameObject.activeInHierarchy)
-            {
-                obj.gameObject.SetActive(true);
-
             }
         }
     }

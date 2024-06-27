@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5057519473388033948}
   - component: {fileID: 3754570129587741843}
   - component: {fileID: 3509727282558440172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,6 +278,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d11ea70ef4502b2449dd02bac957ec35,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: d11ea70ef4502b2449dd02bac957ec35,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

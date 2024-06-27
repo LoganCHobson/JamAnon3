@@ -127,7 +127,7 @@ MonoBehaviour:
       m_Calls: []
   mask:
     serializedVersion: 2
-    m_Bits: 193
+    m_Bits: 1217
   tags:
   - Player
   - Enemy

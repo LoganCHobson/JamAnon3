@@ -25,7 +25,7 @@ public class HealthPack : MonoBehaviour
             if (playerHealth != null)
             {
                 audio.Play();
-                playerHealth.Heal(15);
+                playerHealth.Heal(playerHealth.maxHealth/2);
             }
 
             gameObject.SetActive(false);
