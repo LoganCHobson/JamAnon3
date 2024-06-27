@@ -1,10 +1,8 @@
+using SolarStudios;
 using SuperPupSystems.Helper;
-using System.Collections;
+using SuperPupSystems.Manager;
 using System.Collections.Generic;
 using UnityEngine;
-using SolarStudios;
-using SuperPupSystems.Manager;
-using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,7 +23,7 @@ public class GameManager : MonoBehaviour
         preMoney = player.GetComponent<WalletManager>().coin;
         foreach (Transform child in player.transform)
         {
-            if(child.CompareTag("Gun"))
+            if (child.CompareTag("Gun"))
             {
                 gunType = child.gameObject;
                 break;
@@ -47,9 +45,9 @@ public class GameManager : MonoBehaviour
     {
         WaveSpawner[] WS = FindObjectsOfType<WaveSpawner>();
 
-        foreach(WaveSpawner spawner in WS) 
+        foreach (WaveSpawner spawner in WS)
         {
-            foreach(GameObject obj in spawner.enemiesSpawned)
+            foreach (GameObject obj in spawner.enemiesSpawned)
             {
                 Destroy(obj);
             }
@@ -89,6 +87,19 @@ public class GameManager : MonoBehaviour
             {
                 gunType = child.gameObject;
                 break;
+            }
+        }
+    }
+    public void SpawnerFix() //This script fixes weird bug.
+    {
+        DungeonSpawner[] allSpawners = FindObjectsOfType<DungeonSpawner>();
+
+        foreach (DungeonSpawner obj in allSpawners)
+        {
+            if (obj.transform.parent.gameObject.activeInHierarchy)
+            {
+                obj.gameObject.SetActive(true);
+
             }
         }
     }

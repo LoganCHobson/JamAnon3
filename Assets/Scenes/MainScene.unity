@@ -3615,6 +3615,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2686912666370099451, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: coin
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3037584161490349531, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_Layer
@@ -3713,7 +3718,7 @@ PrefabInstance:
     - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: currentHealth
-      value: 100
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
@@ -5066,6 +5071,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1705160700}
+    - target: {fileID: 1446437177391877895, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1605159638499825004, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh
@@ -5089,11 +5099,16 @@ PrefabInstance:
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
@@ -5113,8 +5128,23 @@ PrefabInstance:
       objectReference: {fileID: 2074217268}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_Target
+      value: 
+      objectReference: {fileID: 2074217268}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SpawnerFix
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
@@ -5123,7 +5153,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
+      value: ClearRooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
@@ -5133,7 +5173,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3291273111239163600, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
@@ -5191,6 +5241,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1720712195}
+    - target: {fileID: 5607374224370529356, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5642776776777086356, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh
@@ -5206,6 +5261,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 461916}
+    - target: {fileID: 5915112784571423764, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6024501674097444661, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh
@@ -5271,6 +5331,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1616082676}
+    - target: {fileID: 7410265871149158404, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7410324193275971770, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh
@@ -5609,7 +5674,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

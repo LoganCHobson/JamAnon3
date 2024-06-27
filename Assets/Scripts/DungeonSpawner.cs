@@ -44,6 +44,7 @@ public class DungeonSpawner : MonoBehaviour
 
     private void DisableSpawner(GameObject room)
     {
+
         Transform player = GameObject.Find("Player").transform;
         DungeonSpawner closestSpawner = null;
         float closestDistance = Mathf.Infinity;
