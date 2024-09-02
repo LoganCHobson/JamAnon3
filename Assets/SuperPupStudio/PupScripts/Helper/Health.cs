@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -127,6 +128,11 @@ namespace SuperPupSystems.Helper
         public void DestroyGameObject()
         {
             Destroy(gameObject);
+        }
+
+        internal void Damage(object meleeDamage)
+        {
+            throw new NotImplementedException();
         }
     }
 

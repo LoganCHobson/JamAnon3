@@ -14,8 +14,14 @@ public class GameManager : MonoBehaviour
     private int preMaxHealth;
     private int bulletDamage;
     private GameObject gunType;
+
+    private RunCounter runCounter;
+    public int run;
+
     private void Start()
     {
+        runCounter = player.GetComponentInChildren<RunCounter>();
+
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
         //bulletDamage = player.GetComponentInChildren<Bullet>().damage;
@@ -77,6 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayerData()
     {
+        run = runCounter.runCounter;
         Debug.Log("Saving player data!");
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;

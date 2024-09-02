@@ -36,11 +36,18 @@ public class AIScript : MonoBehaviour
     public GameObject projectile;
     public Transform firePoint;
 
+    //Utils
+    private GameManager gameManager;
+    private Health healthScript;
     // States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    
+    //Values
+    public int bulletDamage = 10;
+    public int meleeDamage = 4;
 
-
+    private int lastRun = 0;
 
     private void Awake()
     {
@@ -51,7 +58,14 @@ public class AIScript : MonoBehaviour
 
     private void Start()
     {
-   
+       
+        healthScript = GetComponent<Health>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        //Linerally scaling enemies per run.
+        healthScript.maxHealth = Mathf.Min(healthScript.maxHealth + (10 * gameManager.run), 500);
+        bulletDamage = Mathf.Min(bulletDamage + (10 * gameManager.run), 50);
+        meleeDamage = Mathf.Min(meleeDamage + (10 * gameManager.run), 50);
     }
 
     void Update()
@@ -134,6 +148,7 @@ public class AIScript : MonoBehaviour
             if (attackRange > 5)
             {
                 GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
+                bullet.GetComponent<Bullet>().damage = bulletDamage;
 
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -143,7 +158,7 @@ public class AIScript : MonoBehaviour
             {
                 if(Vector3.Distance(player.transform.position, gameObject.transform.position) <= attackRange)
                 {
-                    player.GetComponent<Health>().Damage(4);
+                    player.GetComponent<Health>().Damage(meleeDamage);
                     alreadyAttacked = true;
                     Invoke(nameof(ResetAttack), timeBetweenAttacks);
                     audio2.Play();

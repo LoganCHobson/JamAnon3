@@ -10,24 +10,12 @@ public class RunCounter : MonoBehaviour
     public void AddToRun()
     {
         runCounter++;
+        runText.text = "run: " + runCounter.ToString();
     }
 
     void Start()
     {
-        if (runText == null)
-        {
-            Debug.LogError("GameObject " + name + " field text in count down timer null!!!!");
-        }
+        runText.text = "run: " + runCounter.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(runCounter <= 0)
-        {
-            runCounter = 0;
-        }
-        
-        runText.text = "run: " + Mathf.Ceil(runCounter);
-    }
 }
