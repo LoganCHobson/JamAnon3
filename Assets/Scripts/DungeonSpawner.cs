@@ -98,4 +98,13 @@ public class DungeonSpawner : MonoBehaviour
             }
         }
     }
+
+    private void OnEnable()
+    {
+        Transform grandParent = transform.parent.parent;
+        foreach(Transform obj in grandParent)
+        {
+            obj.gameObject.SetActive(true);
+        }
+    }
 }

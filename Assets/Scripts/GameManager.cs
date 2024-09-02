@@ -32,10 +32,11 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void ClearRooms()
+     public void ClearRooms()
     {
         foreach (GameObject pool in roomPool)
         {
+            fixRooms(pool);
             pool.GetComponent<ObjectPool>().RecycleAll();
         }
         Debug.Log("Cleared all rooms");
@@ -90,6 +91,14 @@ public class GameManager : MonoBehaviour
                 gunType = child.gameObject;
                 break;
             }
+        }
+    }
+
+    void fixRooms(GameObject pool)
+    {
+        foreach (Transform child in pool.transform)
+        {
+            child.gameObject.SetActive(true);
         }
     }
 }
