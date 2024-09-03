@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using SuperPupSystems.Helper;
 using System.Collections;
 using System.Collections.Generic;
@@ -48,6 +49,9 @@ public class AIScript : MonoBehaviour
     public int meleeDamage = 4;
 
     private int lastRun = 0;
+
+    public Vector3 kbDirection;
+    public int kbStrength = 5;
 
     private void Awake()
     {
@@ -159,6 +163,11 @@ public class AIScript : MonoBehaviour
                 if(Vector3.Distance(player.transform.position, gameObject.transform.position) <= attackRange)
                 {
                     player.GetComponent<Health>().Damage(meleeDamage);
+
+                    kbDirection =  (player.transform.position - gameObject.transform.position).normalized;
+
+                    player.GetComponent<Rigidbody>().AddForce(kbDirection * kbStrength);
+
                     alreadyAttacked = true;
                     Invoke(nameof(ResetAttack), timeBetweenAttacks);
                     audio2.Play();
