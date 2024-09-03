@@ -5099,7 +5099,7 @@ PrefabInstance:
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
@@ -5120,7 +5120,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 1188091340}
+      objectReference: {fileID: 2074217268}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[6].m_Target
@@ -5148,6 +5148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: ClearAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
       value: ClearAI
       objectReference: {fileID: 0}
@@ -5155,6 +5160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
       value: ClearRooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
@@ -6002,6 +6012,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1188091340}
+        m_TargetAssemblyTypeName: RunCounter, Assembly-CSharp
+        m_MethodName: AddToRun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   death: 0
 --- !u!54 &2069593233
 Rigidbody:
@@ -6067,6 +6089,7 @@ MonoBehaviour:
   - {fileID: 310553070}
   - {fileID: 1826327978}
   player: {fileID: 1685162125}
+  run: 0
 --- !u!4 &2074217269
 Transform:
   m_ObjectHideFlags: 0
