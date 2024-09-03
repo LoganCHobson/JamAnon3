@@ -268,11 +268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 3431427891545682696}
-  sphereRadius: 100
-  sphereDistance: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!54 &6159707061086565328
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -786,11 +781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 8984632568099275085}
-  sphereRadius: 100
-  sphereDistance: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!54 &5676270671253220861
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3832,9 +3822,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3566617669944663168}
-  - component: {fileID: 7123815228850978666}
+  - component: {fileID: 6737806942718810514}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Enemy Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3855,7 +3845,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4744755293536703047}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7123815228850978666
+--- !u!114 &6737806942718810514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3867,24 +3857,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd681bc47923964ab92298a5f89c33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToSpawn:
-  - {fileID: 1510287208851687751, guid: 3ec9348e86ba0894592dca6acf334adb, type: 3}
-  - {fileID: 8152157234169448432, guid: ac3cd110888e67f4ea92bee85ee2fc9f, type: 3}
-  - {fileID: 7287638629638906651, guid: 36c4bc523f1d88a478cf799b6f17eec7, type: 3}
-  timeBetweenSpawns: 0.1
+  objectsToSpawn: []
+  timeBetweenSpawns: 1
   timeBetweenWaves: 5
-  totalWaves: 1
-  wantedEnemyCount: 3
+  totalWaves: 3
+  wantedEnemyCount: 25
   currentEnemyCount: 0
   enemiesSpawned: []
-  lootToSpawn:
-  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
-  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
-  - {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687, type: 3}
-  - {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020, type: 3}
-  - {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020, type: 3}
-  - {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020, type: 3}
-  - {fileID: 6294575206199383447, guid: 3e4b2d74ab1b9bc40abee06dcb2450f9, type: 3}
+  lootToSpawn: []
 --- !u!1 &3718101220433171786
 GameObject:
   m_ObjectHideFlags: 0
@@ -50202,11 +50182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 2217971911915001316}
-  sphereRadius: 100
-  sphereDistance: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!54 &5879474071296893072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52103,11 +52078,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 8831205533288980964}
-  sphereRadius: 100
-  sphereDistance: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!54 &6433538244981675591
 Rigidbody:
   m_ObjectHideFlags: 0

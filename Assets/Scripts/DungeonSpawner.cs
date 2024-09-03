@@ -102,9 +102,22 @@ public class DungeonSpawner : MonoBehaviour
     private void OnEnable()
     {
         Transform grandParent = transform.parent.parent;
-        foreach(Transform obj in grandParent)
+       /* foreach(Transform obj in grandParent)
         {
             obj.gameObject.SetActive(true);
+        }*/
+        EnableAllChildren(grandParent);
+    }
+
+    void EnableAllChildren(Transform parent)
+    {
+        foreach (Transform child in parent)
+        {
+            child.gameObject.SetActive(true);
+            //Debug.Log("Enabled: " + child);
+
+
+            EnableAllChildren(child);
         }
     }
 }

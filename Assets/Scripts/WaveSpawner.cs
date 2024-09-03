@@ -1,99 +1,55 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public List<GameObject> objectsToSpawn; //List of game objects to spawn
-    public float timeBetweenSpawns = 1f; //Delay between spawns
-    public float timeBetweenWaves = 5f; //Delay between waves
-    public int totalWaves = 3; //Total number of waves
+    [Header("Spawner Settings")]
+    public List<GameObject> enemiesToSpawn; 
+    public float timeBetweenSpawns = 1.0f; //Time between individual enemy spawns
+    public float timeBetweenWaves = 5.0f;  //Time between waves
+    public int numberOfWaves = 5;          // Number of waves
 
-    public int wantedEnemyCount = 25;
-    public int currentEnemyCount;
-    private float nextSpawnTime; //Time to spawn next object
-    private int currentWave = 0; //Current wave index
-    private Vector3 spawnPos;
-    public List<GameObject> enemiesSpawned;
+    [Header("Spawn Points")]
+    public Transform[] spawnPoints;        // Array of spawn points
 
+    private int currentWave = 0;
 
-    public List<GameObject> lootToSpawn = new List<GameObject>();
     void Start()
     {
-        //Start spawning waves
-        SpawnWave();
-
-        //SpawnLoot();
+        StartCoroutine(SpawnWaves());
     }
 
-    void Update()
+    IEnumerator SpawnWaves()
     {
-        //Check if it's time to spawn the next object
-        if (currentEnemyCount <= wantedEnemyCount)
+        while (currentWave < numberOfWaves)
         {
-            if (Time.time >= nextSpawnTime)
+            currentWave++;
+            for (int i = 0; i < enemiesToSpawn.Count; i++)
             {
-                SpawnObject();
-                nextSpawnTime = Time.time + timeBetweenSpawns;
+                Vector3 spawnPosition = GetRandomNavMeshPosition();
+                if (spawnPosition != Vector3.zero)
+                {
+                    Instantiate(enemiesToSpawn[i], spawnPosition, Quaternion.identity);
+                }
+                yield return new WaitForSeconds(timeBetweenSpawns);
             }
+            yield return new WaitForSeconds(timeBetweenWaves);
         }
-
-        
     }
 
-    private void SpawnLoot()
+    Vector3 GetRandomNavMeshPosition()
     {
-        foreach(GameObject obj in lootToSpawn)
+        if (spawnPoints.Length == 0) return Vector3.zero;
+
+        Transform randomPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomPoint.position, out hit, 2.0f, NavMesh.AllAreas))
         {
-            float randomX = Random.Range(transform.position.x, transform.position.x - 65);
-            float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
-            spawnPos = new Vector3(randomX, 20f, randomZ);
-            Instantiate(obj, spawnPos, Quaternion.identity);
-        }
-         
-    }
-
-    void SpawnObject()
-    {
-        //Spawn the next object in the list
-        foreach (GameObject obj in objectsToSpawn)
-        {
-            GameObject objToSpawn = obj;
-            float randomX = Random.Range(transform.position.x, transform.position.x - 65);
-            float randomZ = Random.Range(transform.position.z, transform.position.z + 65);
-            spawnPos = new Vector3(randomX, 5f, randomZ);
-
-            GameObject newEnemy = Instantiate(objToSpawn, spawnPos, Quaternion.identity);
-            currentEnemyCount += 1;
-            enemiesSpawned.Add(newEnemy);
-
-        }
-    }
-
-    void SpawnWave()
-    {
-        //Check if we've completed all waves
-        if (currentWave >= totalWaves)
-        {
-            Debug.Log("Winning!");
-            return;
+            return hit.position;
         }
 
-        //Increment the current wave index
-        currentWave++;
-
-        //Send the next wave
-        Invoke("SpawnWave", timeBetweenWaves);
+        return Vector3.zero;
     }
-
-    void SpawnerReset()
-    {
-        currentWave = 0;
-    }
-
-    public void ClearEnemies()
-    {
-        enemiesSpawned.Clear();
-    }
-
-    
 }
