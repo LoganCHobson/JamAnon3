@@ -71,6 +71,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 937983290670805690}
+  sphereRadius: 100
+  sphereDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!54 &5294142164223018662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1221,6 +1226,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 1280153827144497434}
+  sphereRadius: 100
+  sphereDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!54 &5846120952246223271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2868,6 +2878,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 4549145623078599002}
+  sphereRadius: 100
+  sphereDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!54 &4662264153775134910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -72948,6 +72963,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 4929034968896277585}
+  sphereRadius: 100
+  sphereDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!54 &5902084512429306465
 Rigidbody:
   m_ObjectHideFlags: 0

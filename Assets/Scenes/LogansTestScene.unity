@@ -4991,6 +4991,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 273371338409775027, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: sphereRadius
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 429329428675370524, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh
@@ -5086,11 +5091,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1974137911}
+    - target: {fileID: 1807902798827573621, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: sphereRadius
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1906257076569185159, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 108508767}
+    - target: {fileID: 1906796343873528427, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: sphereRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744441495204200305, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: sphereRadius
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: destination
@@ -6067,6 +6087,7 @@ MonoBehaviour:
   - {fileID: 1179093050}
   - {fileID: 1704671392}
   player: {fileID: 1685162125}
+  run: 0
 --- !u!4 &2074217269
 Transform:
   m_ObjectHideFlags: 0
