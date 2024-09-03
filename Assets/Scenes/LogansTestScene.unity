@@ -1869,6 +1869,43 @@ MonoBehaviour:
   prefab: {fileID: 2484681212737897393, guid: a2e99d88517dd154ea83bbf80a6ef329, type: 3}
   poolSize: 3
   objectPool: []
+--- !u!1 &870440705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3691713051432882303, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750851947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &870440707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870440705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 2039
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &880616873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +4340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hub Room 2.0
       objectReference: {fileID: 0}
+    - target: {fileID: 2468052086727441861, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2506368401857791712, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -4486,7 +4528,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3691713051432882303, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 870440707}
   m_SourcePrefab: {fileID: 100100000, guid: 496d1888da7bf0c4cbb9ddf897b33281, type: 3}
 --- !u!43 &1898616260
 Mesh:
