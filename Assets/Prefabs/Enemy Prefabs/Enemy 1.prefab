@@ -210,9 +210,13 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 6852440990893184467}
   sightRange: 12
-  attackRange: 10
+  attackRange: 4.5
   playerInSightRange: 0
   playerInAttackRange: 0
+  bulletDamage: 10
+  meleeDamage: 4
+  kbDirection: {x: 0, y: 0, z: 0}
+  kbStrength: 5
 --- !u!114 &-8605449236057524035
 MonoBehaviour:
   m_ObjectHideFlags: 0

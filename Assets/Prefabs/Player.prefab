@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9019419293793889239}
   - component: {fileID: 3221119065282824246}
   - component: {fileID: 7437317681979067172}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Reticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,9 +86,9 @@ GameObject:
   - component: {fileID: 4625036171381153541}
   - component: {fileID: 3847454039133613981}
   - component: {fileID: 8167541666704386526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BaseGun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 4682893355494606417}
   - component: {fileID: 7970082335013655642}
   - component: {fileID: 3356473244452025516}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Quit Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,7 +959,7 @@ GameObject:
   - component: {fileID: 7771322656148967361}
   m_Layer: 6
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 7234771140701213455}
   - component: {fileID: 2841985104706394288}
   - component: {fileID: 8273693402833748782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 3543567483411137505}
   - component: {fileID: 8277838290482360785}
   - component: {fileID: 7465677415086733972}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Retry Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1537,7 +1537,7 @@ GameObject:
   - component: {fileID: 1778180491266066372}
   - component: {fileID: 4667173117824995042}
   - component: {fileID: 6239472128302190716}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Money Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1801,7 +1801,8 @@ GameObject:
   - component: {fileID: 898751877428335898}
   - component: {fileID: 7471362565328805661}
   - component: {fileID: 3301585959919010673}
-  m_Layer: 0
+  - component: {fileID: 2104211953307943214}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1866,10 +1867,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6185032626171186584}
-  speed: 6
-  sprintSpeed: 10
+  speed: 7
+  sprintSpeed: 12
   gravity: -9.81
-  jumpHeight: 1.5
+  jumpHeight: 2.5
   groundCheck: {fileID: 2158885717722867542}
   groundDistance: 0.4
   groundMask:
@@ -1925,9 +1926,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7471362565328805661}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayerReset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1938,7 +1939,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 9999999
 --- !u!114 &2686912666370099451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,6 +2178,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &2104211953307943214
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410045159539016713}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 5
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &3627906446214118933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,9 +2216,9 @@ GameObject:
   - component: {fileID: 270018885134070567}
   - component: {fileID: 2769807902876423889}
   - component: {fileID: 1783876742422315949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BiggerBulletGun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2449,7 +2477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2144219495471495110}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Death Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2620,7 +2648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4884785596643748538}
   - component: {fileID: 8543829344565104852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2158885717722867542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2809,9 +2837,9 @@ GameObject:
   - component: {fileID: 5220319632821339012}
   - component: {fileID: 2509508960216147625}
   - component: {fileID: 1996413289612292199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LauncherGun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3099,7 +3127,7 @@ GameObject:
   - component: {fileID: 3308400588911304857}
   - component: {fileID: 4198072593602119982}
   - component: {fileID: 8149606585808345616}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Main Menu Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3651,7 +3679,7 @@ GameObject:
   - component: {fileID: 199888287093265083}
   - component: {fileID: 4665131415621290153}
   - component: {fileID: 666592363947171040}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3784,7 +3812,7 @@ GameObject:
   - component: {fileID: 1390702243971075783}
   - component: {fileID: 7218014090769467553}
   - component: {fileID: 6705621962573299957}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Retry Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4051,7 +4079,7 @@ GameObject:
   - component: {fileID: 3381684141222954904}
   - component: {fileID: 5568542067282304342}
   - component: {fileID: 7107178718289692904}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4156,7 +4184,7 @@ GameObject:
   - component: {fileID: 8855628742379847406}
   - component: {fileID: 5672351244806053798}
   - component: {fileID: 991013284127714124}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: DeathPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4240,7 +4268,7 @@ GameObject:
   - component: {fileID: 2605891131903273318}
   - component: {fileID: 4437526447645206487}
   - component: {fileID: 8290330577173527857}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4406,7 +4434,7 @@ GameObject:
   - component: {fileID: 5325071034626148238}
   - component: {fileID: 482037002802975453}
   - component: {fileID: 6532872028479726035}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +4849,7 @@ GameObject:
   - component: {fileID: 4357610332803201470}
   - component: {fileID: 5118231829978526084}
   - component: {fileID: 2397104397493483424}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Death Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5086,7 +5114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6917426436593805678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5119,9 +5147,9 @@ GameObject:
   - component: {fileID: 1490641630586052969}
   - component: {fileID: 5324943057547601132}
   - component: {fileID: 6974701202111049328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FullyAutoGun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

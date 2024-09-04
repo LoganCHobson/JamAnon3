@@ -42,17 +42,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3c3f3a9742f9ad0478fda5b9d4767f88,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.89
+      value: -34.628815
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3f3a9742f9ad0478fda5b9d4767f88,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3f3a9742f9ad0478fda5b9d4767f88,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 27.57105
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c3f3a9742f9ad0478fda5b9d4767f88,
         type: 3}
@@ -192,9 +192,13 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 1613049692977391248}
   sightRange: 12
-  attackRange: 1
+  attackRange: 3
   playerInSightRange: 0
   playerInAttackRange: 0
+  bulletDamage: 10
+  meleeDamage: 4
+  kbDirection: {x: 0, y: 0, z: 0}
+  kbStrength: 5000
 --- !u!195 &2810048151186914916
 NavMeshAgent:
   m_ObjectHideFlags: 0

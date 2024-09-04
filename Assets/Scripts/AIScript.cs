@@ -165,7 +165,9 @@ public class AIScript : MonoBehaviour
                     player.GetComponent<Health>().Damage(meleeDamage);
 
                     kbDirection =  (player.transform.position - gameObject.transform.position).normalized;
+                    kbDirection = new Vector3(kbDirection.x, 0, kbDirection.z);
 
+                    //player.GetComponent<Rigidbody>().AddForce(30,0,30);
                     player.GetComponent<Rigidbody>().AddForce(kbDirection * kbStrength);
 
                     alreadyAttacked = true;
