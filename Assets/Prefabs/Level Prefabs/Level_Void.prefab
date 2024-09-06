@@ -3091,6 +3091,7 @@ GameObject:
   - component: {fileID: 1065273929740197606}
   - component: {fileID: 2865703411019329146}
   - component: {fileID: 1606926835005073322}
+  - component: {fileID: 6532117959149934365}
   m_Layer: 7
   m_Name: Level_Void
   m_TagString: Untagged
@@ -26698,6 +26699,18 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 36cc8d613acb9e943af3aca018bd6781, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &6532117959149934365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484681212737897393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798cfee2c02133a48a750dc3b41a8b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2581448708410313662
 GameObject:
   m_ObjectHideFlags: 0

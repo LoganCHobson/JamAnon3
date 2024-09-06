@@ -10060,6 +10060,7 @@ GameObject:
   - component: {fileID: 4157115204804507848}
   - component: {fileID: 3196774092151103718}
   - component: {fileID: 1020214911548964775}
+  - component: {fileID: 4660113369087598791}
   m_Layer: 7
   m_Name: Level_Fort
   m_TagString: Untagged
@@ -48757,6 +48758,18 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 0d581921a2a9b7142b45ba83189f649d, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &4660113369087598791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7698292289713538146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798cfee2c02133a48a750dc3b41a8b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7753330916874702615
 GameObject:
   m_ObjectHideFlags: 0

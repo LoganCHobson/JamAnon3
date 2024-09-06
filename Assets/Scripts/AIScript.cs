@@ -67,9 +67,9 @@ public class AIScript : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         //Linerally scaling enemies per run.
-        healthScript.maxHealth = Mathf.Min(healthScript.maxHealth + (10 * gameManager.run), 500);
-        bulletDamage = Mathf.Min(bulletDamage + (10 * gameManager.run), 50);
-        meleeDamage = Mathf.Min(meleeDamage + (10 * gameManager.run), 50);
+        healthScript.maxHealth = Mathf.Min(healthScript.maxHealth + (10 * gameManager.preRunCount), 500);
+        bulletDamage = Mathf.Min(bulletDamage + (10 * gameManager.preRunCount), 50);
+        meleeDamage = Mathf.Min(meleeDamage + (10 * gameManager.preRunCount), 50);
     }
 
     void Update()

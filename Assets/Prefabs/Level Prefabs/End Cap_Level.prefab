@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6507235740488278369}
   - component: {fileID: 1567725429282877858}
   - component: {fileID: 7918757817350700083}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1920024593131382089}
   - component: {fileID: 1603243621497737476}
   - component: {fileID: 7150761318313774283}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,9 +250,9 @@ GameObject:
   - component: {fileID: 6239677833128421485}
   - component: {fileID: 4540677477470196191}
   - component: {fileID: 6632155250174185763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: End Cap_Level
-  m_TagString: Untagged
+  m_TagString: Endcap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6609,7 +6609,7 @@ GameObject:
   - component: {fileID: 4913112814578116280}
   - component: {fileID: 5812288223561400478}
   - component: {fileID: 152289836866113745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: End Cap 2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

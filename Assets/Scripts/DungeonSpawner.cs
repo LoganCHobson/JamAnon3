@@ -9,12 +9,13 @@ public class DungeonSpawner : MonoBehaviour
 
     public Transform endcapSpawnPoint;
 
+
     private void Start()
     {
         objectPoolMaster = GameObject.Find("ObjectPoolMaster");
 
         spawnPoint = transform.GetChild(0);
-        CheckSpawnerDistance();
+
     }
 
 
@@ -22,102 +23,47 @@ public class DungeonSpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            int rand = Random.Range(0, 5);
-
-            GameObject spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
-            
-            if (spawnedRoom == null)
+            // Check if all object pools are empty
+            if (AreAllPoolsEmpty())
             {
-                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
+                int rand;
+                GameObject spawnedRoom = null;
+
+                // Keep trying to spawn a room until it's not null
+                do
+                {
+                    rand = Random.Range(0, 5);
+                    spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
+                } while (spawnedRoom == null);
+
+                spawnedRoom.GetComponent<Reseter>().OnEnableAll();
+                // If the room is spawned, disable this game object
                 gameObject.SetActive(false);
             }
             else
             {
-                DisableSpawner(spawnedRoom);
+                // Spawn endcap if all pools are empty
+                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
+                gameObject.SetActive(false);
             }
-            
-
-            gameObject.SetActive(false);
         }
     }
 
-
-    private void DisableSpawner(GameObject room)
+    // Method to check if all object pools are empty
+    private bool AreAllPoolsEmpty()
     {
-
-        Transform player = GameObject.Find("Player").transform;
-        DungeonSpawner closestSpawner = null;
-        float closestDistance = Mathf.Infinity;
-
-        DungeonSpawner[] spawners = room.GetComponentsInChildren<DungeonSpawner>();
-
-        foreach (var spawner in spawners)
+        for (int i = 0; i < 5; i++)
         {
-            float distance = Vector3.Distance(spawner.transform.position, player.position); 
+            ObjectPool pool = objectPoolMaster.transform.GetChild(i).GetComponent<ObjectPool>();
 
-            if (distance < closestDistance)
+            // Assuming ObjectPool has a method to check if it's empty, e.g., IsEmpty()
+            if (!pool.IsEmpty())
             {
-                closestDistance = distance;
-                closestSpawner = spawner;
+                return true;  // If any pool is not empty, return false
             }
         }
 
-      
-        if (closestSpawner != null)
-        {
-            closestSpawner.gameObject.SetActive(false);
-        }
+        return false;  // All pools are empty
     }
 
-    private void CheckSpawnerDistance()
-    {
-        DungeonSpawner[] allSpawners = FindObjectsOfType<DungeonSpawner>(); // Find all DungeonSpawner instances
-
-        foreach (var spawner in allSpawners)
-        {
-            if (spawner != this) // Skip checking against itself
-            {
-                float distance = Vector3.Distance(spawner.transform.position, transform.position);
-
-                if (distance < minDistanceBetweenSpawners)
-                {
-                    // Determine which spawner is closer to the player and disable both
-                    Transform player = GameObject.Find("Player").transform;
-                    float distanceToThis = Vector3.Distance(transform.position, player.position);
-                    float distanceToOther = Vector3.Distance(spawner.transform.position, player.position);
-
-                    if (distanceToThis <= distanceToOther)
-                    {
-                        gameObject.SetActive(false); // Disable this spawner
-                    }
-                    else
-                    {
-                        spawner.gameObject.SetActive(false); // Disable the other spawner
-                    }
-                }
-            }
-        }
-    }
-
-    private void OnEnable()
-    {
-        Transform grandParent = transform.parent.parent;
-       /* foreach(Transform obj in grandParent)
-        {
-            obj.gameObject.SetActive(true);
-        }*/
-        EnableAllChildren(grandParent);
-    }
-
-    void EnableAllChildren(Transform parent)
-    {
-        foreach (Transform child in parent)
-        {
-            child.gameObject.SetActive(true);
-            //Debug.Log("Enabled: " + child);
-
-
-            EnableAllChildren(child);
-        }
-    }
 }

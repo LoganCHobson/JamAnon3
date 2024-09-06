@@ -1483,6 +1483,7 @@ GameObject:
   - component: {fileID: 3041539865479572063}
   - component: {fileID: 3530999282877323665}
   - component: {fileID: 5913984130860039426}
+  - component: {fileID: 7152573834830157312}
   m_Layer: 7
   m_Name: Level_Towers
   m_TagString: Untagged
@@ -82800,6 +82801,18 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 58e9494da8f855e46a42e0ae88ca2780, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &7152573834830157312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808007922045528089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798cfee2c02133a48a750dc3b41a8b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &844052518220082880
 GameObject:
   m_ObjectHideFlags: 0

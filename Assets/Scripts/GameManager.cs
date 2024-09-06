@@ -13,10 +13,14 @@ public class GameManager : MonoBehaviour
     private float preFireRate;
     private int preMaxHealth;
     private int bulletDamage;
+    [HideInInspector]
+    public int preRunCount;
     private GameObject gunType;
 
     private RunCounter runCounter;
-    public int run;
+  
+
+    public Transform spawn;
 
     private void Start()
     {
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
     public void PlayerReset()
     {
         Debug.Log("Resetting player to prerun");
+        runCounter.runCounter = preRunCount;
         player.GetComponentInChildren<Gun>().fireRate = preFireRate;
         player.GetComponent<Health>().maxHealth = preMaxHealth;
         player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
@@ -79,11 +84,15 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+        player.transform.position = spawn.position;
+
+        ClearRooms();
+        ClearAI();
     }
 
     public void SavePlayerData()
     {
-        run = runCounter.runCounter;
+        preRunCount = runCounter.runCounter;
         Debug.Log("Saving player data!");
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;

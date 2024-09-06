@@ -10,6 +10,7 @@ TagManager:
   - Explosive
   - Enemy
   - Gun
+  - Endcap
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Spawner
   - Enemy
   - NavIgnore
-  - 
+  - Endcap
   - 
   - 
   - 
