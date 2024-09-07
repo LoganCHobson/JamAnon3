@@ -34507,11 +34507,11 @@ GameObject:
   - component: {fileID: 1619618448441980883}
   m_Layer: 9
   m_Name: Spawner (4)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3504578652748291743
 Transform:
   m_ObjectHideFlags: 0
@@ -34548,8 +34548,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 3.3478644, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.66423965, z: 2.0003896}
 --- !u!114 &3332778775932732818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34562,8 +34562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 1316776343421557032}
+  parent: {fileID: 2484681212737897393}
 --- !u!54 &1619618448441980883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35017,11 +35019,11 @@ GameObject:
   - component: {fileID: 1872813947794281198}
   m_Layer: 9
   m_Name: Spawner (5)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8780688681028488479
 Transform:
   m_ObjectHideFlags: 0
@@ -35058,8 +35060,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 3.416954, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.6987841, z: 2.0003896}
 --- !u!114 &3380385144632638806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35072,8 +35074,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 6041897124852432741}
+  parent: {fileID: 2484681212737897393}
 --- !u!54 &1872813947794281198
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35115,11 +35119,11 @@ GameObject:
   - component: {fileID: 6717051320622602897}
   m_Layer: 9
   m_Name: Spawner (3)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4014142371384916988
 Transform:
   m_ObjectHideFlags: 0
@@ -35156,8 +35160,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.8821483, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.4910539, z: 2.0003896}
 --- !u!114 &4876975737848962570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35170,8 +35174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 2776499965575129430}
+  parent: {fileID: 2484681212737897393}
 --- !u!54 &6717051320622602897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35965,11 +35971,11 @@ GameObject:
   - component: {fileID: 4356266067398704535}
   m_Layer: 9
   m_Name: Spawner (6)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9009389071739233935
 Transform:
   m_ObjectHideFlags: 0
@@ -36006,8 +36012,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 3.2678404, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.6838996, z: 2.0003896}
 --- !u!114 &1407569497079682527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36020,8 +36026,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 7745679363726501027}
+  parent: {fileID: 2484681212737897393}
 --- !u!54 &4356266067398704535
 Rigidbody:
   m_ObjectHideFlags: 0

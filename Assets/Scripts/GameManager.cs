@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public Transform spawn;
 
+
     private void Start()
     {
         runCounter = player.GetComponentInChildren<RunCounter>();
@@ -112,9 +113,13 @@ public class GameManager : MonoBehaviour
 
     void fixRooms(GameObject pool)
     {
-        foreach (Transform child in pool.transform)
+        ObjectPool objectPool  = pool.GetComponent<ObjectPool>(); //I know. This is just getting the list of rooms from each pool.
+        foreach (GameObject room in objectPool.objectPool)
         {
-            child.gameObject.SetActive(true);
+            foreach (Transform child in room.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
         }
     }
 }

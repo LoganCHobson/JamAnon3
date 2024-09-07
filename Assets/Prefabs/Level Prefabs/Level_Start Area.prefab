@@ -27336,7 +27336,7 @@ GameObject:
   - component: {fileID: 2296259322409860350}
   m_Layer: 9
   m_Name: Spawner (6)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27377,8 +27377,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.8065078, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.4532331, z: 2.0003896}
 --- !u!114 &2744441495204200305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27391,8 +27391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 2638016073921095777}
+  parent: {fileID: 1230344278062135461}
 --- !u!54 &2296259322409860350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31902,7 +31904,7 @@ GameObject:
   - component: {fileID: 3501492844834213053}
   m_Layer: 9
   m_Name: Spawner (3)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31943,8 +31945,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.8340697, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.4670144, z: 2.0003896}
 --- !u!114 &273371338409775027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31957,8 +31959,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 6334669734617717420}
+  parent: {fileID: 1230344278062135461}
 --- !u!54 &3501492844834213053
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32695,7 +32699,7 @@ GameObject:
   - component: {fileID: 1787692807358035402}
   m_Layer: 9
   m_Name: Spawner (4)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32736,8 +32740,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 3.2784903, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.6295526, z: 2.0003896}
 --- !u!114 &1807902798827573621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32750,8 +32754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 3095058211255370292}
+  parent: {fileID: 1230344278062135461}
 --- !u!54 &1787692807358035402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34759,7 +34765,7 @@ GameObject:
   - component: {fileID: 723312560385922326}
   m_Layer: 9
   m_Name: Spawner (5)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34800,8 +34806,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 3.4083252, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.6944697, z: 2.0003896}
 --- !u!114 &1906796343873528427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34814,8 +34820,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPoolMaster: {fileID: 0}
   minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 3656224561673763167}
+  parent: {fileID: 1230344278062135461}
 --- !u!54 &723312560385922326
 Rigidbody:
   m_ObjectHideFlags: 0

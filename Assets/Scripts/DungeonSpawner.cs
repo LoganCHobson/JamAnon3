@@ -1,51 +1,41 @@
-using UnityEngine;
 using SolarStudios;
+using UnityEngine;
 
 public class DungeonSpawner : MonoBehaviour
 {
-    private GameObject objectPoolMaster;
+    public GameObject objectPoolMaster;
     private Transform spawnPoint;
     public float minDistanceBetweenSpawners = 5f;
 
     public Transform endcapSpawnPoint;
 
+    public GameObject parent;
+
 
     private void Start()
     {
         objectPoolMaster = GameObject.Find("ObjectPoolMaster");
-
         spawnPoint = transform.GetChild(0);
-
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player") && !(other.CompareTag("Doorway")) && other.transform.gameObject != parent)
+        {
+            Debug.Log("Oop, bad interset. " + other.gameObject.name + " Parent: " + other.transform.gameObject.name);
+            gameObject.SetActive(false);
+        }
+        if (other.CompareTag("Spawner"))
+        {
+            Debug.Log("Removing a Spawner");
+            other.gameObject.SetActive(false);
+        }
         if (other.CompareTag("Player"))
         {
-            // Check if all object pools are empty
-            if (AreAllPoolsEmpty())
-            {
-                int rand;
-                GameObject spawnedRoom = null;
+            Debug.Log("Spawning a room");
+            SpawnRoom();
 
-                // Keep trying to spawn a room until it's not null
-                do
-                {
-                    rand = Random.Range(0, 5);
-                    spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
-                } while (spawnedRoom == null);
-
-                spawnedRoom.GetComponent<Reseter>().OnEnableAll();
-                // If the room is spawned, disable this game object
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                // Spawn endcap if all pools are empty
-                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
-                gameObject.SetActive(false);
-            }
         }
     }
 
@@ -66,4 +56,28 @@ public class DungeonSpawner : MonoBehaviour
         return false;  // All pools are empty
     }
 
+    void SpawnRoom()
+    {
+        
+        if (AreAllPoolsEmpty())
+        {
+            int rand;
+            GameObject spawnedRoom = null;
+            do
+            {
+                rand = Random.Range(0, 5);
+                spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
+            } while (spawnedRoom == null);
+            
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
+            gameObject.SetActive(false);
+        }
+    }
 }
+
+
+

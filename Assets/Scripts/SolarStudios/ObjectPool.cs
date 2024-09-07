@@ -76,7 +76,6 @@ namespace SolarStudios //Logans Library
             {
                 if (obj.activeInHierarchy)
                 {
-                    obj.GetComponent<Reseter>().OnEnableAll(); //Not basic obj pool functionality. Remove for other projects.
                     StartCoroutine(DeactivateObjectDelayed(obj, delay));
                 }
                 
