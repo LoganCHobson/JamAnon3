@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Reseter : MonoBehaviour
 {
-    public void OnEnableAll()
+    public void OnEnable()
     {
         Transform grandParent = gameObject.transform;
         foreach (Transform obj in grandParent)
@@ -25,5 +25,15 @@ public class Reseter : MonoBehaviour
 
             EnableAllChildren(child);
         }
+    }
+
+    public void OnDisable()
+    {
+        Transform grandParent = gameObject.transform;
+        foreach (Transform obj in grandParent)
+        {
+            obj.gameObject.SetActive(true);
+        }
+        EnableAllChildren(grandParent);
     }
 }

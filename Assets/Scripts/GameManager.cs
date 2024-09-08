@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private GameObject gunType;
 
     private RunCounter runCounter;
-  
+
 
     public Transform spawn;
 
@@ -42,13 +42,34 @@ public class GameManager : MonoBehaviour
 
     }
 
-     public void ClearRooms()
+    public void ClearRooms()
     {
+        foreach (GameObject pool in roomPool) //All pools
+        {
+            foreach (GameObject obj in pool.GetComponent<ObjectPool>().objectPool) //All rooms in the objectpools
+            {
+                if (obj.activeInHierarchy)//All rooms that are active
+                {
+                    foreach (Transform child in obj.transform)//All children.
+                    {
+                        Debug.Log("Turned on: " + child.name);
+                        child.gameObject.SetActive(true);
+                        foreach (Transform grandChild in child.transform)//All children.
+                        {
+                            Debug.Log("Turned on: " + child.name);
+                            grandChild.gameObject.SetActive(true);
+                        }
+                    }
+                }
+
+            }
+
+        }
         foreach (GameObject pool in roomPool)
         {
-            fixRooms(pool);
             pool.GetComponent<ObjectPool>().RecycleAll();
         }
+
         Debug.Log("Cleared all rooms");
     }
 
@@ -107,14 +128,6 @@ public class GameManager : MonoBehaviour
                 gunType = child.gameObject;
                 break;
             }
-        }
-    }
-
-    void fixRooms(GameObject pool)
-    {
-        foreach (Transform child in pool.transform)
-        {
-            child.gameObject.SetActive(true);
         }
     }
 }

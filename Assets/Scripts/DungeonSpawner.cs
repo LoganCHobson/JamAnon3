@@ -23,47 +23,67 @@ public class DungeonSpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Check if all object pools are empty
             if (AreAllPoolsEmpty())
             {
                 int rand;
                 GameObject spawnedRoom = null;
 
-                // Keep trying to spawn a room until it's not null
                 do
                 {
                     rand = Random.Range(0, 5);
                     spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
+                    if(spawnedRoom != null)
+                    {
+                        FixRoom(spawnedRoom);
+                    }
                 } while (spawnedRoom == null);
 
-                spawnedRoom.GetComponent<Reseter>().OnEnableAll();
-                // If the room is spawned, disable this game object
                 gameObject.SetActive(false);
             }
             else
             {
-                // Spawn endcap if all pools are empty
+                
                 objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
                 gameObject.SetActive(false);
             }
         }
     }
 
-    // Method to check if all object pools are empty
+   
     private bool AreAllPoolsEmpty()
     {
         for (int i = 0; i < 5; i++)
         {
             ObjectPool pool = objectPoolMaster.transform.GetChild(i).GetComponent<ObjectPool>();
 
-            // Assuming ObjectPool has a method to check if it's empty, e.g., IsEmpty()
+            
             if (!pool.IsEmpty())
             {
-                return true;  // If any pool is not empty, return false
+                return true;  
             }
         }
 
-        return false;  // All pools are empty
+        return false; 
     }
 
+
+    void FixRoom(GameObject obj)
+    {
+        if (!obj.activeInHierarchy)//All obj that are active
+        {
+            foreach (Transform child in obj.transform)//All children.
+            {
+                child.gameObject.SetActive(true);
+                foreach (Transform grandchild in child.transform)//All children.
+                {
+                    Debug.Log("Turned on: " + grandchild.name);
+                    grandchild.gameObject.SetActive(true);
+                }
+            }
+        }
+        else
+        {
+            return;
+        }
+    }
 }
