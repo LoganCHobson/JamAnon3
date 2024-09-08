@@ -21,17 +21,19 @@ public class DungeonSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player") && !(other.CompareTag("Doorway")) && other.transform.gameObject != parent)
+        Debug.Log("Found: " + other.gameObject.name);
+        if (!other.CompareTag("Player") && !other.CompareTag("Doorway") && !other.CompareTag("Enemy") && other.transform.gameObject != parent)
         {
             Debug.Log("Oop, bad interset. " + other.gameObject.name + " Parent: " + other.transform.gameObject.name);
             gameObject.SetActive(false);
         }
-        if (other.CompareTag("Spawner"))
+        else if (other.CompareTag("Spawner"))
         {
             Debug.Log("Removing a Spawner");
             other.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
-        if (other.CompareTag("Player"))
+        else if (other.CompareTag("Player"))
         {
             Debug.Log("Spawning a room");
             SpawnRoom();
@@ -58,7 +60,6 @@ public class DungeonSpawner : MonoBehaviour
 
     void SpawnRoom()
     {
-        
         if (AreAllPoolsEmpty())
         {
             int rand;
@@ -68,7 +69,7 @@ public class DungeonSpawner : MonoBehaviour
                 rand = Random.Range(0, 5);
                 spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
             } while (spawnedRoom == null);
-            
+
             gameObject.SetActive(false);
         }
         else
@@ -76,6 +77,7 @@ public class DungeonSpawner : MonoBehaviour
             objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
             gameObject.SetActive(false);
         }
+        gameObject.SetActive(false);
     }
 }
 

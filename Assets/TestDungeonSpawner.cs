@@ -6,7 +6,7 @@ public class TestDungeonSpawner : MonoBehaviour
     public Transform spawnPoint;
     public ObjectPool pool;
     public GameObject parent;
-    bool fuck;
+
     private void Start()
     {
         if (pool == null)
@@ -16,7 +16,7 @@ public class TestDungeonSpawner : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other.gameObject.name);
+        Debug.Log(other.gameObject.name);
         if (pool == null)
         {
             pool = GameObject.FindObjectOfType<ObjectPool>();
@@ -33,7 +33,7 @@ public class TestDungeonSpawner : MonoBehaviour
             Debug.Log("Removing a doorway");
             other.gameObject.SetActive(false);
         }
-        if (other.CompareTag("Player") && !fuck)
+        if (other.CompareTag("Player"))
         {
             Debug.Log("Spawning a room");
             GameObject room = pool.Spawn(spawnPoint.position);
