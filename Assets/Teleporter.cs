@@ -15,6 +15,7 @@ public class Teleporter : MonoBehaviour
         {
             Debug.Log("Teleported");
             other.gameObject.transform.position = destination.position;
+            other.gameObject.transform.rotation = destination.rotation;
             onTeleport.Invoke();
         }
 
