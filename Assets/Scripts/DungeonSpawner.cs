@@ -1,89 +1,71 @@
-using UnityEngine;
 using SolarStudios;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class DungeonSpawner : MonoBehaviour
 {
-    private GameObject objectPoolMaster;
-    private Transform spawnPoint;
-    public float minDistanceBetweenSpawners = 5f;
-
+    public List<ObjectPool> roomPools;
+    public Transform spawnPoint;
     public Transform endcapSpawnPoint;
-
+    public bool active = true;
+    private BoxCollider col;
 
     private void Start()
     {
-        objectPoolMaster = GameObject.Find("ObjectPoolMaster");
+        active = true;
+        col.GetComponent<BoxCollider>();
+        if (spawnPoint == null)
+        {
+            Transform trans = transform.Find("SpawnPoint");
+            spawnPoint = trans;
+        }
 
-        spawnPoint = transform.GetChild(0);
+        if (endcapSpawnPoint == null)
+        {
+            endcapSpawnPoint = transform.Find("EndcapSpawnPoint").transform;
+        }
 
+        if (roomPools.Count == 0)
+        {
+            GameObject poolMaster = GameObject.Find("ObjectPoolMaster");
+            foreach (Transform pool in poolMaster.transform)
+            {
+                roomPools.Add(pool.GetComponent<ObjectPool>());
+            }
+        }
     }
-
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (active)
         {
-            if (AreAllPoolsEmpty())
+            Debug.Log(gameObject + " Collided with " +  other);
+            GameObject room;
+            if (other.CompareTag("Player"))
             {
-                int rand;
-                GameObject spawnedRoom = null;
-
                 do
                 {
-                    rand = Random.Range(0, 5);
-                    spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
-                    if(spawnedRoom != null)
-                    {
-                        FixRoom(spawnedRoom);
-                    }
-                } while (spawnedRoom == null);
-
-                gameObject.SetActive(false);
+                    int rand = Random.Range(0, roomPools.Count - 1);
+                    room = roomPools[rand].Spawn(spawnPoint.position);
+                } while (room == null);
+                active = false;
             }
-            else
+            else if (other.gameObject != gameObject && other.transform.parent != gameObject.transform.parent )
             {
-                
-                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
-                gameObject.SetActive(false);
-            }
-        }
-    }
-
-   
-    private bool AreAllPoolsEmpty()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            ObjectPool pool = objectPoolMaster.transform.GetChild(i).GetComponent<ObjectPool>();
-
-            
-            if (!pool.IsEmpty())
-            {
-                return true;  
-            }
-        }
-
-        return false; 
-    }
-
-
-    void FixRoom(GameObject obj)
-    {
-        if (!obj.activeInHierarchy)//All obj that are active
-        {
-            foreach (Transform child in obj.transform)//All children.
-            {
-                child.gameObject.SetActive(true);
-                foreach (Transform grandchild in child.transform)//All children.
+                if (other.gameObject.TryGetComponent<DungeonSpawner>(out DungeonSpawner spawner))
                 {
-                    Debug.Log("Turned on: " + grandchild.name);
-                    grandchild.gameObject.SetActive(true);
+                    spawner.active = false;
+                    active = false;
+                }
+                else if (other.CompareTag("Endcap"))
+                {
+                    other.gameObject.SetActive(false);
+                }
+                else
+                {
+                    active = false;
                 }
             }
-        }
-        else
-        {
-            return;
+
         }
     }
 }

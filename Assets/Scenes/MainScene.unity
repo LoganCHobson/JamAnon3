@@ -5266,6 +5266,11 @@ PrefabInstance:
       objectReference: {fileID: 1705160700}
     - target: {fileID: 1446437177391877895, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: m_Name
+      value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446437177391877895, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5284,6 +5289,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 108508767}
+    - target: {fileID: 2974564072217001106, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_Name
+      value: EndcapSpawnPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 3167297940539298087, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: destination
@@ -5476,6 +5486,11 @@ PrefabInstance:
       objectReference: {fileID: 1720712195}
     - target: {fileID: 5607374224370529356, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
+      propertyPath: m_Name
+      value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607374224370529356, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5494,6 +5509,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 461916}
+    - target: {fileID: 5915112784571423764, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawner
+      objectReference: {fileID: 0}
     - target: {fileID: 5915112784571423764, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_IsActive
@@ -5564,6 +5584,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1616082676}
+    - target: {fileID: 7410265871149158404, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawner
+      objectReference: {fileID: 0}
     - target: {fileID: 7410265871149158404, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
         type: 3}
       propertyPath: m_IsActive
