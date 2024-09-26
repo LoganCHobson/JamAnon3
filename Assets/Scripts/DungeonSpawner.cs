@@ -7,7 +7,7 @@ public class DungeonSpawner : MonoBehaviour
     public Transform spawnPoint;
     public Transform endcapSpawnPoint;
     public bool active = true;
-
+    public LayerMask collisionLayer; 
 
     private void Start()
     {
@@ -31,44 +31,19 @@ public class DungeonSpawner : MonoBehaviour
         {
             Debug.Log(gameObject + " Collided with " + other);
             GameObject room;
-            Vector3 adjustedPosition = spawnPoint.position; // Default position
 
             if (other.CompareTag("Player"))
             {
-                do
+                if (IsSpawnAreaClear())
                 {
-                    int rand = Random.Range(0, GameManager.instance.roomPool.Count - 1);
-                    string roomName = GameManager.instance.roomPool[rand].objectPool[0].name;
+                    do
+                    {
+                        int rand = Random.Range(0, GameManager.instance.roomPool.Count - 1);
+                        room = GameManager.instance.roomPool[rand].Spawn(spawnPoint.position);
 
-                    if (roomName.Contains("Level_Void"))
-                    {
-                        adjustedPosition = spawnPoint.position + new Vector3(0f, -3f, 0f);
-                    }
-                    else if (roomName.Contains("Level_Basic"))
-                    {
-                        adjustedPosition = spawnPoint.position + new Vector3(0f, -3f, 0f);
-                    }
-                    else if (roomName.Contains("Level_Industrial"))
-                    {
-                        adjustedPosition = spawnPoint.position + new Vector3(0f, -3f, 0f);
-                    }
-                    else if (roomName.Contains("Level_Towers"))
-                    {
-                        adjustedPosition = spawnPoint.position + new Vector3(0f, -3f, 0f);
-                    }
-                    else if (roomName.Contains("Level_Fort"))
-                    {
-                        adjustedPosition = spawnPoint.position + new Vector3(0f, 1.5f, 0f);
-                    }
-                    else
-                    {
-                        adjustedPosition = spawnPoint.position;
-                    }
-
-                    room = GameManager.instance.roomPool[rand].Spawn(adjustedPosition);
-
-                } while (room == null);
-                active = false;
+                    } while (room == null);
+                    active = false;
+                }
             }
             else if (other.gameObject != gameObject && other.transform.parent != gameObject.transform.parent.parent)
             {
@@ -89,4 +64,10 @@ public class DungeonSpawner : MonoBehaviour
         }
     }
 
+    private bool IsSpawnAreaClear()
+    {
+        Collider[] colliders = Physics.OverlapBox(spawnPoint.position, new Vector3(1, 1, 1), Quaternion.identity, collisionLayer);
+        Debug.Log("Found: " + colliders.Length);
+        return colliders.Length == 0;
+    }
 }

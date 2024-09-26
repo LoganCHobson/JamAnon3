@@ -52,6 +52,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 7448436576623332826}
   endcapSpawnPoint: {fileID: 1388917618594989968}
   active: 1
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!65 &472698551135734485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71,8 +74,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.5453453, y: 3.859255, z: 3.9438775}
-  m_Center: {x: 2.542776, y: -0.40307558, z: -0.044552207}
+  m_Size: {x: 5.100958, y: 3.859255, z: 3.9438775}
+  m_Center: {x: -2.340518, y: -0.40307558, z: -0.044552207}
 --- !u!1 &1856770513315899352
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +128,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 8962278096218567917}
   endcapSpawnPoint: {fileID: 330863452310552611}
   active: 1
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!65 &4916836618186169739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,8 +150,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.187378, y: 4.014395, z: 3.9438775}
-  m_Center: {x: -1.5936892, y: -0.48064566, z: -0.044552207}
+  m_Size: {x: 2.385418, y: 4.014395, z: 3.9438775}
+  m_Center: {x: 1.1724031, y: -0.48064566, z: -0.044552207}
 --- !u!1 &2037204198005343948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,8 +2272,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8962278096218567917}
-  - component: {fileID: 2640586474148011706}
-  - component: {fileID: 8149749283902660385}
   m_Layer: 0
   m_Name: DoorSpawnPoint
   m_TagString: Untagged
@@ -2290,39 +2294,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4549578377144812653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2640586474148011706
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605830806332293702}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8149749283902660385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605830806332293702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1a2487849350a47833778b003e0b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4955746910145165751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,6 +2346,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 5391420307968336346}
   endcapSpawnPoint: {fileID: 7370363679740600606}
   active: 1
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!65 &1582351288232706540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2394,8 +2368,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.9299736, y: 4.4916763, z: 3.9438775}
-  m_Center: {x: -2.4649868, y: -0.7192864, z: -0.044552207}
+  m_Size: {x: 4.1729984, y: 4.4916763, z: 3.9438775}
+  m_Center: {x: 2.0184298, y: -0.71928644, z: -0.044552207}
 --- !u!1 &5144603704001187676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,6 +2422,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 8223874843777415276}
   endcapSpawnPoint: {fileID: 1303570974468037852}
   active: 1
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!65 &7674137594825516075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2467,8 +2444,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.031643, y: 4.1909766, z: 3.9438775}
-  m_Center: {x: 2.785925, y: -0.5689365, z: -0.044552207}
+  m_Size: {x: 3.9176502, y: 4.1909766, z: 3.9438775}
+  m_Center: {x: -1.7895787, y: -0.5689366, z: -0.044552207}
 --- !u!1 &5258880750732988841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,8 +2785,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5391420307968336346}
-  - component: {fileID: 214359651946983132}
-  - component: {fileID: 1428097572086538336}
   m_Layer: 0
   m_Name: DoorSpawnPoint
   m_TagString: Untagged
@@ -2832,39 +2807,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7485106919919431151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &214359651946983132
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6018726423619782004}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1428097572086538336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6018726423619782004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1a2487849350a47833778b003e0b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6281246507748106312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,8 +2847,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8223874843777415276}
-  - component: {fileID: 943478363130609173}
-  - component: {fileID: 5428113925868268785}
   m_Layer: 0
   m_Name: DoorSpawnPoint
   m_TagString: Untagged
@@ -2929,39 +2869,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2182290737262430669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &943478363130609173
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6469376040526266551}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5428113925868268785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6469376040526266551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1a2487849350a47833778b003e0b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7173792377680192143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,8 +3262,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7448436576623332826}
-  - component: {fileID: 1015793409402113913}
-  - component: {fileID: 517280578270807745}
   m_Layer: 0
   m_Name: DoorSpawnPoint
   m_TagString: Untagged
@@ -3379,39 +3284,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9160461813541547931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1015793409402113913
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411481251585331620}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &517280578270807745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411481251585331620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1a2487849350a47833778b003e0b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8347657996125529935
 GameObject:
   m_ObjectHideFlags: 0
