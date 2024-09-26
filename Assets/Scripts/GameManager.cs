@@ -2,11 +2,12 @@ using SolarStudios;
 using SuperPupSystems.Helper;
 using SuperPupSystems.Manager;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> roomPool = new List<GameObject>();
+    public List<ObjectPool> roomPool = new List<ObjectPool>();
     public GameObject player;
 
     private int preMoney;
@@ -21,6 +22,24 @@ public class GameManager : MonoBehaviour
 
 
     public Transform spawn;
+
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+
+       
+    }
 
     private void Start()
     {
@@ -40,37 +59,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
-    }
-
-    public void ClearRooms()
-    {
-        foreach (GameObject pool in roomPool) //All pools
+        if (roomPool.Count <= 0)
         {
-            foreach (GameObject obj in pool.GetComponent<ObjectPool>().objectPool) //All rooms in the objectpools
+            GameObject obj = GameObject.Find("ObjectPoolMaster");
+            foreach (Transform pool in obj.transform)
             {
-                if (obj.activeInHierarchy)//All rooms that are active
-                {
-                    foreach (Transform child in obj.transform)//All children.
-                    {
-                        Debug.Log("Turned on: " + child.name);
-                        child.gameObject.SetActive(true);
-                        foreach (Transform grandChild in child.transform)//All children.
-                        {
-                            Debug.Log("Turned on: " + child.name);
-                            grandChild.gameObject.SetActive(true);
-                        }
-                    }
-                }
-
+                roomPool.Add(pool.gameObject.GetComponent<ObjectPool>());
             }
-
-        }
-        foreach (GameObject pool in roomPool)
-        {
-            pool.GetComponent<ObjectPool>().RecycleAll();
         }
 
-        Debug.Log("Cleared all rooms");
+
     }
 
     public void ClearAI()
@@ -107,7 +105,6 @@ public class GameManager : MonoBehaviour
         }
         player.transform.position = spawn.position;
 
-        ClearRooms();
         ClearAI();
     }
 

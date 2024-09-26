@@ -1,89 +1,73 @@
-using UnityEngine;
 using SolarStudios;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class DungeonSpawner : MonoBehaviour
 {
-    private GameObject objectPoolMaster;
-    private Transform spawnPoint;
-    public float minDistanceBetweenSpawners = 5f;
-
+    public Transform spawnPoint;
     public Transform endcapSpawnPoint;
-
+    public bool active = true;
+    public LayerMask collisionLayer; 
 
     private void Start()
     {
-        objectPoolMaster = GameObject.Find("ObjectPoolMaster");
+        active = true;
 
-        spawnPoint = transform.GetChild(0);
+        if (spawnPoint == null)
+        {
+            Transform trans = transform.Find("SpawnPoint");
+            spawnPoint = trans;
+        }
 
+        if (endcapSpawnPoint == null)
+        {
+            endcapSpawnPoint = transform.Find("EndcapSpawnPoint").transform;
+        }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (active)
         {
-            if (AreAllPoolsEmpty())
-            {
-                int rand;
-                GameObject spawnedRoom = null;
+            Debug.Log(gameObject + " Collided with " + other);
+            GameObject room;
 
-                do
+            if (other.CompareTag("Player"))
+            {
+                if (IsSpawnAreaClear())
                 {
-                    rand = Random.Range(0, 5);
-                    spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
-                    if(spawnedRoom != null)
+                    do
                     {
-                        FixRoom(spawnedRoom);
-                    }
-                } while (spawnedRoom == null);
+                        int rand = Random.Range(0, GameManager.instance.roomPool.Count - 1);
+                        room = GameManager.instance.roomPool[rand].Spawn(spawnPoint.position);
 
-                gameObject.SetActive(false);
+                    } while (room == null);
+                    active = false;
+                }
             }
-            else
+            else if (other.gameObject != gameObject && other.transform.parent != gameObject.transform.parent.parent)
             {
-                
-                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
-                gameObject.SetActive(false);
-            }
-        }
-    }
-
-   
-    private bool AreAllPoolsEmpty()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            ObjectPool pool = objectPoolMaster.transform.GetChild(i).GetComponent<ObjectPool>();
-
-            
-            if (!pool.IsEmpty())
-            {
-                return true;  
-            }
-        }
-
-        return false; 
-    }
-
-
-    void FixRoom(GameObject obj)
-    {
-        if (!obj.activeInHierarchy)//All obj that are active
-        {
-            foreach (Transform child in obj.transform)//All children.
-            {
-                child.gameObject.SetActive(true);
-                foreach (Transform grandchild in child.transform)//All children.
+                if (other.gameObject.TryGetComponent<DungeonSpawner>(out DungeonSpawner spawner))
                 {
-                    Debug.Log("Turned on: " + grandchild.name);
-                    grandchild.gameObject.SetActive(true);
+                    spawner.active = false;
+                    active = false;
+                }
+                else if (other.CompareTag("Endcap"))
+                {
+                    other.gameObject.SetActive(false);
+                }
+                else
+                {
+                    active = false;
                 }
             }
         }
-        else
-        {
-            return;
-        }
+    }
+
+    private bool IsSpawnAreaClear()
+    {
+        Collider[] colliders = Physics.OverlapBox(spawnPoint.position, new Vector3(1, 1, 1), Quaternion.identity, collisionLayer);
+        Debug.Log("Found: " + colliders.Length);
+        return colliders.Length == 0;
     }
 }
