@@ -1,6 +1,7 @@
 using UnityEngine;
 using SolarStudios;
 
+
 public class DungeonSpawner : MonoBehaviour
 {
     private GameObject objectPoolMaster;
@@ -28,11 +29,13 @@ public class DungeonSpawner : MonoBehaviour
             
             if (spawnedRoom == null)
             {
-                objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
+                GameObject room = objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
+                
                 gameObject.SetActive(false);
             }
             else
             {
+                EnableAllChildren(spawnedRoom.transform);
                 DisableSpawner(spawnedRoom);
             }
             
@@ -99,24 +102,14 @@ public class DungeonSpawner : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        Transform grandParent = transform.parent.parent;
-       /* foreach(Transform obj in grandParent)
-        {
-            obj.gameObject.SetActive(true);
-        }*/
-        EnableAllChildren(grandParent);
-    }
+    
 
     void EnableAllChildren(Transform parent)
     {
         foreach (Transform child in parent)
         {
             child.gameObject.SetActive(true);
-            //Debug.Log("Enabled: " + child);
-
-
+            
             EnableAllChildren(child);
         }
     }

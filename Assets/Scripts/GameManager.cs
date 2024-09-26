@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private RunCounter runCounter;
     public int run;
 
+
+
     private void Start()
     {
         runCounter = player.GetComponentInChildren<RunCounter>();
@@ -106,6 +108,14 @@ public class GameManager : MonoBehaviour
         foreach (Transform child in pool.transform)
         {
             child.gameObject.SetActive(true);
+            foreach (Transform child2 in child.transform)
+            {
+                child2.gameObject.SetActive(true);
+                foreach(Transform child3 in child2.transform)
+                {
+                    child3.gameObject.SetActive(true);
+                }
+            }
         }
     }
 }
