@@ -36928,16 +36928,6 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2122
       objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
@@ -36997,21 +36987,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hallway Door (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764258823078109730, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37120,16 +37095,6 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2128
       objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
@@ -37189,21 +37154,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hallway Door (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764258823078109730, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37460,16 +37410,6 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2131
       objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
@@ -37529,21 +37469,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hallway Door (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764258823078109730, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37652,16 +37577,6 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2128
       objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345504605346547869, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3763183470975203921, guid: c8fdf40a530808a4ba35c47eeb64812e,
         type: 3}
       propertyPath: m_VersionIndex
@@ -37721,21 +37636,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hallway Door (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Doorway
-      objectReference: {fileID: 0}
-    - target: {fileID: 6679749987931617196, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764258823078109730, guid: c8fdf40a530808a4ba35c47eeb64812e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

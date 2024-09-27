@@ -306,12 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 3431427891545682696}
-  active: 1
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!54 &6159707061086565328
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -923,12 +919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 8984632568099275085}
-  active: 1
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!54 &5676270671253220861
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -51536,12 +51528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 2217971911915001316}
-  active: 1
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!54 &5879474071296893072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53756,12 +53744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5926bd7b67c4f4293061457320cdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  minDistanceBetweenSpawners: 5
   endcapSpawnPoint: {fileID: 8831205533288980964}
-  active: 1
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!54 &6433538244981675591
 Rigidbody:
   m_ObjectHideFlags: 0
