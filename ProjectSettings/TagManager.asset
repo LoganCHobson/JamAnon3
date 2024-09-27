@@ -10,6 +10,7 @@ TagManager:
   - Explosive
   - Enemy
   - Gun
+  - Endcap
   layers:
   - Default
   - TransparentFX

@@ -38,8 +38,14 @@ public class DungeonSpawner : MonoBehaviour
                 EnableAllChildren(spawnedRoom.transform);
                 DisableSpawner(spawnedRoom);
             }
-            
 
+            CheckSpawnerDistance();
+            gameObject.SetActive(false);
+        }
+        if(other.CompareTag("Endcap"))
+        {
+            other.gameObject.SetActive(false);
+            other.gameObject.GetComponentInChildren<Canvas>().enabled = false;
             gameObject.SetActive(false);
         }
     }
@@ -76,27 +82,16 @@ public class DungeonSpawner : MonoBehaviour
     {
         DungeonSpawner[] allSpawners = FindObjectsOfType<DungeonSpawner>(); // Find all DungeonSpawner instances
 
-        foreach (var spawner in allSpawners)
+        foreach (DungeonSpawner spawner in allSpawners)
         {
             if (spawner != this) // Skip checking against itself
             {
                 float distance = Vector3.Distance(spawner.transform.position, transform.position);
 
-                if (distance < minDistanceBetweenSpawners)
+                if (distance <= minDistanceBetweenSpawners)
                 {
-                    // Determine which spawner is closer to the player and disable both
-                    Transform player = GameObject.Find("Player").transform;
-                    float distanceToThis = Vector3.Distance(transform.position, player.position);
-                    float distanceToOther = Vector3.Distance(spawner.transform.position, player.position);
-
-                    if (distanceToThis <= distanceToOther)
-                    {
-                        gameObject.SetActive(false); // Disable this spawner
-                    }
-                    else
-                    {
-                        spawner.gameObject.SetActive(false); // Disable the other spawner
-                    }
+                    gameObject.SetActive(false);
+                    spawner.gameObject.SetActive(false);
                 }
             }
         }
