@@ -53,6 +53,8 @@ public class AIScript : MonoBehaviour
 
     public UnityEvent attack;
 
+    private Animator anim;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -62,6 +64,7 @@ public class AIScript : MonoBehaviour
 
     private void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         healthScript = GetComponent<Health>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
@@ -137,15 +140,19 @@ public class AIScript : MonoBehaviour
 
     private void AttackPlayer()
     {
+        anim.SetTrigger("Fire");
         agent.SetDestination(transform.position);
         transform.LookAt(player);
         if (!alreadyAttacked)
         {
             if (attackRange > 5)
             {
+                
                 GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
                 bullet.GetComponent<Bullet>().damage = bulletDamage;
                 attack.Invoke();
+                anim.SetTrigger("Fire");
+                
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
 
