@@ -8,6 +8,7 @@ using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 public class AIScript : MonoBehaviour
 {
     
@@ -22,9 +23,6 @@ public class AIScript : MonoBehaviour
     public Transform player;
 
     public Transform enemy;
-
-    public AudioSource audio;
-    public AudioSource audio2;
 
     // Patroling
     public Vector3 walkPoint;
@@ -53,6 +51,8 @@ public class AIScript : MonoBehaviour
     public Vector3 kbDirection;
     public int kbStrength = 5;
 
+    public UnityEvent attack;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -62,7 +62,6 @@ public class AIScript : MonoBehaviour
 
     private void Start()
     {
-       
         healthScript = GetComponent<Health>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
@@ -91,10 +90,6 @@ public class AIScript : MonoBehaviour
         {
             AttackPlayer();
         }
-
-        
-
-
     }
 
     private void Patroling()
@@ -132,15 +127,12 @@ public class AIScript : MonoBehaviour
             {
                 walkPointSet = true;
             }
-          
-                
         }
     }
 
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
-        
     }
 
     private void AttackPlayer()
@@ -153,10 +145,10 @@ public class AIScript : MonoBehaviour
             {
                 GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
                 bullet.GetComponent<Bullet>().damage = bulletDamage;
-
+                attack.Invoke();
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
-                audio.Play();
+
             }
             if (attackRange <= 5)
             {
@@ -169,23 +161,16 @@ public class AIScript : MonoBehaviour
 
                     //player.GetComponent<Rigidbody>().AddForce(30,0,30);
                     player.GetComponent<Rigidbody>().AddForce(kbDirection * kbStrength);
-
+                    attack.Invoke();
                     alreadyAttacked = true;
                     Invoke(nameof(ResetAttack), timeBetweenAttacks);
-                    audio2.Play();
-
                 }
             }
         }
-       
-
-
     }
     private void ResetAttack()
     
     {
         alreadyAttacked = false;
     }
-
-
 }
