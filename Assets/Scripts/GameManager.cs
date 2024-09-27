@@ -2,23 +2,44 @@ using SolarStudios;
 using SuperPupSystems.Helper;
 using SuperPupSystems.Manager;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> roomPool = new List<GameObject>();
+    public List<ObjectPool> roomPool = new List<ObjectPool>();
     public GameObject player;
 
     private int preMoney;
     private float preFireRate;
     private int preMaxHealth;
     private int bulletDamage;
+    [HideInInspector]
+    public int preRunCount;
     private GameObject gunType;
 
     private RunCounter runCounter;
-    public int run;
 
 
+    public Transform spawn;
+
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
 
     private void Start()
     {
@@ -38,16 +59,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
-    }
-
-     public void ClearRooms()
-    {
-        foreach (GameObject pool in roomPool)
+        if (roomPool.Count <= 0)
         {
-            fixRooms(pool);
-            pool.GetComponent<ObjectPool>().RecycleAll();
+            GameObject obj = GameObject.Find("ObjectPoolMaster");
+            foreach (Transform pool in obj.transform)
+            {
+                roomPool.Add(pool.gameObject.GetComponent<ObjectPool>());
+            }
         }
-        Debug.Log("Cleared all rooms");
+
+
     }
 
     public void ClearAI()
@@ -67,6 +88,7 @@ public class GameManager : MonoBehaviour
     public void PlayerReset()
     {
         Debug.Log("Resetting player to prerun");
+        runCounter.runCounter = preRunCount;
         player.GetComponentInChildren<Gun>().fireRate = preFireRate;
         player.GetComponent<Health>().maxHealth = preMaxHealth;
         player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
@@ -81,11 +103,14 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+        player.transform.position = spawn.position;
+
+        ClearAI();
     }
 
     public void SavePlayerData()
     {
-        run = runCounter.runCounter;
+        preRunCount = runCounter.runCounter;
         Debug.Log("Saving player data!");
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
@@ -99,22 +124,6 @@ public class GameManager : MonoBehaviour
             {
                 gunType = child.gameObject;
                 break;
-            }
-        }
-    }
-
-    void fixRooms(GameObject pool)
-    {
-        foreach (Transform child in pool.transform)
-        {
-            child.gameObject.SetActive(true);
-            foreach (Transform child2 in child.transform)
-            {
-                child2.gameObject.SetActive(true);
-                foreach(Transform child3 in child2.transform)
-                {
-                    child3.gameObject.SetActive(true);
-                }
             }
         }
     }
