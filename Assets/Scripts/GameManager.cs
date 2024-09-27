@@ -104,8 +104,6 @@ public class GameManager : MonoBehaviour
             }
         }
         player.transform.position = spawn.position;
-
-        ClearAI();
     }
 
     public void SavePlayerData()
@@ -125,6 +123,14 @@ public class GameManager : MonoBehaviour
                 gunType = child.gameObject;
                 break;
             }
+        }
+    }
+
+    public void ClearRooms()
+    {
+        foreach(ObjectPool pool in roomPool)
+        {
+            pool.RecycleAll();
         }
     }
 }

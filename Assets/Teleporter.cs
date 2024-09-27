@@ -7,6 +7,7 @@ public class Teleporter : MonoBehaviour
 {
     public Transform destination;
     public UnityEvent onTeleport;
+    private GameManager gameManager = GameManager.instance;
 
     public bool death = false;
     private void OnTriggerEnter(Collider other)
@@ -22,9 +23,8 @@ public class Teleporter : MonoBehaviour
         if(death && other.CompareTag("Player"))
         {
             Debug.Log("Died");
-                GameObject.Find("Teleporter").GetComponent<Teleporter>().onTeleport.Invoke();
-                //other.gameObject.transform.position = destination.position;
-                GameObject.Find("GameManager").GetComponent<GameManager>().PlayerReset();
+                GameObject.Find("TeleporterToHub").GetComponent<Teleporter>().onTeleport.Invoke();
+                gameManager.PlayerReset();
 
             
         }
