@@ -4,11 +4,14 @@ using SuperPupSystems.Manager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 public class pickup : MonoBehaviour
 {
     public int value;
     public float rotationSpeed = 25f;
     private AudioSource audio;
+
+    public UnityEvent pickupCoin;
 
     private void Start()
     {
@@ -23,7 +26,7 @@ public class pickup : MonoBehaviour
     {
         if(other.transform.CompareTag("Player"))
         {
-            audio.Play(); ;
+            pickupCoin.Invoke();
             WalletManager.instance.AddCoin(value);
             gameObject.SetActive(false);
         }

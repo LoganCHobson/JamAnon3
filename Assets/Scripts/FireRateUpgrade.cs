@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FireRateUpgrade : MonoBehaviour
 {
     public float increaseFireRate = -0.02f;
     public float rotationSpeed = 25f;
 
+    public UnityEvent pickup;
     private AudioSource audio;
 
     // Update is called once per frame
@@ -24,10 +26,10 @@ public class FireRateUpgrade : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            pickup.Invoke();
             Gun playersGun = other.GetComponentInChildren<Gun>();
             if(playersGun != null)
             {
-                audio.Play();
                 playersGun.fireRate -= increaseFireRate;
             }
 

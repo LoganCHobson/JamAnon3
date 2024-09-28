@@ -72,6 +72,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   rotationSpeed: 25
+  pickupCoin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3509727282558440172}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &5057519473388033948
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -129,8 +144,9 @@ AudioSource:
   m_GameObject: {fileID: 1824505405374654975}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a294a1f5aa4a47b44b0ab293245317b0, type: 3}
+  OutputAudioMixerGroup: {fileID: -1493808086319758015, guid: 34515c19d7e7a2c4b995494db422d426,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 884d5580d98f1504eb15a8b7b90db429, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 0.9
@@ -141,7 +157,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 25
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

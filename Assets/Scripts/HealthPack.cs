@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SuperPupSystems.Helper;
+using UnityEngine.Events;
 
 public class HealthPack : MonoBehaviour
 {
     private AudioSource audio;
     public float rotationSpeed = 10f;
+
+    public UnityEvent pickup;
 
     private void Start()
     {
@@ -21,6 +24,7 @@ public class HealthPack : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            pickup.Invoke();
             Health playerHealth = other.GetComponent<Health>();
             if (playerHealth != null)
             {
