@@ -140,9 +140,11 @@ public class AIScript : MonoBehaviour
 
     private void AttackPlayer()
     {
+        Vector3 playerPosition = player.transform.position;
+        playerPosition = new Vector3(playerPosition.x, playerPosition.y-1f, playerPosition.z);
         anim.SetTrigger("Fire");
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+        transform.LookAt(playerPosition);
         if (!alreadyAttacked)
         {
             if (attackRange > 5)
