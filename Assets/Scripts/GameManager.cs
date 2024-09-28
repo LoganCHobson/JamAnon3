@@ -1,8 +1,8 @@
 using SolarStudios;
 using SuperPupSystems.Helper;
 using SuperPupSystems.Manager;
+using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    private Animator playerAnim;
     private void Awake()
     {
         if (instance == null)
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        playerAnim = player.GetComponentInChildren<Animator>();
         runCounter = player.GetComponentInChildren<RunCounter>();
 
         player = GameObject.Find("Player");
@@ -133,4 +135,26 @@ public class GameManager : MonoBehaviour
             pool.RecycleAll();
         }
     }
+
+    public void Teleport()
+    {
+        StartCoroutine(TeleportSequence());
+    }
+
+    private IEnumerator TeleportSequence()
+    {
+        playerAnim.Play("TeleportEffect");
+        TogglePlayerControl(false);
+        yield return new WaitForSeconds(2);
+        playerAnim.Play("TeleportEffectReverse");
+        yield return new WaitForSeconds(2);
+        TogglePlayerControl(true);
+    }
+
+    private void TogglePlayerControl(bool enable)
+    {
+        player.GetComponent<PlayerMovement>().enabled = enable;
+        player.GetComponentInChildren<MouseLook>().enabled = enable;
+    }
 }
+

@@ -1601,6 +1601,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &463628052 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4629060969622140234, guid: 3a19aad9c310adf4b8c256195d4ed8fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 943952136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &463858490
 Mesh:
   m_ObjectHideFlags: 0
@@ -6169,7 +6175,7 @@ PrefabInstance:
         type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 463628052}
     - target: {fileID: 3470254001554110850, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: onTeleport.m_PersistentCalls.m_Calls.Array.data[0].m_Target
