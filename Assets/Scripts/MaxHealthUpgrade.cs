@@ -1,32 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using SuperPupSystems.Helper;
 using UnityEngine.Events;
 
-public class MaxHealthUpgrade : MonoBehaviour
+public class MaxHealthUpgrade : Pickup
 {
-    public float rotationSpeed = 10f;
-    public int increaseHealth = 10;
+    public int increaseHealth;
     public UnityEvent pickup;
-    void Update()
-    {
-        gameObject.transform.Rotate(0f,rotationSpeed * Time.deltaTime,0f);
-    }
 
-    public void OnTriggerEnter(Collider other)
+    public override void onPickupEvent()
     {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            pickup.Invoke();
-            Health playerHealth = other.GetComponent<Health>();
-            if(playerHealth != null)
-            {
-                playerHealth.maxHealth += increaseHealth;
-                playerHealth.currentHealth = playerHealth.maxHealth;
-            }
+        Health health = GameManager.instance.player.GetComponent<Health>();
 
-            gameObject.SetActive(false);
-        }
+        health.maxHealth += increaseHealth;
+        health.currentHealth = health.maxHealth;
+        pickup.Invoke();
     }
 }

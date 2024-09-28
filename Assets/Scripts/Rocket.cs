@@ -11,9 +11,13 @@ public class Rocket : MonoBehaviour
     public ParticleSystem smoke;
 
     public Bullet bullet;
-    // Start is called before the first frame update
+
+    public float splashRadius = 15f;
+    public float damage;
+
     void Start()
     {
+        damage = GameManager.instance.player.GetComponentInChildren<Gun>().damagePerShot;
         if (bullet != null)
         {
             bullet.hitTarget.AddListener(OnBulletHitTarget);
@@ -24,7 +28,6 @@ public class Rocket : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     public void OnBulletHitTarget()
     {
         Debug.Log("Bullet hit target, playing particle systems");
@@ -32,5 +35,15 @@ public class Rocket : MonoBehaviour
         flash.Play();
         fire.Play();
         smoke.Play();
+        /*
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, splashRadius);
+        foreach (Collider hitCollider in hitColliders)
+        {
+            Health targetHealth = hitCollider.GetComponent<Health>();
+            if (targetHealth != null)
+            {
+                targetHealth.Damage(damage);
+            }
+        }*/
     }
 }

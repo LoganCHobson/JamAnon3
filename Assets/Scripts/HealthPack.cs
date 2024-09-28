@@ -4,35 +4,15 @@ using UnityEngine;
 using SuperPupSystems.Helper;
 using UnityEngine.Events;
 
-public class HealthPack : MonoBehaviour
+public class HealthPack : Pickup
 {
-    private AudioSource audio;
-    public float rotationSpeed = 10f;
-
+    public int value;
     public UnityEvent pickup;
-
-    private void Start()
+        
+public override void onPickupEvent()
     {
-        audio = GetComponent<AudioSource>();
-    }
-    void Update()
-    {
-        gameObject.transform.Rotate(0f,rotationSpeed * Time.deltaTime,0f);
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            pickup.Invoke();
-            Health playerHealth = other.GetComponent<Health>();
-            if (playerHealth != null)
-            {
-                audio.Play();
-                playerHealth.Heal(playerHealth.maxHealth/2);
-            }
-
-            gameObject.SetActive(false);
-        }
+        Health health = GameManager.instance.player.GetComponent<Health>();
+        health.Heal(health.maxHealth / 2);
+        pickup.Invoke();
     }
 }

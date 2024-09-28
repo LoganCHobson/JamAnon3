@@ -20,6 +20,7 @@ namespace SuperPupSystems.Helper
         private Vector3 m_lastPosition;
         private RaycastHit m_info;
         private Timer m_timer;
+        private bool dead;
 
         private void Awake()
         {
@@ -56,17 +57,20 @@ namespace SuperPupSystems.Helper
 
         private void CollisionCheck()
         {
-            if (Physics.Linecast(m_lastPosition, transform.position, out m_info, mask))
+            if (Physics.Linecast(m_lastPosition, transform.position, out m_info, mask) && !dead)
             {
                 if (tags.Contains(m_info.transform.tag))
                 {
                     m_info.transform.GetComponent<Health>()?.Damage(damage);
-
+                    dead = true;
                     hitTarget.Invoke();
                 }
 
                 if (destroyOnImpact)
                 {
+
+                    hitTarget.Invoke();
+                    dead = true;
                     StartCoroutine(DestroyBulletAfterDelay());
                 }
             }

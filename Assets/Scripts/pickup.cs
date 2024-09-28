@@ -5,17 +5,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class pickup : MonoBehaviour
+public abstract class Pickup : MonoBehaviour
 {
-    public int value;
     public float rotationSpeed = 25f;
     private AudioSource audio;
+    private bool used;
 
-    public UnityEvent pickupCoin;
+    public abstract void onPickupEvent();
 
     private void Start()
     {
         audio = GetComponent<AudioSource>();
+        if(audio == null )
+        {
+            Debug.LogError("Did you forget to add audio to your pickup?");
+        }
     }
     void Update()
     {
@@ -24,11 +28,18 @@ public class pickup : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.CompareTag("Player"))
+        if(!used && other.transform.CompareTag("Player") )
         {
-            pickupCoin.Invoke();
-            WalletManager.instance.AddCoin(value);
-            gameObject.SetActive(false);
+            used = true;
+            audio.Play();   
+            gameObject.GetComponent<Pickup>().onPickupEvent();
+            Invoke("Delay", 1);
         }
     }
+
+    private void Delay()
+    {
+        gameObject.SetActive(false);
+    }
 }
+

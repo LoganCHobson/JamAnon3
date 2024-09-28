@@ -4,13 +4,33 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 using SuperPupSystems.Helper;
+using UnityEditor.Rendering;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+
+    public GameObject loadingScreen;
+    public GameObject mainMenu;
+    public Slider loadSlider;
+    public void LoadLevel(string level)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        mainMenu.SetActive(false);
+        loadingScreen.SetActive(true);
+        StartCoroutine(LoadLevelAsync(level));
     }
+    IEnumerator LoadLevelAsync(string level)
+    {
+        AsyncOperation load = SceneManager.LoadSceneAsync(level);
+
+        while(!load.isDone)
+        {
+            float progress = Mathf.Clamp01(load.progress / 0.9f);
+            loadSlider.value = progress;
+            yield return null;
+        }
+    }
+
 
     public void QuitGame()
     {

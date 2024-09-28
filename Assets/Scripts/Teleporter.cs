@@ -17,7 +17,7 @@ public class Teleporter : MonoBehaviour
     {
         if (other.CompareTag("Player") && !death)
         {
-            gameManager.Teleport();
+            //gameManager.Teleport();
             other.gameObject.transform.position = destination.position;
             other.gameObject.transform.rotation = destination.rotation;
             onTeleport.Invoke();
@@ -25,7 +25,7 @@ public class Teleporter : MonoBehaviour
 
         if (death && other.CompareTag("Player"))
         {
-            gameManager.Teleport();
+           // gameManager.Teleport();
             GameObject.Find("TeleporterToHub").GetComponent<Teleporter>().onTeleport.Invoke();
             gameManager.PlayerReset();
         }

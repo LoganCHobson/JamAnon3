@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6294575206199383447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.51, y: 1.594, z: 27.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -122,15 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede2a062cbe9c9f46ac709c43dd13f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increaseFireRate: 0.01
   rotationSpeed: 25
+  increaseFireRate: 0.01
   pickup:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2774856670228562010}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 4086396194578429600}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -138,6 +138,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6306314294102927142}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3772568228691802086}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!54 &3772568228691802086
 Rigidbody:
@@ -209,7 +233,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1000
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -244,7 +268,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.9
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -300,7 +324,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5c9f59e47578f3a488033712c81f5d24,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c9f59e47578f3a488033712c81f5d24,
         type: 3}
@@ -355,6 +379,12 @@ PrefabInstance:
 --- !u!4 &2969960126185134630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c9f59e47578f3a488033712c81f5d24,
+    type: 3}
+  m_PrefabInstance: {fileID: 3368080654610447821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4086396194578429600 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: 5c9f59e47578f3a488033712c81f5d24,
     type: 3}
   m_PrefabInstance: {fileID: 3368080654610447821}
   m_PrefabAsset: {fileID: 0}
