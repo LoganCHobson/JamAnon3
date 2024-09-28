@@ -5023,6 +5023,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 912557758516534249}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1544664135546074940 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1857085767778954453, guid: e1309214a6e431242b089c0c4c657385,
+    type: 3}
+  m_PrefabInstance: {fileID: 912557758516534249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8163642940368538074 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9070558002753131059, guid: e1309214a6e431242b089c0c4c657385,
+    type: 3}
+  m_PrefabInstance: {fileID: 912557758516534249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8953385665072928336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8136560460118396345, guid: e1309214a6e431242b089c0c4c657385,
@@ -5207,7 +5219,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 15
   timeBetweenAttacks: 1
-  projectile: {fileID: 7804715228311895986, guid: f7e33d97308681d48b96659050fb63dd,
+  projectile: {fileID: 7804715228311895986, guid: 9bf8b1841021b2b44b5514c3c0cc867e,
     type: 3}
   firePoint: {fileID: 6852440990893184467}
   sightRange: 12
@@ -5249,6 +5261,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8903116574877149537}
+        m_TargetAssemblyTypeName: AIScript, Assembly-CSharp
+        m_MethodName: DamageFlash
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1544664135546074940}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8903116574877149537}
+        m_TargetAssemblyTypeName: AIScript, Assembly-CSharp
+        m_MethodName: DamageFlash
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8163642940368538074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5305,6 +5341,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8717749427640035483}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 994962907996010095}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHealth: 100
   currentHealth: 100
 --- !u!65 &994962907996010095
@@ -5350,9 +5410,9 @@ AudioSource:
   Priority: 175
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5447,9 +5507,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

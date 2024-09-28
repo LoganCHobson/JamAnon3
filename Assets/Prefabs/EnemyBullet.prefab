@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4520842445179794360}
   - component: {fileID: 5150486314206683611}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
       m_Calls: []
   mask:
     serializedVersion: 2
-    m_Bits: 1153
+    m_Bits: 193
   tags:
   - Player
   - Enemy

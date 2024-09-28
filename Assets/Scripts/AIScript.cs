@@ -180,4 +180,21 @@ public class AIScript : MonoBehaviour
     {
         alreadyAttacked = false;
     }
+
+    public void DamageFlash(MeshRenderer rend)
+    {
+        
+        StartCoroutine(FlashCoroutine(rend));
+    }
+
+    private IEnumerator FlashCoroutine(MeshRenderer rend)
+    {
+        Texture origText = rend.material.mainTexture;
+        Color originalColor = rend.material.color;
+        rend.material.color = Color.red;
+        rend.material.mainTexture = null;
+        yield return new WaitForSeconds(.2f);
+        rend.material.color = originalColor;
+        rend.material.mainTexture = origText;
+    }
 }

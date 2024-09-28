@@ -5124,7 +5124,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 15
   timeBetweenAttacks: 1
-  projectile: {fileID: 7804715228311895986, guid: f7e33d97308681d48b96659050fb63dd,
+  projectile: {fileID: 7804715228311895986, guid: 9bf8b1841021b2b44b5514c3c0cc867e,
     type: 3}
   firePoint: {fileID: 1613049692977391248}
   sightRange: 12
@@ -5193,13 +5193,37 @@ MonoBehaviour:
   hurt:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2955055868616128675}
+      - m_Target: {fileID: 5572159236253364381}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1699246113813695946}
+        m_TargetAssemblyTypeName: AIScript, Assembly-CSharp
+        m_MethodName: DamageFlash
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4113114474988789125}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1699246113813695946}
+        m_TargetAssemblyTypeName: AIScript, Assembly-CSharp
+        m_MethodName: DamageFlash
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8529617692539915141}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5256,10 +5280,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5572159236253364381}
+      - m_Target: {fileID: 2955055868616128675}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1053070792247946735}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5313,9 +5349,9 @@ AudioSource:
   Priority: 175
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5410,9 +5446,9 @@ AudioSource:
   Priority: 185
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5507,9 +5543,9 @@ AudioSource:
   Priority: 185
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 25
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5662,9 +5698,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8334473122059422314}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &4113114474988789125 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5385540955709233135, guid: 766efe07bc5cdc9499055055a3aff0be,
+    type: 3}
+  m_PrefabInstance: {fileID: 8334473122059422314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4358578293603044293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5752566736932340143, guid: 766efe07bc5cdc9499055055a3aff0be,
+    type: 3}
+  m_PrefabInstance: {fileID: 8334473122059422314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8529617692539915141 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 429730088055865839, guid: 766efe07bc5cdc9499055055a3aff0be,
     type: 3}
   m_PrefabInstance: {fileID: 8334473122059422314}
   m_PrefabAsset: {fileID: 0}
