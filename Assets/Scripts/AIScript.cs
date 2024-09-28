@@ -140,14 +140,19 @@ public class AIScript : MonoBehaviour
 
     private void AttackPlayer()
     {
+        //Setting Y of Lookat player vector to reduce tilting
+        Vector3 playerPosition = player.transform.position;
+        playerPosition = new Vector3(playerPosition.x, playerPosition.y-1f, playerPosition.z);
+
         anim.SetTrigger("Fire");
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+        
+
         if (!alreadyAttacked)
         {
             if (attackRange > 5)
             {
-                
+                transform.LookAt(new Vector3(playerPosition.x, playerPosition.y-1, playerPosition.z));
                 GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
                 bullet.GetComponent<Bullet>().damage = bulletDamage;
                 attack.Invoke();
@@ -159,7 +164,8 @@ public class AIScript : MonoBehaviour
             }
             if (attackRange <= 5)
             {
-                if(Vector3.Distance(player.transform.position, gameObject.transform.position) <= attackRange)
+                transform.LookAt(playerPosition);
+                if (Vector3.Distance(player.transform.position, gameObject.transform.position) <= attackRange)
                 {
                     player.GetComponent<Health>().Damage(meleeDamage);
 
