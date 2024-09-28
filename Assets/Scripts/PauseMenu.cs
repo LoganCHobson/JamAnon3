@@ -1,22 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using SuperPupSystems.Manager;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public bool isGamePaused = false;
 
     public GameObject pauseMenuUI;
-    
-    public GameObject moneyText;
-    public GameObject runCounter;
+    public GameObject hud;
 
-    public GameObject money;
-    public GameObject runNum;
-    public GameObject healthBar;
-    public GameObject reticle;
+    public Text moneyText;
+    public Text attempts;
+
 
     void Start()
     {
@@ -26,16 +23,17 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isGamePaused)
+            if (isGamePaused)
             {
                 Resume();
-            }else
+            }
+            else
             {
                 Pause();
             }
-        }   
+        }
     }
 
     public void Resume()
@@ -44,12 +42,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
-        money.SetActive(false);
-        runNum.SetActive(false);
-        healthBar.SetActive(true);
-        reticle.SetActive(true);
-        moneyText.SetActive(true);
-        runCounter.SetActive(true);
+        hud.SetActive(true);
         Time.timeScale = 1.0f;
         isGamePaused = false;
     }
@@ -59,12 +52,9 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
-        money.SetActive(true);
-        runNum.SetActive(true);
-        healthBar.SetActive(false);
-        reticle.SetActive(false);
-        moneyText.SetActive(false);
-        runCounter.SetActive(false);
+        hud.SetActive(false);
+        attempts.text = GameManager.instance.runCounter.runCounter.ToString();
+        moneyText.text = WalletManager.instance.coin.ToString();
         Time.timeScale = 0.0f;
         isGamePaused = true;
     }
@@ -78,12 +68,12 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        #if(UNITY_EDITOR)
+#if (UNITY_EDITOR)
         Debug.Log("Quiting Play Mode");
         EditorApplication.ExitPlaymode();
-        #else
+#else
         Debug.Log("Quitting Build");
         Application.Quit();
-        #endif
+#endif
     }
 }

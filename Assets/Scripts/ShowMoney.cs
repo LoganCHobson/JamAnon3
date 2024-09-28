@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 using SuperPupSystems.Manager;
 
 public class ShowMoney : MonoBehaviour
 {
-    public TMP_Text money;
+    public Text money;
     // Start is called before the first frame update
     void Start()
     {

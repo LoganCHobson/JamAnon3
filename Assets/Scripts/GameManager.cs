@@ -4,11 +4,14 @@ using SuperPupSystems.Manager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public List<ObjectPool> roomPool = new List<ObjectPool>();
     public GameObject player;
+
+
 
     private int preMoney;
     private float preFireRate;
@@ -18,7 +21,8 @@ public class GameManager : MonoBehaviour
     public int preRunCount;
     private GameObject gunType;
 
-    private RunCounter runCounter;
+    [HideInInspector]
+    public RunCounter runCounter;
 
 
     public Transform spawn;
@@ -38,8 +42,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
     }
 
     private void Start()
@@ -130,7 +132,7 @@ public class GameManager : MonoBehaviour
 
     public void ClearRooms()
     {
-        foreach(ObjectPool pool in roomPool)
+        foreach (ObjectPool pool in roomPool)
         {
             pool.RecycleAll();
         }

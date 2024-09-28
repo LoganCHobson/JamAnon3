@@ -68,7 +68,6 @@ namespace SuperPupSystems.Helper
 
                 if (destroyOnImpact)
                 {
-
                     hitTarget.Invoke();
                     dead = true;
                     StartCoroutine(DestroyBulletAfterDelay());
