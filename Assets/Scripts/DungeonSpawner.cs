@@ -97,8 +97,6 @@ public class DungeonSpawner : MonoBehaviour
         }
     }
 
-    
-
     void EnableAllChildren(Transform parent)
     {
         foreach (Transform child in parent)

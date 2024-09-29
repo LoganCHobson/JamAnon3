@@ -22,11 +22,7 @@ public class WaveSpawner : MonoBehaviour
 
     public List<GameObject> enemiesSpawned;
 
-    void Start()
-    {
-        GenerateRandomNavMeshPoints();
-        StartCoroutine(SpawnWaves());
-    }
+   
 
     void GenerateRandomNavMeshPoints()
     {
@@ -69,5 +65,11 @@ public class WaveSpawner : MonoBehaviour
             return hit.position;
         }
         return Vector3.zero;
+    }
+
+    public void OnEnable()
+    {
+        GenerateRandomNavMeshPoints();
+        StartCoroutine(SpawnWaves());
     }
 }

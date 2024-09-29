@@ -32,13 +32,14 @@ public abstract class Pickup : MonoBehaviour
         {
             used = true;
             audio.Play();   
-            gameObject.GetComponent<Pickup>().onPickupEvent();
+            onPickupEvent();
             Invoke("Delay", 1);
         }
     }
 
     private void Delay()
     {
+        used = false;
         gameObject.SetActive(false);
     }
 }

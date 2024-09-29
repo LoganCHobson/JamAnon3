@@ -4,6 +4,7 @@ using SuperPupSystems.Manager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -31,6 +32,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     private Animator playerAnim;
+
+    public UnityEvent correctStartSpawner;
     private void Awake()
     {
         if (instance == null)
@@ -163,6 +166,7 @@ public class GameManager : MonoBehaviour
         PlayerReset();
         ClearAI();
         ClearRooms();
+        correctStartSpawner.Invoke();
     }
 }
 

@@ -5,6 +5,7 @@ public class MaxHealthUpgrade : Pickup
 {
     public int increaseHealth;
     public UnityEvent pickup;
+    public UnityEvent reset;
 
     public override void onPickupEvent()
     {
@@ -13,5 +14,10 @@ public class MaxHealthUpgrade : Pickup
         health.maxHealth += increaseHealth;
         health.currentHealth = health.maxHealth;
         pickup.Invoke();
+    }
+
+    public void OnEnable()
+    {
+        reset.Invoke();
     }
 }
