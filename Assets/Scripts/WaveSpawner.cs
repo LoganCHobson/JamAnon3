@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,48 +15,83 @@ public class WaveSpawner : MonoBehaviour
     [Header("Spawner Settings")]
     public List<Wave> waves;               //List of waves
     public int numberOfSpawnPoints = 10;   //Number of random spawn points to generate
+    public float spawnRange = 20f;         //Range for spawn points around the spawner
+    public float minimumSpawnDistance = 5f; //Minimum distance between each spawn point
 
     private List<Vector3> spawnPoints = new List<Vector3>();
     private int currentWaveIndex = 0;
+    private float waveTimer = 0f;
+    private float spawnTimer = 0f;
+    private int enemyIndex = 0;
+    private bool isWaveActive = false;
 
     public List<GameObject> enemiesSpawned;
 
-   
+    
 
-    void GenerateRandomNavMeshPoints()
+    void Update()
     {
-        for (int i = 0; i < numberOfSpawnPoints; i++)
+        if (currentWaveIndex < waves.Count)
         {
-            Vector3 randomPoint = GetRandomPointOnNavMesh();
-            if (randomPoint != Vector3.zero)
+            Wave currentWave = waves[currentWaveIndex];
+
+            if (!isWaveActive)
             {
-                spawnPoints.Add(randomPoint);
+                waveTimer += Time.deltaTime;
+                if (waveTimer >= currentWave.timeBetweenWaves)
+                {
+                    isWaveActive = true;
+                    waveTimer = 0f;
+                }
+            }
+            else
+            {
+                spawnTimer += Time.deltaTime;
+                if (spawnTimer >= currentWave.timeBetweenSpawns && enemyIndex < currentWave.enemiesToSpawn.Count)
+                {
+                    Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)];
+                    GameObject spawnedEnemy = Instantiate(currentWave.enemiesToSpawn[enemyIndex], spawnPosition, Quaternion.identity);
+                    enemiesSpawned.Add(spawnedEnemy);
+
+                    enemyIndex++;
+                    spawnTimer = 0f;
+                }
+
+                if (enemyIndex >= currentWave.enemiesToSpawn.Count)
+                {
+                    isWaveActive = false;
+                    enemyIndex = 0;
+                    currentWaveIndex++;
+                }
             }
         }
     }
 
-    IEnumerator SpawnWaves()
+    void GenerateRandomNavMeshPoints()
     {
-        while (currentWaveIndex < waves.Count)
+        spawnPoints.Clear(); 
+
+        for (int i = 0; i < numberOfSpawnPoints; i++)
         {
-            Wave currentWave = waves[currentWaveIndex];
-            yield return new WaitForSeconds(currentWave.timeBetweenWaves);
-
-            foreach (GameObject enemy in currentWave.enemiesToSpawn)
+            Vector3 newPoint = GetRandomPointOnNavMesh();
+           
+            int attempts = 0;
+            while (IsPointTooCloseToExistingPoints(newPoint) && attempts < 30)
             {
-                Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)];
-                 GameObject spawnedEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
-                enemiesSpawned.Add(spawnedEnemy);
-                yield return new WaitForSeconds(currentWave.timeBetweenSpawns);
+                newPoint = GetRandomPointOnNavMesh();
+                attempts++;
             }
-
-            currentWaveIndex++;
+            
+            if (newPoint != Vector3.zero)
+            {
+                spawnPoints.Add(newPoint);
+            }
         }
     }
 
     Vector3 GetRandomPointOnNavMesh()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * 20.0f; // Adjust the radius as needed
+        Vector3 randomDirection = Random.insideUnitSphere * spawnRange;
         randomDirection += transform.position;
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomDirection, out hit, 10.0f, NavMesh.AllAreas))
@@ -67,9 +101,32 @@ public class WaveSpawner : MonoBehaviour
         return Vector3.zero;
     }
 
-    public void OnEnable()
+    bool IsPointTooCloseToExistingPoints(Vector3 newPoint)
     {
-        GenerateRandomNavMeshPoints();
-        StartCoroutine(SpawnWaves());
+        foreach (Vector3 point in spawnPoints)
+        {
+            if (Vector3.Distance(newPoint, point) < minimumSpawnDistance)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void Restart()
+    {
+        currentWaveIndex = 0;
+        enemyIndex = 0;
+
+        waveTimer = 0f;
+        spawnTimer = 0f;
+        isWaveActive = false;
+
+        enemiesSpawned.Clear();
+        GenerateRandomNavMeshPoints(); 
+    }
+    private void OnEnable()
+    {
+        Restart();
     }
 }
