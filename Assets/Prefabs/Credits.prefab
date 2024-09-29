@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 5174431322325475488}
   - component: {fileID: 4716433628416266471}
   m_Layer: 5
-  m_Name: Dylan
+  m_Name: Dylan Hillard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan-
+  m_text: Dylan Hillard-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8890a1e4b7873f84a9dc22b7584cae53, type: 2}
   m_sharedMaterial: {fileID: -8501412015256802562, guid: 8890a1e4b7873f84a9dc22b7584cae53,
@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 5534972262075770197}
   - component: {fileID: 6310707911076866229}
   m_Layer: 5
-  m_Name: Dylan
+  m_Name: Dylan Hillard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1892,7 +1892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8191742909181769812
 RectTransform:
   m_ObjectHideFlags: 0

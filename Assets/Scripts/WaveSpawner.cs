@@ -6,16 +6,16 @@ using UnityEngine.AI;
 [System.Serializable]
 public class Wave
 {
-    public float timeBetweenWaves = 5.0f;  // Time before this wave starts
-    public float timeBetweenSpawns = 1.0f; // Time between individual enemy spawns in this wave
-    public List<GameObject> enemiesToSpawn; // List of enemy prefabs to spawn in this wave
+    public float timeBetweenWaves = 5.0f;  //Time before this wave starts
+    public float timeBetweenSpawns = 1.0f; //Time between individual enemy spawns in this wave
+    public List<GameObject> enemiesToSpawn; //List of enemy prefabs to spawn in this wave
 }
 
 public class WaveSpawner : MonoBehaviour
 {
     [Header("Spawner Settings")]
-    public List<Wave> waves;               // List of waves
-    public int numberOfSpawnPoints = 10;   // Number of random spawn points to generate
+    public List<Wave> waves;               //List of waves
+    public int numberOfSpawnPoints = 10;   //Number of random spawn points to generate
 
     private List<Vector3> spawnPoints = new List<Vector3>();
     private int currentWaveIndex = 0;
