@@ -26757,7 +26757,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f09113a3a62b51948bc4ff397247d95b, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d160fe66000469740961e2535ed985e9, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2581448708410313662
 GameObject:
@@ -33597,7 +33597,7 @@ GameObject:
   - component: {fileID: 8940694440861002047}
   - component: {fileID: 1922062210278234233}
   - component: {fileID: 7959472185849653416}
-  m_Layer: 4
+  m_Layer: 11
   m_Name: Death Planes
   m_TagString: AcidWater
   m_Icon: {fileID: 0}
