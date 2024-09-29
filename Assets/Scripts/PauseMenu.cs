@@ -2,7 +2,7 @@ using SuperPupSystems.Manager;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,8 +11,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject hud;
 
-    public Text moneyText;
-    public Text attempts;
+    public TMP_Text moneyText;
+    public TMP_Text attempts;
 
 
     void Start()
