@@ -5222,7 +5222,7 @@ MonoBehaviour:
   projectile: {fileID: 7804715228311895986, guid: 9bf8b1841021b2b44b5514c3c0cc867e,
     type: 3}
   firePoint: {fileID: 6852440990893184467}
-  sightRange: 12
+  sightRange: 24
   attackRange: 4.5
   playerInSightRange: 0
   playerInAttackRange: 0
