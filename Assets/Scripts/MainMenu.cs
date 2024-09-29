@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
 
     public GameObject loadingScreen;
     public GameObject mainMenu;
+    public GameObject settingsUI;
+
     public Slider loadSlider;
     public void LoadLevel(string level)
     {
@@ -31,7 +33,11 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-
+    public void Toggle()
+    {
+        mainMenu.SetActive(!mainMenu.activeSelf);   
+        settingsUI.SetActive(!settingsUI.activeSelf);
+    }
     public void QuitGame()
     {
         #if(UNITY_EDITOR)

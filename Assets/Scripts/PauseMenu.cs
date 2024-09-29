@@ -9,7 +9,8 @@ public class PauseMenu : MonoBehaviour
     public bool isGamePaused = false;
 
     public GameObject pauseMenuUI;
-    public GameObject hud;
+    public GameObject hudUI;
+    public GameObject settingsUI;
 
     public TMP_Text moneyText;
     public TMP_Text attempts;
@@ -42,7 +43,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
-        hud.SetActive(true);
+        hudUI.SetActive(true);
         Time.timeScale = 1.0f;
         isGamePaused = false;
     }
@@ -52,7 +53,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
-        hud.SetActive(false);
+        hudUI.SetActive(false);
         attempts.text = GameManager.instance.runCounter.runCounter.ToString();
         moneyText.text = WalletManager.instance.coin.ToString();
         Time.timeScale = 0.0f;
@@ -64,6 +65,12 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Loading Main Menu");
         Time.timeScale = 1.0f;
         SceneManager.LoadSceneAsync("MainMenu");
+    }
+
+    public void Toggle()
+    {
+        pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
+        settingsUI.SetActive(!settingsUI.activeSelf);
     }
 
     public void QuitGame()
