@@ -9,10 +9,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-
     public GameObject loadingScreen;
     public GameObject mainMenu;
-    public GameObject settingsUI;
 
     public Slider loadSlider;
     public void LoadLevel(string level)
@@ -33,10 +31,10 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void Toggle()
+    public void Toggle(GameObject obj)
     {
         mainMenu.SetActive(!mainMenu.activeSelf);   
-        settingsUI.SetActive(!settingsUI.activeSelf);
+        obj.SetActive(!obj.activeSelf);
     }
     public void QuitGame()
     {

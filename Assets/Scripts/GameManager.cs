@@ -4,13 +4,14 @@ using SuperPupSystems.Manager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
     public List<ObjectPool> roomPool = new List<ObjectPool>();
     public GameObject player;
-
 
 
     private int preMoney;
@@ -35,9 +36,8 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+           
         }
-
         else
         {
             Destroy(gameObject);
@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+      
         playerAnim = player.GetComponentInChildren<Animator>();
         runCounter = player.GetComponentInChildren<RunCounter>();
 
@@ -71,8 +72,6 @@ public class GameManager : MonoBehaviour
                 roomPool.Add(pool.gameObject.GetComponent<ObjectPool>());
             }
         }
-
-
     }
 
     public void ClearAI()

@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject hudUI;
-    public GameObject settingsUI;
 
     public TMP_Text moneyText;
     public TMP_Text attempts;
@@ -67,10 +66,10 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadSceneAsync("MainMenu");
     }
 
-    public void Toggle()
+    public void Toggle(GameObject obj)
     {
         pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
-        settingsUI.SetActive(!settingsUI.activeSelf);
+        obj.SetActive(!obj.activeSelf);
     }
 
     public void QuitGame()
