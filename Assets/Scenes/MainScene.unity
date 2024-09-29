@@ -5021,6 +5021,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2104211953307943214, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2657382010459216697, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5079,7 +5084,7 @@ PrefabInstance:
     - target: {fileID: 3598056045671458357, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: field of view
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6037051775153051085, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
@@ -5091,7 +5096,48 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2074217267}
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerReset
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527471693658540150, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821577488562763767, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: runText
+      value: 
+      objectReference: {fileID: 1685162127}
+    m_RemovedComponents:
+    - {fileID: 7471362565328805661, guid: 11164402afa24e94fa5f5c070892cd25, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5108,6 +5154,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1685162124}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1685162127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3372712942524394189, guid: 11164402afa24e94fa5f5c070892cd25,
+    type: 3}
+  m_PrefabInstance: {fileID: 1685162124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1696911333
 Mesh:
   m_ObjectHideFlags: 0

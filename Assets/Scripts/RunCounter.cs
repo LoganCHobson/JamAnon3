@@ -12,10 +12,4 @@ public class RunCounter : MonoBehaviour
         runCounter++;
         runText.text = "run: " + runCounter.ToString();
     }
-
-    void Start()
-    {
-        runText.text = "run: " + runCounter.ToString();
-    }
-
 }

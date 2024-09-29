@@ -5,14 +5,11 @@ public class Teleporter : MonoBehaviour
 {
     public Transform destination;
     public UnityEvent onTeleport;
-    private GameManager gameManager = GameManager.instance;
+    
 
     public bool death = false;
 
-    private void Start()
-    {
-        gameManager = GameManager.instance;
-    }
+  
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !death)
@@ -25,9 +22,7 @@ public class Teleporter : MonoBehaviour
 
         if (death && other.CompareTag("Player"))
         {
-           // gameManager.Teleport();
-            GameObject.Find("TeleporterToHub").GetComponent<Teleporter>().onTeleport.Invoke();
-            gameManager.PlayerReset();
+            GameManager.instance.Death();
         }
 
     }

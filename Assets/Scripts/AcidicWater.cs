@@ -5,20 +5,50 @@ using SuperPupSystems.Helper;
 
 public class AcidicWater : MonoBehaviour
 {
-    //Needs to change but is alright for now
-    public Health playerHealth;
-    
-    // Start is called before the first frame update
-    void Start()
+    public int damage = 2;
+    public float rateOfDamage = 2f;  
+
+    private Health health;
+    private float damageTimer = 0f;  
+    private bool playerInWater = false;
+
+    private AudioSource audio;
+
+
+    private void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player Has Taken Damage");
-            playerHealth.Damage(1);
+            health = other.GetComponent<Health>();
+            playerInWater = true; 
+            damageTimer = 0f; 
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInWater = false; 
+        }
+    }
+
+    private void Update()
+    {
+        if (playerInWater && health != null)
+        {
+            damageTimer += Time.deltaTime;
+
+            if (damageTimer >= rateOfDamage)
+            {
+                audio.Play();
+                health.Damage(damage);   
+                damageTimer = 0f;       
+            }
         }
     }
 }

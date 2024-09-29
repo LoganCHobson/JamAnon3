@@ -157,5 +157,12 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = enable;
         player.GetComponentInChildren<MouseLook>().enabled = enable;
     }
+
+    public void Death()
+    {
+        PlayerReset();
+        ClearAI();
+        ClearRooms();
+    }
 }
 
