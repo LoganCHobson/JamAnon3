@@ -24,11 +24,14 @@ public class Gun : MonoBehaviour
     public LayerMask layerMask;
 
     GameObject gunHolder;
-
+    
     private AudioSource shoot;
+
+    private Animator anim;
 
     private void Start()
     {
+        anim = GetComponent<Animator>();    
         shoot = GetComponent<AudioSource>();
         gunHolder = GetComponentInParent<WeaponSway>().gameObject;
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
@@ -74,6 +77,7 @@ public class Gun : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         shoot.Play();
+        anim.Play("Recoil");
 
         Destroy(bullet, 3f);
 
