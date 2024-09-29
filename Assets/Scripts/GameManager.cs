@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerReset()
     {
+        player.GetComponentInChildren<Slider>().value = preMaxHealth;
         Debug.Log("Resetting player to prerun");
         runCounter.runCounter = preRunCount;
         player.GetComponentInChildren<Gun>().fireRate = preFireRate;
