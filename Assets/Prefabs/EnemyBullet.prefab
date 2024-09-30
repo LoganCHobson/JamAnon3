@@ -130,7 +130,6 @@ MonoBehaviour:
     m_Bits: 193
   tags:
   - Player
-  - Enemy
 --- !u!1001 &973043343818338404
 PrefabInstance:
   m_ObjectHideFlags: 0
