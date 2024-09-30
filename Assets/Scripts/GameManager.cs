@@ -77,20 +77,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ClearAI()
-    {
-        WaveSpawner[] WS = FindObjectsOfType<WaveSpawner>();
-
-        foreach (WaveSpawner spawner in WS)
-        {
-            foreach (GameObject obj in spawner.enemiesSpawned)
-            {
-                Destroy(obj);
-            }
-            spawner.enemiesSpawned.Clear();
-        }
-    }
-
     public void PlayerReset()
     {
         player.GetComponentInChildren<Slider>().value = preMaxHealth;
@@ -165,7 +151,6 @@ public class GameManager : MonoBehaviour
     public void Death()
     {
         PlayerReset();
-        ClearAI();
         ClearRooms();
         correctStartSpawner.Invoke();
     }

@@ -6883,9 +6883,19 @@ PrefabInstance:
       objectReference: {fileID: 1685162126}
     - target: {fileID: 6252964915462886043, guid: c31dce7ff79f91a41961467f6264ab9c,
         type: 3}
+      propertyPath: optionsUI
+      value: 
+      objectReference: {fileID: 2072195285}
+    - target: {fileID: 6252964915462886043, guid: c31dce7ff79f91a41961467f6264ab9c,
+        type: 3}
       propertyPath: settingsUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6252964915462886043, guid: c31dce7ff79f91a41961467f6264ab9c,
+        type: 3}
+      propertyPath: howToPlayUI
+      value: 
+      objectReference: {fileID: 682594456}
     - target: {fileID: 8402816177820809766, guid: c31dce7ff79f91a41961467f6264ab9c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

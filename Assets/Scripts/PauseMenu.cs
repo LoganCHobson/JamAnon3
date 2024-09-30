@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public bool isGamePaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject howToPlayUI;
+    public GameObject optionsUI;
     public GameObject hudUI;
 
     public TMP_Text moneyText;
@@ -42,6 +44,8 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
+        howToPlayUI.SetActive(false);
+        optionsUI.SetActive(false);
         hudUI.SetActive(true);
         Time.timeScale = 1.0f;
         isGamePaused = false;

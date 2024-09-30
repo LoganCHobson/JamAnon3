@@ -129,4 +129,11 @@ public class WaveSpawner : MonoBehaviour
     {
         Restart();
     }
+    private void OnDisable()
+    {
+        foreach (GameObject enemy in enemiesSpawned)
+        {
+            Destroy(enemy);
+        }
+    }
 }
