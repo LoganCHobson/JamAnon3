@@ -15,10 +15,10 @@ public class LootSpawner : MonoBehaviour
     public void SpawnLoot()
     {
         LootItem selectedLoot = GetRandomLoot();
-        if (selectedLoot != null)
+        if (selectedLoot.itemPrefab != null && selectedLoot != null)
         {
-            
-            Instantiate(selectedLoot.itemPrefab, transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(selectedLoot.itemPrefab, transform);
+            obj.GetComponent<Pickup>().permanent = false;
         }
         else
         {

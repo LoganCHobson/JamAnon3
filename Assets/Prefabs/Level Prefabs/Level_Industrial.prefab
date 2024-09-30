@@ -3494,6 +3494,7 @@ GameObject:
   - component: {fileID: 526703010585950819}
   - component: {fileID: 8051884221260648038}
   - component: {fileID: 3344739539744168642}
+  - component: {fileID: 2691836735409595068}
   m_Layer: 7
   m_Name: Level_Industrial
   m_TagString: Untagged
@@ -67652,6 +67653,19 @@ MonoBehaviour:
   m_MinRegionArea: 1
   m_NavMeshData: {fileID: 23800000, guid: b4d9ac986928ff34f9e643a1b7d267ef, type: 2}
   m_BuildHeightMesh: 1
+--- !u!114 &2691836735409595068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313308171776256550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5e625c774b6464a8f5f50080519b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temporaryObjs: []
 --- !u!1 &2462676925010235417
 GameObject:
   m_ObjectHideFlags: 0

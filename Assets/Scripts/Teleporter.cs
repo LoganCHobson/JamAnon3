@@ -24,6 +24,10 @@ public class Teleporter : MonoBehaviour
         {
             GameManager.instance.Death();
         }
+        if(other.CompareTag("Pickup"))
+        {
+            Destroy(other.gameObject);
+        }
 
     }
 }

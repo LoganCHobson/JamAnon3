@@ -3344,6 +3344,7 @@ GameObject:
   - component: {fileID: 1065273929740197606}
   - component: {fileID: 2865703411019329146}
   - component: {fileID: 1606926835005073322}
+  - component: {fileID: 1757822304930730780}
   m_Layer: 7
   m_Name: Level_Void
   m_TagString: Untagged
@@ -3369,7 +3370,6 @@ Transform:
   - {fileID: 8839139216948957720}
   - {fileID: 1776517998201987652}
   - {fileID: 4156654428908722059}
-  - {fileID: 7893116901004522492}
   - {fileID: 4576527047925845592}
   - {fileID: 4737291616462351744}
   - {fileID: 7429271645808481294}
@@ -26939,6 +26939,19 @@ MonoBehaviour:
   m_MinRegionArea: 1
   m_NavMeshData: {fileID: 23800000, guid: d160fe66000469740961e2535ed985e9, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &1757822304930730780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484681212737897393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5e625c774b6464a8f5f50080519b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temporaryObjs: []
 --- !u!1 &2581448708410313662
 GameObject:
   m_ObjectHideFlags: 0
@@ -31396,77 +31409,6 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
---- !u!1 &5529585895952262546
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7893116901004522492}
-  - component: {fileID: 2528308437930686032}
-  - component: {fileID: 842705845352410161}
-  m_Layer: 7
-  m_Name: Death
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7893116901004522492
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5529585895952262546}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.5, y: -11.5, z: 35.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2505180836836017777}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2528308437930686032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5529585895952262546}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 71.91864, y: 1, z: 70.19736}
-  m_Center: {x: 1.3960114, y: 0, z: -0.9818268}
---- !u!114 &842705845352410161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5529585895952262546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d23b8416eee084eaeb692382401e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 0}
-  onTeleport:
-    m_PersistentCalls:
-      m_Calls: []
-  death: 1
 --- !u!1 &5572448276058225491
 GameObject:
   m_ObjectHideFlags: 0
@@ -34037,6 +33979,7 @@ GameObject:
   - component: {fileID: 8940694440861002047}
   - component: {fileID: 1922062210278234233}
   - component: {fileID: 7959472185849653416}
+  - component: {fileID: 6766279123978739813}
   m_Layer: 11
   m_Name: Death Planes
   m_TagString: AcidWater
@@ -34260,6 +34203,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6766279123978739813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247356275031429590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d23b8416eee084eaeb692382401e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+  death: 1
 --- !u!1 &7286195012089380054
 GameObject:
   m_ObjectHideFlags: 0

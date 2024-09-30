@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Gun
   - Endcap
+  - Pickup
   layers:
   - Default
   - TransparentFX
