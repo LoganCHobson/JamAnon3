@@ -185,7 +185,7 @@ public class AIScript : MonoBehaviour
                 {
                     player.GetComponent<Health>().Damage(meleeDamage);
 
-                    if (!player.GetComponent<WallChecker>().wall)
+                    if (!player.GetChild(4).GetComponent<WallChecker>().wall)
                     {
                         kbDirection = (player.transform.position - gameObject.transform.position).normalized;
                         kbDirection = new Vector3(kbDirection.x, 0, kbDirection.z);
