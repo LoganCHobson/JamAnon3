@@ -11,7 +11,8 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 public class AIScript : MonoBehaviour
 {
-    
+
+    private WallChecker wallChecker;
 
     public LayerMask whatIsGround, whatIsPlayer;
     public NavMeshSurface surface;
@@ -184,11 +185,14 @@ public class AIScript : MonoBehaviour
                 {
                     player.GetComponent<Health>().Damage(meleeDamage);
 
-                    kbDirection =  (player.transform.position - gameObject.transform.position).normalized;
-                    kbDirection = new Vector3(kbDirection.x, 0, kbDirection.z);
-
-                    //player.GetComponent<Rigidbody>().AddForce(30,0,30);
-                    player.GetComponent<Rigidbody>().AddForce(kbDirection * kbStrength, ForceMode.Impulse);
+                    if (!player.GetComponent<WallChecker>().wall)
+                    {
+                        kbDirection = (player.transform.position - gameObject.transform.position).normalized;
+                        kbDirection = new Vector3(kbDirection.x, 0, kbDirection.z);
+                        KnockBack(kbDirection);
+                        
+                    }
+                   
                     attack.Invoke();
                     alreadyAttacked = true;
                     Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -216,5 +220,10 @@ public class AIScript : MonoBehaviour
             isFlashing = true;
             flashTimer = 0f;
         }
+    }
+
+    public void KnockBack(Vector3 _direction)
+    {
+        player.GetComponent<Rigidbody>().AddForce(_direction * kbStrength, ForceMode.Impulse);
     }
 }
