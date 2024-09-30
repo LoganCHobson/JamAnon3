@@ -5081,6 +5081,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5083124355138551178, guid: 5df4727ac80e87140bfebabce8d04f75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5456248743453613582, guid: 5df4727ac80e87140bfebabce8d04f75,
         type: 3}
       propertyPath: m_IsActive
@@ -5102,7 +5107,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5083124355138551178, guid: 5df4727ac80e87140bfebabce8d04f75, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df4727ac80e87140bfebabce8d04f75, type: 3}
@@ -5121,12 +5127,6 @@ MeshRenderer:
 --- !u!23 &6225614995840976578 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8787097697210268670, guid: 5df4727ac80e87140bfebabce8d04f75,
-    type: 3}
-  m_PrefabInstance: {fileID: 3429448330578279740}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &8346377777804195466 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 6648319412385811382, guid: 5df4727ac80e87140bfebabce8d04f75,
     type: 3}
   m_PrefabInstance: {fileID: 3429448330578279740}
   m_PrefabAsset: {fileID: 0}
@@ -5284,7 +5284,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8152157234169448432}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.81
   m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
@@ -5293,7 +5293,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 3.2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -5398,7 +5398,7 @@ MonoBehaviour:
         m_MethodName: DamageFlash
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8346377777804195466}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.MeshRenderer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5537,8 +5537,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2705741, y: 3.1652288, z: 1}
-  m_Center: {x: 0.008062363, y: 1.6050162, z: 0}
+  m_Size: {x: 1.7473786, y: 3.2211995, z: 1}
+  m_Center: {x: 0.0123490095, y: 1.6330016, z: 0}
 --- !u!82 &-1463820217447624448
 AudioSource:
   m_ObjectHideFlags: 0

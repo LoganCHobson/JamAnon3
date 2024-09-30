@@ -5024,7 +5024,7 @@ PrefabInstance:
     - target: {fileID: 1136605629609769494, guid: e1309214a6e431242b089c0c4c657385,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 1136605629609769494, guid: e1309214a6e431242b089c0c4c657385,
         type: 3}
@@ -5253,7 +5253,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.64
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -5461,8 +5461,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3411427, y: 1.5466192, z: 0.48806667}
-  m_Center: {x: 0.041797638, y: 0.8092891, z: 0.03637457}
+  m_Size: {x: 1.6674051, y: 1.6320231, z: 0.48806667}
+  m_Center: {x: 0.0013828278, y: 0.85199106, z: 0.03637457}
 --- !u!82 &2189768558452264185
 AudioSource:
   m_ObjectHideFlags: 0

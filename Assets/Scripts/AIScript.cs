@@ -156,8 +156,6 @@ public class AIScript : MonoBehaviour
                 GameObject bullet = Instantiate(projectile, firePoint.position, transform.rotation);
                 bullet.GetComponent<Bullet>().damage = bulletDamage;
                 attack.Invoke();
-                anim.SetTrigger("Fire");
-                
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
 
