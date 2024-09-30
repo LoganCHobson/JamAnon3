@@ -188,7 +188,7 @@ public class AIScript : MonoBehaviour
                     kbDirection = new Vector3(kbDirection.x, 0, kbDirection.z);
 
                     //player.GetComponent<Rigidbody>().AddForce(30,0,30);
-                    player.GetComponent<Rigidbody>().AddForce(kbDirection * kbStrength);
+                    player.GetComponent<Rigidbody>().AddForce(kbDirection * kbStrength, ForceMode.Impulse);
                     attack.Invoke();
                     alreadyAttacked = true;
                     Invoke(nameof(ResetAttack), timeBetweenAttacks);
