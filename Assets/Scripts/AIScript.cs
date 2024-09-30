@@ -54,6 +54,12 @@ public class AIScript : MonoBehaviour
     public UnityEvent attack;
 
     private Animator anim;
+    private bool isFlashing = false;
+    private float flashDuration = 0.2f;  
+    private float flashTimer = 0f;       
+    private Texture originalTexture;
+    private Color originalColor;
+    private MeshRenderer rend;
 
     private void Awake()
     {
@@ -92,6 +98,17 @@ public class AIScript : MonoBehaviour
         if (playerInSightRange && playerInAttackRange)
         {
             AttackPlayer();
+        }
+
+        if (isFlashing)
+        {
+            flashTimer += Time.deltaTime;
+            if (flashTimer >= flashDuration)
+            {
+                rend.material.color = originalColor;
+                rend.material.mainTexture = originalTexture;
+                isFlashing = false;
+            }
         }
     }
 
@@ -185,20 +202,19 @@ public class AIScript : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void DamageFlash(MeshRenderer rend)
+    public void DamageFlash(MeshRenderer renderer)
     {
-        
-        StartCoroutine(FlashCoroutine(rend));
-    }
+        if (!isFlashing)
+        {
+            rend = renderer;
+            originalTexture = rend.material.mainTexture;
+            originalColor = rend.material.color;
 
-    private IEnumerator FlashCoroutine(MeshRenderer rend)
-    {
-        Texture origText = rend.material.mainTexture;
-        Color originalColor = rend.material.color;
-        rend.material.color = Color.red;
-        rend.material.mainTexture = null;
-        yield return new WaitForSeconds(.2f);
-        rend.material.color = originalColor;
-        rend.material.mainTexture = origText;
+            rend.material.color = Color.red;
+            rend.material.mainTexture = null;
+
+            isFlashing = true;
+            flashTimer = 0f;
+        }
     }
 }
