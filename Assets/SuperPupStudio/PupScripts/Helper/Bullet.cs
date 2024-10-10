@@ -33,7 +33,6 @@ namespace SuperPupSystems.Helper
         private void Start()
         {
             m_timer = GetComponent<Timer>();
-            m_timer.timeout.AddListener(DestroyBullet);
 
             m_timer.StartTimer(lifeTime);
 
@@ -70,20 +69,9 @@ namespace SuperPupSystems.Helper
                 {
                     hitTarget.Invoke();
                     dead = true;
-                    StartCoroutine(DestroyBulletAfterDelay());
+                    Destroy(gameObject, destroyDelay);
                 }
             }
-        }
-
-        private IEnumerator DestroyBulletAfterDelay()
-        {
-            yield return new WaitForSeconds(destroyDelay);
-            DestroyBullet();
-        }
-
-        private void DestroyBullet()
-        {
-            Destroy(gameObject);
         }
     }
 }

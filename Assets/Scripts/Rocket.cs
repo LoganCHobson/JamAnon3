@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using SuperPupSystems.Helper;
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class Rocket : MonoBehaviour
     public Bullet bullet;
 
     public float splashRadius = 15f;
-    public float damage;
+    public int splashDamage;
+    public int damage;
 
     void Start()
     {
@@ -30,20 +32,26 @@ public class Rocket : MonoBehaviour
 
     public void OnBulletHitTarget()
     {
+        Debug.Log("Ran");
         Debug.Log("Bullet hit target, playing particle systems");
         sparks.Play();
         flash.Play();
         fire.Play();
         smoke.Play();
-        /*
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, splashRadius);
-        foreach (Collider hitCollider in hitColliders)
+        
+        List<Health> healthComponents = hitColliders //We gotta do this because theres too many colliders on one obj.
+            .Select(collider => collider.GetComponent<Health>())
+            .Where(health => health != null)  
+            .Distinct()                      
+            .ToList();                       
+
+        foreach (Health healthComponent in healthComponents)
         {
-            Health targetHealth = hitCollider.GetComponent<Health>();
-            if (targetHealth != null)
-            {
-                targetHealth.Damage(damage);
-            }
-        }*/
+            GameObject hitObject = healthComponent.gameObject; 
+            Debug.Log("Hit: " + hitObject.name);
+            healthComponent.Damage(splashDamage);
+        }
     }
 }

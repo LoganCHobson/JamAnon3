@@ -5197,7 +5197,7 @@ MonoBehaviour:
   bulletDamage: 10
   meleeDamage: 7
   kbDirection: {x: 0, y: 0, z: 0}
-  kbStrength: 10
+  kbStrength: 100
   attack:
     m_PersistentCalls:
       m_Calls:
