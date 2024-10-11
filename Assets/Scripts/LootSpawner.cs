@@ -13,6 +13,8 @@ public class LootSpawner : MonoBehaviour
     public List<LootItem> lootTable = new List<LootItem>(); 
     private GameManager gameManager = GameManager.instance;
 
+
+
     public void SpawnLoot()
     {
         LootItem selectedLoot = GetRandomLoot();
@@ -24,6 +26,20 @@ public class LootSpawner : MonoBehaviour
         else
         {
             Debug.Log("No loot spawned.");
+        }
+    }
+
+    public GameObject SpawnLootReturnGameObj()
+    {
+        LootItem selectedLoot = GetRandomLoot();
+        if (selectedLoot.itemPrefab != null && selectedLoot != null)
+        {
+            return selectedLoot.itemPrefab;
+        }
+        else
+        {
+            Debug.Log("No loot spawned.");
+            return null;
         }
     }
 
@@ -51,7 +67,7 @@ public class LootSpawner : MonoBehaviour
         return null;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         foreach(LootItem loot in lootTable)
         {
