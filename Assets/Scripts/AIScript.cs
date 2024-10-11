@@ -162,7 +162,7 @@ public class AIScript : MonoBehaviour
         Vector3 playerPosition = player.transform.position;
         playerPosition = new Vector3(playerPosition.x, playerPosition.y-1f, playerPosition.z);
 
-        anim.SetTrigger("Fire");
+        //anim.SetTrigger("Fire");
         agent.SetDestination(transform.position);
         
 

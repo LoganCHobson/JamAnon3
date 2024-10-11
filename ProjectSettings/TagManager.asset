@@ -12,6 +12,7 @@ TagManager:
   - Gun
   - Endcap
   - Pickup
+  - Spawner
   layers:
   - Default
   - TransparentFX

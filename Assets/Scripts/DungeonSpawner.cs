@@ -1,5 +1,5 @@
-using UnityEngine;
 using SolarStudios;
+using UnityEngine;
 
 
 public class DungeonSpawner : MonoBehaviour
@@ -15,43 +15,73 @@ public class DungeonSpawner : MonoBehaviour
         objectPoolMaster = GameObject.Find("ObjectPoolMaster");
 
         spawnPoint = transform.GetChild(0);
-        CheckSpawnerDistance();
+        //CheckSpawnerDistance();
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Doorway") && other.transform.root != transform.root)
+        {
+            Debug.Log("Checking: " + other);
+            if (other.GetComponentInChildren<DungeonSpawner>())
+            {
+                GameObject temp = other.GetComponentInChildren<DungeonSpawner>().gameObject; //I know I just want the debugging.
+                temp.SetActive(false);
+                Debug.Log("Turned off: " + gameObject.name + " & " + temp.name);
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                return;
+            }
+        }
+       else if (other.CompareTag("Player"))
         {
             int rand = Random.Range(0, 5);
 
             GameObject spawnedRoom = objectPoolMaster.transform.GetChild(rand).GetComponent<ObjectPool>().Spawn(spawnPoint.position);
-            
+
             if (spawnedRoom == null)
             {
                 GameObject room = objectPoolMaster.transform.GetChild(5).GetComponent<ObjectPool>().Spawn(endcapSpawnPoint.position, endcapSpawnPoint.rotation);
-                
+
                 gameObject.SetActive(false);
             }
             else
             {
                 EnableAllChildren(spawnedRoom.transform);
-                DisableSpawner(spawnedRoom);
+                //DisableSpawner(spawnedRoom);
             }
 
-            CheckSpawnerDistance();
+            //CheckSpawnerDistance();
             gameObject.SetActive(false);
         }
-        if(other.CompareTag("Endcap"))
+        else if (other.CompareTag("Endcap"))
         {
             other.gameObject.SetActive(false);
             other.gameObject.GetComponentInChildren<Canvas>().enabled = false;
             gameObject.SetActive(false);
         }
+        else if (other.CompareTag("Doorway") && other.transform.root != transform.root)
+        {
+            Debug.Log("Checking: " + other);
+            if (other.GetComponentInChildren<DungeonSpawner>())
+            {
+                GameObject temp = other.GetComponentInChildren<DungeonSpawner>().gameObject; //I know I just want the debugging.
+                temp.SetActive(false);
+                Debug.Log("Turned off: " + gameObject.name + " & " + temp.name);
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 
 
-    private void DisableSpawner(GameObject room)
+    /*private void DisableSpawner(GameObject room)
     {
 
         Transform player = GameObject.Find("Player").transform;
@@ -62,7 +92,7 @@ public class DungeonSpawner : MonoBehaviour
 
         foreach (var spawner in spawners)
         {
-            float distance = Vector3.Distance(spawner.transform.position, player.position); 
+            float distance = Vector3.Distance(spawner.transform.position, player.position);
 
             if (distance < closestDistance)
             {
@@ -71,7 +101,7 @@ public class DungeonSpawner : MonoBehaviour
             }
         }
 
-      
+
         if (closestSpawner != null)
         {
             closestSpawner.gameObject.SetActive(false);
@@ -96,13 +126,13 @@ public class DungeonSpawner : MonoBehaviour
             }
         }
     }
-
+    */
     void EnableAllChildren(Transform parent)
     {
         foreach (Transform child in parent)
         {
             child.gameObject.SetActive(true);
-            
+
             EnableAllChildren(child);
         }
     }

@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 6159707061086565328}
   m_Layer: 9
   m_Name: Spawner (3)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -630,8 +630,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 1.9851897, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.0425745, z: 2.0003896}
 --- !u!114 &3300612730696031057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,7 +1462,7 @@ GameObject:
   - component: {fileID: 5676270671253220861}
   m_Layer: 9
   m_Name: Spawner (5)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,8 +1503,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 1.9373703, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 0.041007727, z: 2.0003896}
 --- !u!114 &2301889848121962403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54827,7 +54827,7 @@ GameObject:
   - component: {fileID: 5879474071296893072}
   m_Layer: 9
   m_Name: Spawner (4)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54868,8 +54868,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.0532022, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.016908407, z: 2.0003896}
 --- !u!114 &8352309815940687290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57563,7 +57563,7 @@ GameObject:
   - component: {fileID: 6433538244981675591}
   m_Layer: 9
   m_Name: Spawner (6)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57604,8 +57604,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.0790215, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.0894904, z: 2.0003896}
 --- !u!114 &6903420069767257442
 MonoBehaviour:
   m_ObjectHideFlags: 0

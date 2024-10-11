@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5294142164223018662}
   m_Layer: 9
   m_Name: Spawner (6)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.6184862, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.3592225, z: 2.0003896}
 --- !u!114 &5122090305419564924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 5846120952246223271}
   m_Layer: 9
   m_Name: Spawner (4)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1445,8 +1445,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.5907156, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.28566527, z: 2.0003896}
 --- !u!114 &2822541829605620558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3356,7 +3356,7 @@ GameObject:
   - component: {fileID: 4662264153775134910}
   m_Layer: 9
   m_Name: Spawner (3)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3397,8 +3397,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.17513, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.1375446, z: 2.0003896}
 --- !u!114 &246897979091105361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75389,7 +75389,7 @@ GameObject:
   - component: {fileID: 5902084512429306465}
   m_Layer: 9
   m_Name: Spawner (5)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75430,8 +75430,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.0924835, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.036548853, z: 2.0003896}
 --- !u!114 &3165940074050815838
 MonoBehaviour:
   m_ObjectHideFlags: 0
