@@ -4967,10 +4967,10 @@ MonoBehaviour:
     spawnProbability: 0.4
   - itemPrefab: {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687,
       type: 3}
-    spawnProbability: 0.34
+    spawnProbability: 0.44
   - itemPrefab: {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020,
       type: 3}
-    spawnProbability: 0.2
+    spawnProbability: 0.1
   - itemPrefab: {fileID: 6294575206199383447, guid: 3e4b2d74ab1b9bc40abee06dcb2450f9,
       type: 3}
     spawnProbability: 0.05
@@ -5246,9 +5246,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 7
-  m_Acceleration: 8
+  m_Acceleration: 12
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -5285,7 +5285,7 @@ MonoBehaviour:
   projectile: {fileID: 7804715228311895986, guid: 9bf8b1841021b2b44b5514c3c0cc867e,
     type: 3}
   firePoint: {fileID: 6852440990893184467}
-  sightRange: 24
+  sightRange: 30
   attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0

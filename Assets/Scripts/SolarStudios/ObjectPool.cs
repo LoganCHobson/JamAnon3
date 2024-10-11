@@ -46,7 +46,7 @@ namespace SolarStudios //Logans Library
             onSpawn.Invoke();
             foreach (GameObject obj in objectPool)
             {
-                if (!obj.activeInHierarchy)
+                if (!obj.activeInHierarchy && obj != null)
                 {
                     obj.transform.position = position;
                     obj.transform.rotation = rotation;

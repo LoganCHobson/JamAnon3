@@ -5,19 +5,18 @@ using UnityEngine.AI;
 [System.Serializable]
 public class Wave
 {
-    public float timeBetweenWaves = 5.0f;  //Time before this wave starts
-    public float timeBetweenSpawns = 1.0f; //Time between individual enemy spawns in this wave
-    public List<GameObject> objectsToSpawn; //List of prefabs to spawn in this wave
+    public float timeBetweenWaves = 5.0f;  // Time before this wave starts
+    public float timeBetweenSpawns = 1.0f; // Time between individual enemy spawns in this wave
+    public List<GameObject> objectsToSpawn; // List of prefabs to spawn in this wave
 }
 
 public class WaveSpawner : MonoBehaviour
 {
     [Header("Spawner Settings")]
-    public List<Wave> waves;               //List of waves
-    public int numberOfSpawnPoints = 10;   //Number of random spawn points to generate
-    public float spawnRange = 20f;         //Range for spawn points around the spawner
-    public float minimumSpawnDistance = 5f; //Minimum distance between each spawn point
-    public float minDistanceFromLastSpawn = 20f; //Minimum distance from last spawn
+    public List<Wave> waves;               // List of waves
+    public int numberOfSpawnPoints = 10;   // Number of random spawn points to generate
+    public float spawnRange = 20f;         // Range for spawn points around the spawner
+    public float minimumSpawnDistance = 5f; // Minimum distance between each spawn point
 
     private List<Vector3> spawnPoints = new List<Vector3>();
     private int currentWaveIndex = 0;
@@ -27,8 +26,7 @@ public class WaveSpawner : MonoBehaviour
     private bool isWaveActive = false;
 
     public List<GameObject> objectsSpawned;
-
-    private Vector3 lastSpawnPosition; 
+    private Vector3 lastSpawnPosition;
 
     void Update()
     {
@@ -50,20 +48,14 @@ public class WaveSpawner : MonoBehaviour
                 spawnTimer += Time.deltaTime;
                 if (spawnTimer >= currentWave.timeBetweenSpawns && index < currentWave.objectsToSpawn.Count)
                 {
-                    Vector3 spawnPosition = Vector3.zero;
-                    int attempts = 0;
-                    
-                    do
+                    if (index < spawnPoints.Count)  
                     {
-                        spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Count)];
-                        attempts++;
-                    } while (Vector3.Distance(spawnPosition, lastSpawnPosition) < minDistanceFromLastSpawn && attempts < 30);
+                        Vector3 spawnPosition = spawnPoints[index];  
 
-                    if (attempts < 30)
-                    {
-                        GameObject spawnedEnemy = Instantiate(currentWave.objectsToSpawn[index], spawnPosition, Quaternion.identity);
-                        objectsSpawned.Add(spawnedEnemy);
-                        lastSpawnPosition = spawnPosition; 
+                        GameObject spawnedObject = Instantiate(currentWave.objectsToSpawn[index], spawnPosition, Quaternion.identity);
+                        objectsSpawned.Add(spawnedObject);
+
+                        lastSpawnPosition = spawnPosition;
 
                         index++;
                         spawnTimer = 0f;
@@ -89,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
             Vector3 newPoint = GetRandomPointOnNavMesh();
 
             int attempts = 0;
-            while (IsPointTooCloseToExistingPoints(newPoint) && attempts < 30)
+            while (Spacing(newPoint) && attempts < 30)
             {
                 newPoint = GetRandomPointOnNavMesh();
                 attempts++;
@@ -114,7 +106,7 @@ public class WaveSpawner : MonoBehaviour
         return Vector3.zero;
     }
 
-    bool IsPointTooCloseToExistingPoints(Vector3 newPoint)
+    bool Spacing(Vector3 newPoint)
     {
         foreach (Vector3 point in spawnPoints)
         {
@@ -136,20 +128,20 @@ public class WaveSpawner : MonoBehaviour
         isWaveActive = false;
 
         objectsSpawned.Clear();
-        lastSpawnPosition = Vector3.zero; 
+        lastSpawnPosition = Vector3.zero;
         GenerateRandomNavMeshPoints();
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         Restart();
-    }
+    }*/
 
     private void OnDisable()
     {
-        foreach (GameObject enemy in objectsSpawned)
+        foreach (GameObject spawnedObject in objectsSpawned)
         {
-            Destroy(enemy);
+            Destroy(spawnedObject);
         }
     }
 }

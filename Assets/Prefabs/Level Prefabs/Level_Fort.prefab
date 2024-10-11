@@ -9983,13 +9983,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - timeBetweenWaves: 5
-    timeBetweenSpawns: 0
+  - timeBetweenWaves: 0
+    timeBetweenSpawns: 0.1
     objectsToSpawn: []
-  numberOfSpawnPoints: 10
+  numberOfSpawnPoints: 20
   spawnRange: 25
   minimumSpawnDistance: 5
-  minDistanceFromLastSpawn: 20
   objectsSpawned: []
 --- !u!114 &7242143199264927646
 MonoBehaviour:
@@ -10006,10 +10005,10 @@ MonoBehaviour:
   lootTable:
   - itemPrefab: {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687,
       type: 3}
-    spawnProbability: 0.74
+    spawnProbability: 0.84
   - itemPrefab: {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020,
       type: 3}
-    spawnProbability: 0.2
+    spawnProbability: 0.1
   - itemPrefab: {fileID: 6294575206199383447, guid: 3e4b2d74ab1b9bc40abee06dcb2450f9,
       type: 3}
     spawnProbability: 0.05
@@ -48933,8 +48932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temporaryObjs: []
-  loot: {fileID: 1994316060970906648}
-  enemy: {fileID: 6463836303913856932}
+  loot: {fileID: 7503160233258579157}
+  enemy: {fileID: 8033776003889632046}
   howMuchLoot: 6
   howMuchEnemies: 10
 --- !u!1 &7753330916874702615
@@ -49354,13 +49353,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - timeBetweenWaves: 5
+  - timeBetweenWaves: 2
     timeBetweenSpawns: 0.2
     objectsToSpawn: []
   numberOfSpawnPoints: 10
   spawnRange: 25
   minimumSpawnDistance: 5
-  minDistanceFromLastSpawn: 20
   objectsSpawned: []
 --- !u!114 &4382102280668357728
 MonoBehaviour:

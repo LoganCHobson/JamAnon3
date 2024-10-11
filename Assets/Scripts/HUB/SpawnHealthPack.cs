@@ -25,7 +25,8 @@ public class SpawnHealthPack : MonoBehaviour
             {
                 Debug.Log("Player Buys the Health Pack");
                 /*Spawn GameObject*/
-                Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
+                GameObject temp = Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
+                temp.GetComponent<HealthPack>().permanent = true;
                 WalletManager.instance.coin -= price;
             }
         }else

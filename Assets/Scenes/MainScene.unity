@@ -5245,6 +5245,16 @@ PrefabInstance:
       propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2074217268}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: sprintSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5780,6 +5790,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 111532140}
+    - target: {fileID: 473643910590200989, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: price
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 899363379472570228, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5835,6 +5850,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1279254131}
+    - target: {fileID: 3184644044254690960, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: m_text
+      value: 'Price: $500
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 3385977463662851500, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5885,6 +5907,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 767145389}
+    - target: {fileID: 4418799984137324495, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: price
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4560244813063706426, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5905,6 +5932,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1730501516}
+    - target: {fileID: 5409502875214961372, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: price
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5447714384308523384, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5985,6 +6017,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 767145389}
+    - target: {fileID: 6358229634813358630, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: m_text
+      value: 'Price: $1000
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 6797716261559172338, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -6015,6 +6054,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1730501516}
+    - target: {fileID: 8063469075962041203, guid: 496d1888da7bf0c4cbb9ddf897b33281,
+        type: 3}
+      propertyPath: m_text
+      value: 'Price: $200
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 9062047630506365017, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh

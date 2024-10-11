@@ -4966,10 +4966,10 @@ MonoBehaviour:
     spawnProbability: 0.4
   - itemPrefab: {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687,
       type: 3}
-    spawnProbability: 0.34
+    spawnProbability: 0.44
   - itemPrefab: {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020,
       type: 3}
-    spawnProbability: 0.2
+    spawnProbability: 0.1
   - itemPrefab: {fileID: 6294575206199383447, guid: 3e4b2d74ab1b9bc40abee06dcb2450f9,
       type: 3}
     spawnProbability: 0.05
@@ -5325,7 +5325,7 @@ MonoBehaviour:
   projectile: {fileID: 7804715228311895986, guid: 9bf8b1841021b2b44b5514c3c0cc867e,
     type: 3}
   firePoint: {fileID: 3889990461500766228}
-  sightRange: 24
+  sightRange: 30
   attackRange: 15
   playerInSightRange: 0
   playerInAttackRange: 0

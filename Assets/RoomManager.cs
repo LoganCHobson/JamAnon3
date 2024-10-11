@@ -6,12 +6,13 @@ public class RoomManager : MonoBehaviour
 {
 
     public List<GameObject> temporaryObjs = new List<GameObject>();
-    public WaveSpawner loot;
-    public WaveSpawner enemy;
+    public GameObject loot;
+    public GameObject enemy;
 
     public int howMuchLoot;
     public int howMuchEnemies;
 
+   
     private void OnDisable()
     {
         foreach (GameObject obj in temporaryObjs)
@@ -20,20 +21,28 @@ public class RoomManager : MonoBehaviour
         }
         temporaryObjs.Clear();
 
-        loot.waves.Clear();
-        enemy.waves.Clear();
+        loot.GetComponent<WaveSpawner>().waves[0].objectsToSpawn.Clear();
+        enemy.GetComponent<WaveSpawner>().waves[0].objectsToSpawn.Clear();
+        loot.gameObject.SetActive(false);
+        enemy.gameObject.SetActive(false);
+    }
+    private void Start()
+    {
+        
     }
 
     private void OnEnable()
     {
-        WaveSpawner waveSpawnerLoot = loot.GetComponent<WaveSpawner>();
-        LootSpawner lootSpawner = loot.gameObject.GetComponent<LootSpawner>();
 
-       
+        WaveSpawner waveSpawnerLoot = loot.GetComponent<WaveSpawner>();
+        LootSpawner lootSpawner = loot.GetComponent<LootSpawner>();
+
+
         if (waveSpawnerLoot.waves.Count == 0)
         {
             Wave wave = new Wave();
-
+            wave.timeBetweenSpawns = 0f;
+            wave.timeBetweenWaves = 2f;
             for (int i = 0; i < howMuchLoot; i++)
             {
                 GameObject lootObj = lootSpawner.SpawnLootReturnGameObj(); 
@@ -66,7 +75,8 @@ public class RoomManager : MonoBehaviour
         if (waveSpawnerEnemy.waves.Count == 0)
         {
             Wave wave = new Wave();
-
+            wave.timeBetweenSpawns = 0f;
+            wave.timeBetweenWaves = 2f;
             for (int i = 0; i < howMuchEnemies; i++)
             {
                 GameObject enemyObj = enemyLootSpawner.SpawnLootReturnGameObj(); 
@@ -92,6 +102,7 @@ public class RoomManager : MonoBehaviour
             }
         }
 
-        enemy.Restart(); 
+        enemy.GetComponent<WaveSpawner>().Restart(); 
+        loot.GetComponent<WaveSpawner>().Restart();
     }
 }
