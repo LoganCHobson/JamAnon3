@@ -11,6 +11,7 @@ public class LootItem
 public class LootSpawner : MonoBehaviour
 {
     public List<LootItem> lootTable = new List<LootItem>(); 
+    private GameManager gameManager = GameManager.instance;
 
     public void SpawnLoot()
     {
@@ -48,5 +49,28 @@ public class LootSpawner : MonoBehaviour
         }
        
         return null;
+    }
+
+    private void Start()
+    {
+        foreach(LootItem loot in lootTable)
+        {
+            if(loot.itemPrefab == null)
+            {
+                if(loot.spawnProbability < 0.90)
+                {
+                    loot.spawnProbability = Mathf.Max(loot.spawnProbability + (0.04f * gameManager.preRunCount), 0);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                loot.spawnProbability = Mathf.Max(loot.spawnProbability - (0.01f * gameManager.preRunCount), 0);
+            }
+            
+        }
     }
 }

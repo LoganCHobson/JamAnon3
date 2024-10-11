@@ -37,7 +37,7 @@ public class AIScript : MonoBehaviour
     public Transform firePoint;
 
     //Utils
-    private GameManager gameManager;
+    private GameManager gameManager = GameManager.instance;
     private Health healthScript;
     // States
     public float sightRange, attackRange;
@@ -73,7 +73,7 @@ public class AIScript : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         healthScript = GetComponent<Health>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+       
 
         //Linerally scaling enemies per run.
         healthScript.maxHealth = Mathf.Min(healthScript.maxHealth + (10 * gameManager.preRunCount), 500);

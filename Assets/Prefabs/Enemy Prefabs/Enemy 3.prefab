@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable:
+  - itemPrefab: {fileID: 0}
+    spawnProbability: 0.4
   - itemPrefab: {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687,
       type: 3}
     spawnProbability: 0.34
@@ -57,8 +59,6 @@ MonoBehaviour:
   - itemPrefab: {fileID: 1775392326538538140, guid: eda4c51ed54c29744af064a4fa3ea23e,
       type: 3}
     spawnProbability: 0.01
-  - itemPrefab: {fileID: 0}
-    spawnProbability: 0.4
 --- !u!1 &964782741929230065
 GameObject:
   m_ObjectHideFlags: 0
