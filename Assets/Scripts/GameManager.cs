@@ -33,7 +33,12 @@ public class GameManager : MonoBehaviour
 
     private Animator playerAnim;
 
-    public UnityEvent correctStartSpawner;
+   
+
+    public GameObject spawner1;
+    public GameObject spawner2;
+    public GameObject spawner3;
+    public GameObject spawner4;
     private void Awake()
     {
         if (instance == null)
@@ -125,6 +130,7 @@ public class GameManager : MonoBehaviour
         {
             pool.RecycleAll();
         }
+        SpawnerCorrect();
     }
 
     public void Teleport()
@@ -152,7 +158,14 @@ public class GameManager : MonoBehaviour
     {
         PlayerReset();
         ClearRooms();
-        correctStartSpawner.Invoke();
+    }
+    public void SpawnerCorrect()
+    {
+        spawner1.SetActive(true);
+        spawner2.SetActive(true);
+        spawner3.SetActive(true);
+        spawner4.SetActive(true);
+
     }
 }
 

@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 1122419847305247483}
   - component: {fileID: 2380412965734461716}
   - component: {fileID: 7564348868556290492}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: HallwayDoor
   m_TagString: Doorway
   m_Icon: {fileID: 0}
