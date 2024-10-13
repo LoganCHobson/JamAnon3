@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
         {
             pool.RecycleAll();
         }
-        SpawnerCorrect();
+        Invoke("SpawnerCorrect", 1);
     }
 
     public void Teleport()

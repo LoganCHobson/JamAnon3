@@ -5062,6 +5062,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2104211953307943214, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
+      propertyPath: m_Drag
+      value: 9.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2104211953307943214, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 12.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2104211953307943214, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
       propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
@@ -5173,12 +5183,22 @@ PrefabInstance:
     - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: speed
-      value: 5
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: gravity
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: sprintSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: airControlFactor
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6100,7 +6120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4722255322993293546, guid: 4852b75c54f21b74ea54da405df10870, type: 3}
-  poolSize: 0
+  poolSize: 3
   objectPool: []
   onSpawn:
     m_PersistentCalls:
