@@ -9,7 +9,7 @@ public class SpawnDamageUpgrade : MonoBehaviour
     public GameObject prefab;
     public int price = 100;
     public bool insideCollider = false;
-   
+    public AudioSource audioSource;
     void Start()
     {
         purchaseTag.SetActive(false);
@@ -22,6 +22,7 @@ public class SpawnDamageUpgrade : MonoBehaviour
             purchaseTag.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
             {
+                audioSource.Play();
                 Debug.Log("Player Buys the Health Pack");
                 /*Spawn GameObject*/
                GameObject temp = Instantiate(prefab, gameObject.transform.position, Quaternion.identity);

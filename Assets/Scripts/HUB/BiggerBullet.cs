@@ -8,6 +8,7 @@ public class BiggerBullet : MonoBehaviour
     public GameObject purchaseTag;
     public int price = 100;
     public bool insideCollider = false;
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class BiggerBullet : MonoBehaviour
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 if (player != null)
                 {
+                    audioSource.Play();
                     Debug.Log("Player found: " + player.name);
                     SwitchGuns(player.transform, "BiggerBulletGun");
                     WalletManager.instance.coin -= price;

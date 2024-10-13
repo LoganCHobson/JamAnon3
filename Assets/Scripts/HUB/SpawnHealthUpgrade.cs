@@ -9,6 +9,7 @@ public class SpawnHealthUpgrade : MonoBehaviour
     public GameObject prefab;
     public int price = 200;
     public bool insideCollider = false;
+    public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class SpawnHealthUpgrade : MonoBehaviour
             purchaseTag.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F) && WalletManager.instance.coin >= price)
             {
+                audioSource.Play();
                 Debug.Log("Player Buys the Health Pack");
                 /*Spawn GameObject*/
                 GameObject tmp = Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
