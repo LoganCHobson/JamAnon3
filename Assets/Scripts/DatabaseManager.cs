@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class DatabaseManager : MonoBehaviour
 {
@@ -14,6 +16,13 @@ public class DatabaseManager : MonoBehaviour
     public TMP_Text scoreText;
     private string userID;
     private DatabaseReference dbReference;
+
+    private List<string> bannedWords = new List<string> { "ass", "cum", "fag", "gay", "jew", "sex", "dck", "dic", "cok",
+    "kkk", "tit", "pns", "vag", "fck", "nig", "ngr", "jiz", "wtf", "fgt",
+    "phk", "sht", "cnt", "bch", "dyk", "fuk", "fux", "fuc", "pis", "pus",
+    "coc", "jzz", "prn", "fap", "fuq", "jew", "cvm", "kys"}; //Yup. Theres bad people out there.
+
+
     private void Start()
     {
         userID = Guid.NewGuid().ToString();
@@ -40,17 +49,48 @@ public class DatabaseManager : MonoBehaviour
     {
         try
         {
-            CreateUser(nameInput.text, ScoreManager.instance.score);
-            dbReference.Child("users").Child(userID).Child("name").SetValueAsync(nameInput.text);
-            dbReference.Child("users").Child(userID).Child("score").SetValueAsync(ScoreManager.instance.score);
-            nameInput.text = "";
+            if(IsValidName(nameInput.text))
+            {
+                CreateUser(nameInput.text, ScoreManager.instance.score);
+                dbReference.Child("users").Child(userID).Child("name").SetValueAsync(nameInput.text);
+                dbReference.Child("users").Child(userID).Child("score").SetValueAsync(ScoreManager.instance.score);
+                nameInput.text = "";
+            }
+            else
+            {
+                nameInput.text = "***";
+            }
+           
         }
         catch
         {
+            nameInput.text = "Err";
             Debug.Log("Firebase aint workin.");
         }
         
     }
+
+    public bool IsValidName(string playerName)
+    {
+        string sanitizedInput = playerName.ToLower().Trim();
+        
+        if (!Regex.IsMatch(sanitizedInput, @"^[a-zA-Z]+$"))
+        {
+            return false; 
+        }
+        
+        foreach (string bannedWord in bannedWords)
+        {
+            if (sanitizedInput.Contains(bannedWord))
+            {
+                return false; 
+            }
+        }
+
+        return true; 
+    }
+
+
 }
 
     public class User

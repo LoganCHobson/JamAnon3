@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerReset();
         ClearRooms();
+        player.GetComponents<AudioSource>()[1].Play();
     }
     public void SpawnerCorrect()
     {
