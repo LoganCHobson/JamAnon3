@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
 
     public TMP_Text moneyText;
     public TMP_Text attempts;
+    public TMP_Text scoreText;
 
 
     void Start()
@@ -57,8 +58,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
         hudUI.SetActive(false);
+        scoreText.text = ScoreManager.instance.score.ToString();
         attempts.text = GameManager.instance.runCounter.runCounter.ToString();
         moneyText.text = WalletManager.instance.coin.ToString();
+        
         Time.timeScale = 0.0f;
         isGamePaused = true;
     }

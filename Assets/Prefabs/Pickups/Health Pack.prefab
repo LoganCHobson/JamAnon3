@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 25
   permanent: 1
+  scoreValue: 100
   value: 0
   pickup:
     m_PersistentCalls:

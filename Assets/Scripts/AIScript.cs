@@ -226,4 +226,9 @@ public class AIScript : MonoBehaviour
     {
         player.GetComponent<Rigidbody>().AddForce(_direction * kbStrength, ForceMode.Impulse);
     }
+
+    public void AddScore(int value)
+    {
+        ScoreManager.instance.AddScore(value);
+    }
 }
