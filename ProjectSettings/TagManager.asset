@@ -12,6 +12,8 @@ TagManager:
   - Gun
   - Endcap
   - Pickup
+  - Spawner
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - Enemy
   - NavIgnore
   - Endcap
-  - 
+  - Doorway
   - 
   - 
   - 

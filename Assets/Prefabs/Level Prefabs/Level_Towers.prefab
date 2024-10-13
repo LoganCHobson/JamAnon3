@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 299102060093603532}
   m_Layer: 7
   m_Name: Level_Towers
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -85028,11 +85028,11 @@ GameObject:
   - component: {fileID: 7887242487401923798}
   m_Layer: 9
   m_Name: Spawner (5)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3969802533863208269
 Transform:
   m_ObjectHideFlags: 0
@@ -85069,8 +85069,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.7106934, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.34565377, z: 2.0003896}
 --- !u!114 &8782809374479542843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85107,7 +85107,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -85538,11 +85538,11 @@ GameObject:
   - component: {fileID: 251379248714758648}
   m_Layer: 9
   m_Name: Spawner (3)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1322870793010377812
 Transform:
   m_ObjectHideFlags: 0
@@ -85579,8 +85579,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.1649256, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.1324422, z: 2.0003896}
 --- !u!114 &115205577716147055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85617,7 +85617,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -86207,11 +86207,11 @@ GameObject:
   - component: {fileID: 9058923823799949376}
   m_Layer: 9
   m_Name: Spawner (6)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8095311064971605165
 Transform:
   m_ObjectHideFlags: 0
@@ -86248,8 +86248,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.195324, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 1.1476414, z: 2.0003896}
 --- !u!114 &9510687716219870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86286,7 +86286,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -86305,11 +86305,11 @@ GameObject:
   - component: {fileID: 8404958261800457837}
   m_Layer: 9
   m_Name: Spawner (4)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6097854235335935264
 Transform:
   m_ObjectHideFlags: 0
@@ -86346,8 +86346,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 0.95971346, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.5298362, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 2.6322653, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: -0.30644011, z: 2.0003896}
 --- !u!114 &2550218738586420583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86384,7 +86384,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0

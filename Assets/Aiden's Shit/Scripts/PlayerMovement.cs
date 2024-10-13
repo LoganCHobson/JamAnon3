@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
+
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -19,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     [SerializeField]
     private bool isGrounded;
-    
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,21 +44,24 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-
+        move = move.normalized;
         if (Input.GetKey(KeyCode.LeftShift))
         {
             controller.Move(move * sprintSpeed * Time.deltaTime);
         }
-        else
+         else 
         {
             controller.Move(move * speed * Time.deltaTime);
         }
+        
+           
+            
+        
 
-        if(Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButton("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
-        
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);

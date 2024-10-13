@@ -5071,6 +5071,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGFX
       objectReference: {fileID: 0}
+    - target: {fileID: 8136560460118396345, guid: e1309214a6e431242b089c0c4c657385,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
