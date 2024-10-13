@@ -110,6 +110,7 @@ MonoBehaviour:
   onEffectComplete:
     m_PersistentCalls:
       m_Calls: []
+  animName: MoneyEffectAnim
 --- !u!1 &7123511063208207640
 GameObject:
   m_ObjectHideFlags: 0

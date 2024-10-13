@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public List<ObjectPool> roomPool = new List<ObjectPool>();
     public GameObject player;
 
+    private int preScore;
     private int preMoney;
     private float preFireRate;
     private int preMaxHealth;
@@ -50,7 +51,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-      
+
+        preScore = ScoreManager.instance.score;
         playerAnim = player.GetComponentInChildren<Animator>();
         runCounter = player.GetComponentInChildren<RunCounter>();
 
@@ -80,9 +82,11 @@ public class GameManager : MonoBehaviour
 
     public void PlayerReset()
     {
+        ScoreManager.instance.score = preScore;
         player.GetComponentInChildren<Slider>().value = preMaxHealth;
         Debug.Log("Resetting player to prerun");
         runCounter.runCounter = preRunCount;
+        player.GetComponentInChildren<Slider>().value = preMaxHealth;
         player.GetComponentInChildren<Gun>().fireRate = preFireRate;
         player.GetComponent<Health>().maxHealth = preMaxHealth;
         player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
@@ -102,6 +106,7 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayerData()
     {
+        preScore = ScoreManager.instance.score;
         preRunCount = runCounter.runCounter;
         Debug.Log("Saving player data!");
         player = GameObject.Find("Player");

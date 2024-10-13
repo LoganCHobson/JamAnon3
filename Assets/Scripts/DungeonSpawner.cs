@@ -39,6 +39,7 @@ public class DungeonSpawner : MonoBehaviour
             }
             else
             {
+                ScoreManager.instance.AddScore(100);
                 Debug.Log(gameObject.name + " Says Spawning: " + spawnedRoom.gameObject.name);
                 EnableAllChildren(spawnedRoom.transform);
             }

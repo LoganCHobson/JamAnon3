@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
+    public List<AudioClip> clipList;
+    private AudioSource audioSource;
     public TMP_Text scoreText;
     public TMP_Text moneyText;
     public int score;
@@ -19,13 +21,33 @@ public class ScoreManager : MonoBehaviour
 
     public static ScoreManager instance;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
-        scoreText.text = score.ToString("N0");
+        scoreText.text = "Score: " + score.ToString("N0");
     }
 
     public void AddScore(int points)
     {
+        int rand = Random.Range(0, clipList.Count);
+        audioSource.clip = clipList[rand];
+        audioSource.Play();
         score += points;
         EnqueueScoreEffect("+" + points, scoreText.transform.position);
     }
@@ -59,7 +81,7 @@ public class ScoreManager : MonoBehaviour
 
     private void PositionEffectAbove(RectTransform effectTransform, Vector3 targetPosition)
     {
-        Vector3 abovePosition = new Vector3(targetPosition.x, targetPosition.y + 50f, targetPosition.z);
+        Vector3 abovePosition = new Vector3(targetPosition.x + 100f, targetPosition.y + 50f, targetPosition.z);
         effectTransform.position = abovePosition;
     }
 

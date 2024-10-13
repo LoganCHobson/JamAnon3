@@ -247,3 +247,4 @@ MonoBehaviour:
   onEffectComplete:
     m_PersistentCalls:
       m_Calls: []
+  animName: ScoreEffectAnim

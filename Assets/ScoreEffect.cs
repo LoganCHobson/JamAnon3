@@ -7,10 +7,12 @@ public class ScoreEffect : MonoBehaviour
 {
     private Animator anim;
     public UnityEvent onEffectComplete;
+    public string animName;
 
     private void Start()
     {
-        anim.Play("ScoreEffectAnim");
+        anim = GetComponent<Animator>();    
+        anim.Play(animName);
     }
 
     public void AnimationComplete()

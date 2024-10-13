@@ -2,7 +2,7 @@ using UnityEngine;
 public abstract class Pickup : MonoBehaviour
 {
     public float rotationSpeed = 25f;
-    private AudioSource audio;
+    private AudioSource pickupAudio;
     private bool used;
     [HideInInspector]
     public bool permanent = true;
@@ -11,8 +11,8 @@ public abstract class Pickup : MonoBehaviour
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
-        if (audio == null)
+        pickupAudio = GetComponent<AudioSource>();
+        if (pickupAudio == null)
         {
             Debug.LogError("Did you forget to add audio to your pickup?");
         }
@@ -27,7 +27,11 @@ public abstract class Pickup : MonoBehaviour
         if (!used && other.transform.CompareTag("Player"))
         {
             used = true;
-            audio.Play();
+            if(pickupAudio == null)
+            {
+                pickupAudio = GetComponent<AudioSource>();
+            }
+            pickupAudio.Play();
             onPickupEvent();
 
             if (permanent)

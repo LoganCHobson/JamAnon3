@@ -120,7 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 25
   permanent: 1
-  increaseHealth: 10
+  scoreValue: 200
+  increaseHealth: 20
   pickup:
     m_PersistentCalls:
       m_Calls:

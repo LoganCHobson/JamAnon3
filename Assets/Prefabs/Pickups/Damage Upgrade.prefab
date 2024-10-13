@@ -117,7 +117,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1493808086319758015, guid: 34515c19d7e7a2c4b995494db422d426,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: ac6e4bae15365d74cb5f3ef40d3be61d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8fdea83d24bb07d4ead8827d28daf056, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 0.9
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 25
   permanent: 1
+  scoreValue: 125
   increaseDamage: 10
   pickup:
     m_PersistentCalls:

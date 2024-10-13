@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class HealthPack : Pickup
 {
-    public int value;
+    public int scoreValue;
     public UnityEvent pickup;
     public UnityEvent reset;
 
@@ -11,6 +11,7 @@ public class HealthPack : Pickup
     {
         Health health = GameManager.instance.player.GetComponent<Health>();
         health.Heal(health.maxHealth / 2);
+        ScoreManager.instance.AddScore(scoreValue);
         pickup.Invoke();
     }
 
