@@ -168,5 +168,21 @@ public class GameManager : MonoBehaviour
         spawner4.SetActive(true);
 
     }
+
+    public void SaveHighScore()
+    {
+        int currentHighScore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if (ScoreManager.instance.score > currentHighScore)
+        {
+            PlayerPrefs.SetInt("HighScore", ScoreManager.instance.score);
+            PlayerPrefs.Save(); 
+        }
+    }
+
+    public int GetHighScore()
+    {
+        return PlayerPrefs.GetInt("HighScore", 0); 
+    }
 }
 

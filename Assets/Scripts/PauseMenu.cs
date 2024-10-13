@@ -1,8 +1,8 @@
 using SuperPupSystems.Manager;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     public TMP_Text moneyText;
     public TMP_Text attempts;
     public TMP_Text scoreText;
+    public TMP_Text highScoreText;
 
 
     void Start()
@@ -54,6 +55,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        GameManager.instance.SaveHighScore();
+        highScoreText.text = GameManager.instance.GetHighScore().ToString();
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
@@ -61,7 +65,7 @@ public class PauseMenu : MonoBehaviour
         scoreText.text = ScoreManager.instance.score.ToString();
         attempts.text = GameManager.instance.runCounter.runCounter.ToString();
         moneyText.text = WalletManager.instance.coin.ToString();
-        
+
         Time.timeScale = 0.0f;
         isGamePaused = true;
     }

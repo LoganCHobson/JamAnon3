@@ -6,13 +6,20 @@ using UnityEngine.SceneManagement;
 using SuperPupSystems.Helper;
 using UnityEditor.Rendering;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject loadingScreen;
     public GameObject mainMenu;
+    public TMP_Text text;
 
     public Slider loadSlider;
+
+    private void Start()
+    {
+        text.text = "Highscore: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
     public void LoadLevel(string level)
     {
         mainMenu.SetActive(false);

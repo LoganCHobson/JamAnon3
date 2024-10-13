@@ -218,7 +218,7 @@ MonoBehaviour:
   rotationSpeed: 25
   permanent: 1
   scoreValue: 125
-  increaseDamage: 10
+  increaseDamage: 5
   pickup:
     m_PersistentCalls:
       m_Calls:
