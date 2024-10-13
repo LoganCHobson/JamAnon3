@@ -14,11 +14,10 @@ public class GameManager : MonoBehaviour
     public List<ObjectPool> roomPool = new List<ObjectPool>();
     public GameObject player;
 
-
     private int preMoney;
     private float preFireRate;
     private int preMaxHealth;
-    private int bulletDamage;
+    private int preDamage;
     [HideInInspector]
     public int preRunCount;
     private GameObject gunType;
@@ -26,14 +25,11 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public RunCounter runCounter;
 
-
     public Transform spawn;
 
     public static GameManager instance;
 
     private Animator playerAnim;
-
-   
 
     public GameObject spawner1;
     public GameObject spawner2;
@@ -60,7 +56,7 @@ public class GameManager : MonoBehaviour
 
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
-        //bulletDamage = player.GetComponentInChildren<Bullet>().damage;
+        preDamage = player.GetComponentInChildren<Gun>().damagePerShot;
         preMaxHealth = player.GetComponent<Health>().maxHealth;
         preMoney = player.GetComponent<WalletManager>().coin;
         foreach (Transform child in player.transform)
@@ -91,7 +87,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<Health>().maxHealth = preMaxHealth;
         player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
         player.GetComponent<WalletManager>().coin = preMoney;
-        //player.GetComponentInChildren<Bullet>().damage = bulletDamage;
+        player.GetComponentInChildren<Gun>().damagePerShot = preDamage;
         foreach (Transform child in player.transform)
         {
             if (child.CompareTag("Gun"))
@@ -110,7 +106,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Saving player data!");
         player = GameObject.Find("Player");
         preFireRate = player.GetComponentInChildren<Gun>().fireRate;
-        //bulletDamage = player.GetComponentInChildren<Bullet>().damage;
+        preDamage = player.GetComponentInChildren<Gun>().damagePerShot;
         preMaxHealth = player.GetComponent<Health>().maxHealth;
         player.GetComponent<Health>().currentHealth = player.GetComponent<Health>().maxHealth;
         preMoney = player.GetComponent<WalletManager>().coin;

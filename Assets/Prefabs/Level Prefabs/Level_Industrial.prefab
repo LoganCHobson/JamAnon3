@@ -75313,7 +75313,7 @@ MonoBehaviour:
   lootTable:
   - itemPrefab: {fileID: 1824505405374654975, guid: 5908c0cb56499a947a142153478d7687,
       type: 3}
-    spawnProbability: 0.84
+    spawnProbability: 0.79
   - itemPrefab: {fileID: 4746025221622278860, guid: 6b3c842c1edd1944782d18caf30aa020,
       type: 3}
     spawnProbability: 0.1
@@ -75323,6 +75323,9 @@ MonoBehaviour:
   - itemPrefab: {fileID: 1775392326538538140, guid: eda4c51ed54c29744af064a4fa3ea23e,
       type: 3}
     spawnProbability: 0.01
+  - itemPrefab: {fileID: 4975021713585913496, guid: 9fcef980133eee4469159ce301f41149,
+      type: 3}
+    spawnProbability: 0.05
 --- !u!1 &8087742287288260884
 GameObject:
   m_ObjectHideFlags: 0

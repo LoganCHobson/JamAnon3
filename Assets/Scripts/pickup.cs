@@ -41,14 +41,14 @@ public abstract class Pickup : MonoBehaviour
         }
 
 
-       /* if (gameObject.transform.parent == null) //Adding non perma pickups to a list.
-        {
-            if (other.gameObject.layer == 7)
-            {
-                other.gameObject.GetComponent<RoomManager>().temporaryObjs.Add(gameObject);
-                gameObject.transform.SetParent(other.gameObject.transform);
-            }
-        }*/
+        /* if (gameObject.transform.parent == null) //Adding non perma pickups to a list.
+         {
+             if (other.gameObject.layer == 7)
+             {
+                 other.gameObject.GetComponent<RoomManager>().temporaryObjs.Add(gameObject);
+                 gameObject.transform.SetParent(other.gameObject.transform);
+             }
+         }*/
     }
 
     private void Delay()

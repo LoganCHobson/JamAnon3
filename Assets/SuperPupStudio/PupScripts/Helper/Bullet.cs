@@ -38,6 +38,8 @@ namespace SuperPupSystems.Helper
 
             // set init position
             m_lastPosition = transform.position;
+
+            Destroy(gameObject, lifeTime);
         }
 
         private void FixedUpdate()

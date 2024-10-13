@@ -1,3 +1,4 @@
+using SuperPupSystems.Helper;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -76,6 +77,7 @@ public class Gun : MonoBehaviour
         nextFireTime = Time.time + fireRate;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+        bullet.GetComponent<Bullet>().damage = damagePerShot;
         shoot.Play();
         anim.Play("Recoil");
 

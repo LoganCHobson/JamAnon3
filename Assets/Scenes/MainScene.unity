@@ -3635,6 +3635,77 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1750851947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1213321687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213321691}
+  - component: {fileID: 1213321688}
+  - component: {fileID: 1213321692}
+  m_Layer: 0
+  m_Name: SuperDeath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1213321688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213321687}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1213321691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213321687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalScale: {x: 4000, y: 0.1, z: 4000}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213321692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213321687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d23b8416eee084eaeb692382401e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+  death: 1
 --- !u!43 &1279254131
 Mesh:
   m_ObjectHideFlags: 0
@@ -5145,6 +5216,11 @@ PrefabInstance:
       propertyPath: pausedGame
       value: 
       objectReference: {fileID: 3845046577801319254}
+    - target: {fileID: 2769807902876423889, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3410045159539016713, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: m_Name
@@ -5155,6 +5231,16 @@ PrefabInstance:
       propertyPath: pausedGame
       value: 
       objectReference: {fileID: 3845046577801319254}
+    - target: {fileID: 3847454039133613981, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847454039133613981, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: damagePerShot
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5324943057547601132, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: pausedGame
@@ -5735,11 +5821,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 111532140}
-    - target: {fileID: 473643910590200989, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: price
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 899363379472570228, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5795,13 +5876,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1279254131}
-    - target: {fileID: 3184644044254690960, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: m_text
-      value: 'Price: $500
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 3385977463662851500, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5852,11 +5926,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 767145389}
-    - target: {fileID: 4418799984137324495, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: price
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 4560244813063706426, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5877,11 +5946,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1730501516}
-    - target: {fileID: 5409502875214961372, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: price
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 5447714384308523384, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5962,13 +6026,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 767145389}
-    - target: {fileID: 6358229634813358630, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: m_text
-      value: 'Price: $1000
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 6797716261559172338, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5979,11 +6036,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1508667958}
-    - target: {fileID: 7576821236063801150, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.053
-      objectReference: {fileID: 0}
     - target: {fileID: 8002851675849229795, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -5999,13 +6051,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1730501516}
-    - target: {fileID: 8063469075962041203, guid: 496d1888da7bf0c4cbb9ddf897b33281,
-        type: 3}
-      propertyPath: m_text
-      value: 'Price: $200
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 9062047630506365017, guid: 496d1888da7bf0c4cbb9ddf897b33281,
         type: 3}
       propertyPath: m_Mesh
@@ -6874,3 +6919,4 @@ SceneRoots:
   - {fileID: 3845046577801319253}
   - {fileID: 2072195284}
   - {fileID: 682594455}
+  - {fileID: 1213321691}

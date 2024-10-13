@@ -26,7 +26,7 @@ public class SpawnHealthUpgrade : MonoBehaviour
                 Debug.Log("Player Buys the Health Pack");
                 /*Spawn GameObject*/
                 GameObject tmp = Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
-                tmp.GetComponent<MaxHealthUpgrade>().permanent = true;
+                tmp.GetComponent<MaxHealthUpgrade>().permanent = false;
                 WalletManager.instance.coin -= price;
             }
         }else
