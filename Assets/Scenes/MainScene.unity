@@ -5427,7 +5427,7 @@ PrefabInstance:
     - target: {fileID: 2686912666370099451, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
       propertyPath: coin
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2769807902876423889, guid: 11164402afa24e94fa5f5c070892cd25,
         type: 3}
@@ -5549,6 +5549,11 @@ PrefabInstance:
       propertyPath: clipList.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 0687070164e1ee24a92430c3710b9977, type: 3}
+    - target: {fileID: 8986654424358627497, guid: 11164402afa24e94fa5f5c070892cd25,
+        type: 3}
+      propertyPath: gravity
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7355,6 +7360,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3845046577801319254}
+    - target: {fileID: 7862014326376527286, guid: 6a73a8b060ae3f148aefffcf984dacc4,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

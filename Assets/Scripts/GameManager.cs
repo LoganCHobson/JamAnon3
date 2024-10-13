@@ -83,7 +83,6 @@ public class GameManager : MonoBehaviour
     public void PlayerReset()
     {
         ScoreManager.instance.score = preScore;
-        player.GetComponentInChildren<Slider>().value = preMaxHealth;
         Debug.Log("Resetting player to prerun");
         runCounter.runCounter = preRunCount;
         player.GetComponentInChildren<Slider>().value = preMaxHealth;

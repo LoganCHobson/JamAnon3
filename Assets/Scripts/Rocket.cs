@@ -28,6 +28,8 @@ public class Rocket : MonoBehaviour
         {
             Debug.LogError("Bullet reference is not set in Rocket script");
         }
+
+        splashDamage = Mathf.FloorToInt(damage * 0.15f); //Ensuring splash damage scales with damage upgrade
     }
 
     public void OnBulletHitTarget()
