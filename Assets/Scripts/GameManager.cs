@@ -134,27 +134,6 @@ public class GameManager : MonoBehaviour
         Invoke("SpawnerCorrect", 1);
     }
 
-    public void Teleport()
-    {
-        StartCoroutine(TeleportSequence());
-    }
-
-    private IEnumerator TeleportSequence()
-    {
-        playerAnim.Play("TeleportEffect");
-        TogglePlayerControl(false);
-        yield return new WaitForSeconds(2);
-        playerAnim.Play("TeleportEffectReverse");
-        yield return new WaitForSeconds(2);
-        TogglePlayerControl(true);
-    }
-
-    private void TogglePlayerControl(bool enable)
-    {
-        player.GetComponent<PlayerMovement>().enabled = enable;
-        player.GetComponentInChildren<MouseLook>().enabled = enable;
-    }
-
     public void Death()
     {
         PlayerReset();
@@ -185,5 +164,7 @@ public class GameManager : MonoBehaviour
     {
         return PlayerPrefs.GetInt("HighScore", 0); 
     }
+
+   
 }
 
