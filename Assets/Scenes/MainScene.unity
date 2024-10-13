@@ -6061,7 +6061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6595768837843066952, guid: 12fe6f9e84010cf47b5a1ec1cc2e3795, type: 3}
-  poolSize: 20
+  poolSize: 30
   objectPool: []
   onSpawn:
     m_PersistentCalls:
