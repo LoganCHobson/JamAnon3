@@ -12,8 +12,9 @@ public class EndcapCorrector : MonoBehaviour
             inital = other.gameObject;
             Debug.Log("Inital gained " + inital.name);
         }
-        if(!other.CompareTag("Player") && other.gameObject != inital)
+        if(other.CompareTag("Room") && other.gameObject != inital)
         {
+            Debug.Log("Deleted myself because of: " +other.gameObject.name);
             gameObject.GetComponentInChildren<Canvas>().enabled = false;
             gameObject.SetActive(false);
         }

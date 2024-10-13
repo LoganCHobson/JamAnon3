@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6507235740488278369}
   - component: {fileID: 1567725429282877858}
   - component: {fileID: 7918757817350700083}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1920024593131382089}
   - component: {fileID: 1603243621497737476}
   - component: {fileID: 7150761318313774283}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348575889347382397}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: End Cap_Level
   m_TagString: Endcap
   m_Icon: {fileID: 0}
@@ -285,7 +285,8 @@ GameObject:
   - component: {fileID: 152289836866113745}
   - component: {fileID: 2658359158119920987}
   - component: {fileID: 7501718128905977879}
-  m_Layer: 12
+  - component: {fileID: 6192200573632185013}
+  m_Layer: 7
   m_Name: End Cap 2.0
   m_TagString: Endcap
   m_Icon: {fileID: 0}
@@ -2478,3 +2479,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c088d60d5e8c6c446a18685a5601c721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &6192200573632185013
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7639811411390104210}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1

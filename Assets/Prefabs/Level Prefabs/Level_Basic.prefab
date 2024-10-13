@@ -668,11 +668,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &576216858342319808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,8 +1503,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 1.9373703, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: 0.041007727, z: 2.0003896}
+  m_Size: {x: 2.8873723, y: 1.2146301, z: 3.9253545}
+  m_Center: {x: -1.4423313, y: 0.40237784, z: 2.0003896}
 --- !u!114 &2301889848121962403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,11 +1541,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1142661158199959426
 GameObject:
   m_ObjectHideFlags: 0
@@ -8920,11 +8920,11 @@ GameObject:
   - component: {fileID: 1988716025134107422}
   m_Layer: 7
   m_Name: Level_Basic
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4744755293536703047
 Transform:
   m_ObjectHideFlags: 0
@@ -54868,8 +54868,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.8873723, y: 2.0532022, z: 3.9253545}
-  m_Center: {x: -1.4423313, y: -0.016908407, z: 2.0003896}
+  m_Size: {x: 3.085579, y: 1.9606884, z: 3.9253545}
+  m_Center: {x: -1.343228, y: 0.029348731, z: 2.0003896}
 --- !u!114 &8352309815940687290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54906,11 +54906,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &6522611496099456825
 GameObject:
   m_ObjectHideFlags: 0
@@ -57642,11 +57642,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7640763925536119902
 GameObject:
   m_ObjectHideFlags: 0
