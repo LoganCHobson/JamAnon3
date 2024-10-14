@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "259882575552",
+    "firebase_url": "https://wakefield-scoreboard-default-rtdb.firebaseio.com",
+    "project_id": "wakefield-scoreboard",
+    "storage_bucket": "wakefield-scoreboard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259882575552:android:cecdc83a69e4ef6b4c6f25",
+        "android_client_info": {
+          "package_name": "com.UnityTechnologies.com.unity.template.urpblank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbSoQCy5eZgAvXB86NGs6WDIxcio22Neg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
