@@ -28,6 +28,8 @@ public class Gun : MonoBehaviour
     
     private AudioSource shoot;
 
+    public Animator retAnim;
+
     private Animator anim;
 
     private void Start()
@@ -78,6 +80,7 @@ public class Gun : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         bullet.GetComponent<Bullet>().damage = damagePerShot;
+        bullet.GetComponent<Bullet>().hitTarget.AddListener(PlayRetAnim);
         shoot.Play();
         anim.Play("Recoil");
 
@@ -115,5 +118,10 @@ public class Gun : MonoBehaviour
             gunHolder.transform.LookAt(hit.transform.position);       
         }
 
+    }
+
+    public void PlayRetAnim()
+    {
+        retAnim.Play("DamageFeedBackRet");
     }
 }

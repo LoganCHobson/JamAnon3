@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject howToPlayUI;
     public GameObject optionsUI;
     public GameObject hudUI;
+    public GameObject submitScoreUI;
 
     public TMP_Text moneyText;
     public TMP_Text attempts;
@@ -49,6 +50,7 @@ public class PauseMenu : MonoBehaviour
         howToPlayUI.SetActive(false);
         optionsUI.SetActive(false);
         hudUI.SetActive(true);
+        submitScoreUI.SetActive(false);
         Time.timeScale = 1.0f;
         isGamePaused = false;
     }

@@ -14,6 +14,7 @@ namespace SuperPupSystems.Helper
         public float destroyDelay = 0.5f;
         public bool destroyOnImpact = true;
         public UnityEvent hitTarget;
+        public UnityEvent hit;
         public LayerMask mask;
         public List<string> tags;
 
@@ -69,7 +70,7 @@ namespace SuperPupSystems.Helper
 
                 if (destroyOnImpact)
                 {
-                    hitTarget.Invoke();
+                    hit.Invoke();
                     dead = true;
                     Destroy(gameObject, destroyDelay);
                 }
